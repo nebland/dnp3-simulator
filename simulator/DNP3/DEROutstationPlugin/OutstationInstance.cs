@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.API;
 using Automatak.Simulator.DNP3.Commons;
+using Automatak.Simulator.DNP3.DEROutstationPlugin;
 
 namespace Automatak.Simulator.DNP3.DerOutstationPlugin
 {
@@ -99,7 +100,82 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
 
         public IOutstationFactory CreateFactory()
         {
-            throw new NotImplementedException();
+            return new OutstationFactory();
+        }
+    }
+
+    class OutstationFactory : IOutstationFactory
+    {
+        private readonly ProxyCommandHandler m_commandHandler = new ProxyCommandHandler();
+        private readonly EventedOutstationApplication m_application = new EventedOutstationApplication();
+
+        public IOutstationApplication Application
+        {
+            get { return m_application; }
+        }
+
+        public ICommandHandler CommandHandler
+        {
+            get { return m_commandHandler; }
+        }
+
+        public IOutstationInstance CreateInstance(IOutstation outstation, string name, OutstationStackConfig config)
+        {
+            return new OutstationInstance(m_commandHandler, m_application, outstation, config, name);
+        }
+    }
+
+
+    class OutstationInstance : IOutstationInstance
+    {
+        readonly ProxyCommandHandler handler;
+        readonly EventedOutstationApplication application;
+        readonly IOutstation outstation;
+        readonly string alias;
+
+        OutstationForm form = null;
+
+        public OutstationInstance(ProxyCommandHandler handler, EventedOutstationApplication application, IOutstation outstation, OutstationStackConfig config, string alias)
+        {
+            this.handler = handler;
+            this.application = application;
+            this.outstation = outstation;
+            this.alias = alias;
+        }
+
+        string IOutstationInstance.DisplayName
+        {
+            get { return alias; }
+        }
+
+        bool IOutstationInstance.HasForm
+        {
+            get { return true; }
+        }
+
+        bool IOutstationInstance.ShowFormOnCreation
+        {
+            get { return false; }
+        }
+
+        void IOutstationInstance.ShowForm()
+        {
+            if (this.form == null)
+            {
+                this.form = new OutstationForm();
+            }
+
+            form.Show();
+        }
+
+        void IOutstationInstance.Shutdown()
+        {
+            if (form != null)
+            {
+                form.Close();
+                form.Dispose();
+                form = null;
+            }
         }
     }
 }

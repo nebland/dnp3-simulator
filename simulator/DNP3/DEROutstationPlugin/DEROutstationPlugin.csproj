@@ -39,6 +39,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,14 +49,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OutstationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutstationForm.Designer.cs">
+      <DependentUpon>OutstationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutstationInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Commons\Commons.csproj">
+      <Project>{67c09f7a-3dd4-4c02-aa3b-6882fb6ea816}</Project>
+      <Name>Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNP3Commons\DNP3Commons.csproj">
+      <Project>{bf90d749-22fb-49fd-b840-4ff875d12cc6}</Project>
+      <Name>DNP3Commons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DNP3PluginAPI\DNP3PluginAPI.csproj">
       <Project>{a392b2a4-f62e-442c-813e-6b7f4bf63459}</Project>
       <Name>DNP3PluginAPI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OutstationForm.resx">
+      <DependentUpon>OutstationForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
