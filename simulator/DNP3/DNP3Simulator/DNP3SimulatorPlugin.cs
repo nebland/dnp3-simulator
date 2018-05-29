@@ -31,7 +31,8 @@ namespace Automatak.Simulator.DNP3
         readonly DNP3Config config = new DNP3Config(
            new IOutstationModule[]{ 
                Automatak.Simulator.DNP3.DefaultOutstationPlugin.OutstationModule.Instance,
-               Automatak.Simulator.DNP3.RelayOutstationPlugin.OutstationModule.Instance
+               Automatak.Simulator.DNP3.RelayOutstationPlugin.OutstationModule.Instance,
+               Automatak.Simulator.DNP3.DerOutstationPlugin.OutstationModule.Instance
            }
         );
 
