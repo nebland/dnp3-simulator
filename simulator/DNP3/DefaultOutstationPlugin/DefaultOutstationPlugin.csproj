@@ -127,13 +127,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\AnalogValueDialog.resx" />
-    <EmbeddedResource Include="GUI\BinaryValueDialog.resx" />
-    <EmbeddedResource Include="GUI\CommandHandlerControl.resx" />
-    <EmbeddedResource Include="GUI\CounterValueDialog.resx" />
-    <EmbeddedResource Include="GUI\DoubleBinaryValueDialog.resx" />
-    <EmbeddedResource Include="GUI\OutstationForm.resx" />
-    <EmbeddedResource Include="GUI\QualitySelector.resx" />
+    <EmbeddedResource Include="GUI\AnalogValueDialog.resx">
+      <DependentUpon>AnalogValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BinaryValueDialog.resx">
+      <DependentUpon>BinaryValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CommandHandlerControl.resx">
+      <DependentUpon>CommandHandlerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CounterValueDialog.resx">
+      <DependentUpon>CounterValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DoubleBinaryValueDialog.resx">
+      <DependentUpon>DoubleBinaryValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OutstationForm.resx">
+      <DependentUpon>OutstationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QualitySelector.resx">
+      <DependentUpon>QualitySelector.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
