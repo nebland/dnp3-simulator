@@ -200,13 +200,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.CheckState();
         }
 
-        void LoadSingleBinaryOutputStatus(ushort index, bool value)
-        {
-            var changes = new ChangeSet();
-            changes.Update(new BinaryOutputStatus(value, 0x01, DateTime.Now), index);
-            loader.Load(changes);
-        }
-
         void LoadSingleBinaryOutputStatus(ControlRelayOutputBlock command, ushort index, bool value)
         {
             if (this.InvokeRequired)
@@ -218,7 +211,9 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 var output = String.Format("Accepted CROB: {0} - {1}", command.code, index);
                 this.listBoxLog.Items.Add(output);
 
-                this.LoadSingleBinaryOutputStatus(index, value);
+                var changes = new ChangeSet();
+                changes.Update(new BinaryOutputStatus(value, 0x01, DateTime.Now), index);
+                loader.Load(changes);
             }
         }
 
@@ -234,11 +229,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 switch (command.code)
                 {
                     case (ControlCode.LATCH_ON):
-                        if (operate) this.LoadSingleBinaryOutputStatus(index, true);
+                        if (operate) this.LoadSingleBinaryOutputStatus(command, index, true);
                         return CommandStatus.SUCCESS;
 
                     case (ControlCode.LATCH_OFF):
-                        if (operate) this.LoadSingleBinaryOutputStatus(index, false);
+                        if (operate) this.LoadSingleBinaryOutputStatus(command, index, false);
                         return CommandStatus.SUCCESS;
 
                     default:
