@@ -132,6 +132,7 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
         readonly EventedOutstationApplication application;
         readonly IOutstation outstation;
         readonly string alias;
+        readonly MeasurementCache cache;
 
         OutstationForm form = null;
 
@@ -141,6 +142,8 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
             this.application = application;
             this.outstation = outstation;
             this.alias = alias;
+
+            this.cache = new MeasurementCache(config.databaseTemplate);
         }
 
         string IOutstationInstance.DisplayName
@@ -162,7 +165,7 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
         {
             if (this.form == null)
             {
-                this.form = new OutstationForm();
+                this.form = new OutstationForm(outstation, application, cache, handler, alias);
             }
 
             form.Show();
