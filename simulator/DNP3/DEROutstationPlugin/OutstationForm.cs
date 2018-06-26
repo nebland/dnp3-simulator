@@ -217,6 +217,23 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
         }
 
+        void LoadSingleAnalogOutputStatus(ushort index, double value)
+        {
+            if (this.InvokeRequired)
+            {
+                this.BeginInvoke(new Action(() => LoadSingleAnalogOutputStatus(index, value)));
+            }
+            else
+            {
+                var output = String.Format("Accepted CROB: {0} - {1}", value, index);
+                this.listBoxLog.Items.Add(output);
+
+                var changes = new ChangeSet();
+                changes.Update(new AnalogOutputStatus(value, 0x01, DateTime.Now), index);
+                loader.Load(changes);
+            }
+        }
+
         /*
          * Handles logic to set CommandStatus for both Select and Operate
          */
@@ -254,9 +271,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             {
                 if (operate)
                 {
-                    var changes = new ChangeSet();
-                    changes.Update(new AnalogOutputStatus(value, 0x01, DateTime.Now), index);
-                    loader.Load(changes);
+                    LoadSingleAnalogOutputStatus(index, value);
                 }
 
                 return CommandStatus.SUCCESS;
