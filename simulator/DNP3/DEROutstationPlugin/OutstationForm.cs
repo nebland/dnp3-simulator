@@ -251,7 +251,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
         }
 
-        CommandStatus OnControl(AnalogOutputFloat32 command, ushort index, bool operate)
+        CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
             bool isIndexValid = true;
 
@@ -260,7 +260,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 if (operate)
                 {
                     var changes = new ChangeSet();
-                    changes.Update(new AnalogOutputStatus(command.value, 0x01, DateTime.Now), index);
+                    changes.Update(new AnalogOutputStatus(value, 0x01, DateTime.Now), index);
                     loader.Load(changes);
                 }
 
@@ -331,22 +331,22 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         CommandStatus ICommandHandler.Select(AnalogOutputInt32 command, ushort index)
         {
-            throw new NotImplementedException();
+            return OnAnalogControl(command.value, index, false);
         }
 
         CommandStatus ICommandHandler.Select(AnalogOutputInt16 command, ushort index)
         {
-            throw new NotImplementedException();
+            return OnAnalogControl(command.value, index, false);
         }
 
         CommandStatus ICommandHandler.Select(AnalogOutputFloat32 command, ushort index)
         {
-            return OnControl(command, index, false);
+            return OnAnalogControl(command.value, index, false);
         }
 
         CommandStatus ICommandHandler.Select(AnalogOutputDouble64 command, ushort index)
         {
-            throw new NotImplementedException();
+            return OnAnalogControl(command.value, index, false);
         }
 
         CommandStatus ICommandHandler.Operate(ControlRelayOutputBlock command, ushort index, OperateType opType)
@@ -356,22 +356,22 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         CommandStatus ICommandHandler.Operate(AnalogOutputInt32 command, ushort index, OperateType opType)
         {
-            throw new NotImplementedException();
+            return OnAnalogControl(command.value, index, true);
         }
 
         CommandStatus ICommandHandler.Operate(AnalogOutputInt16 command, ushort index, OperateType opType)
         {
-            throw new NotImplementedException();
+            return OnAnalogControl(command.value, index, true);
         }
 
         CommandStatus ICommandHandler.Operate(AnalogOutputFloat32 command, ushort index, OperateType opType)
         {
-            return OnControl(command, index, true);
+            return OnAnalogControl(command.value, index, true);
         }
 
         CommandStatus ICommandHandler.Operate(AnalogOutputDouble64 command, ushort index, OperateType opType)
         {
-            throw new NotImplementedException();
+            return OnAnalogControl(command.value, index, true);
         }
     }
 }
