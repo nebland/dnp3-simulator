@@ -11,8 +11,8 @@ using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.Commons;
 
 namespace Automatak.Simulator.DNP3.DEROutstationPlugin
-{    
-    partial class OutstationForm : Form
+{
+    partial class OutstationForm : Form, ICommandHandler
     {
         MeasurementCollection activeCollection = null;
 
@@ -38,14 +38,18 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
 
-            this.commandHandlerControl1.Configure(proxy, loader);
-
             this.comboBoxColdRestartMode.DataSource = System.Enum.GetValues(typeof(RestartMode));
 
             this.application.ColdRestart += application_ColdRestart;
             this.application.TimeWrite += application_TimeWrite;
 
             this.CheckState();
+
+            // tell ProxyCommandHandler to use the proxy
+            this.proxy.Enabled = false;
+
+            // and use this form as the proxy
+            proxy.CommandProxy = this;
         }
 
         void application_TimeWrite(ulong millisecSinceEpoch)
@@ -58,7 +62,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         {
             // simulate a restart with the restart IIN bit
             this.outstation.SetRestartIIN();
-        }       
+        }
         
         void CheckState()
         {
@@ -87,7 +91,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         {
             e.Cancel = true;
             this.Hide();
-        }               
+        }
 
         void comboBoxTypes_SelectedIndexChanged(object sender, EventArgs e)
         {        
@@ -106,10 +110,10 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                     activeCollection = collection;
 
                     collection.AddObserver(this.measurementView);
-                }                
+                } 
             }
             this.CheckState(); 
-        }             
+        }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -196,6 +200,78 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.CheckState();
         }
 
+        void LoadSingleBinaryOutputStatus(ushort index, bool value)
+        {
+            var changes = new ChangeSet();
+            changes.Update(new BinaryOutputStatus(value, 0x01, DateTime.Now), index);
+            loader.Load(changes);
+        }
+
+        void LoadSingleBinaryOutputStatus(ControlRelayOutputBlock command, ushort index, bool value)
+        {
+            if (this.InvokeRequired)
+            {
+                this.BeginInvoke(new Action(() => LoadSingleBinaryOutputStatus(command, index, value)));
+            }
+            else
+            {
+                var output = String.Format("Accepted CROB: {0} - {1}", command.code, index);
+                this.listBoxLog.Items.Add(output);
+
+                this.LoadSingleBinaryOutputStatus(index, value);
+            }
+        }
+
+        /*
+         * Handles logic to set CommandStatus for both Select and Operate
+         */
+        CommandStatus OnControl(ControlRelayOutputBlock command, ushort index, bool operate)
+        {
+            bool isIndexValid = true;
+
+            if (isIndexValid)
+            {
+                switch (command.code)
+                {
+                    case (ControlCode.LATCH_ON):
+                        if (operate) this.LoadSingleBinaryOutputStatus(index, true);
+                        return CommandStatus.SUCCESS;
+
+                    case (ControlCode.LATCH_OFF):
+                        if (operate) this.LoadSingleBinaryOutputStatus(index, false);
+                        return CommandStatus.SUCCESS;
+
+                    default:
+                        return CommandStatus.NOT_SUPPORTED;
+                }
+            }
+            else
+            {
+                return CommandStatus.NOT_SUPPORTED;
+            }
+        }
+
+        CommandStatus OnControl(AnalogOutputFloat32 command, ushort index, bool operate)
+        {
+            bool isIndexValid = true;
+
+            if (isIndexValid)
+            {
+                if (operate)
+                {
+                    var changes = new ChangeSet();
+                    changes.Update(new AnalogOutputStatus(command.value, 0x01, DateTime.Now), index);
+                    loader.Load(changes);
+                }
+
+                return CommandStatus.SUCCESS;
+            }
+            else
+            {
+                return CommandStatus.NOT_SUPPORTED;
+            }
+        }
+
         private void measurementView_OnRowSelectionChanged(IEnumerable<UInt16> selection)
         {
             this.CheckState();
@@ -215,7 +291,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.listBoxEvents.Items.Clear();
             this.events.Clear();
             this.CheckState();
-        }       
+        }
 
         private void checkBoxNeedTime_CheckedChanged(object sender, EventArgs e)
         {
@@ -236,6 +312,66 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         private void numericUpDownColdRestartTime_ValueChanged(object sender, EventArgs e)
         {
             this.application.ColdRestartTime = Decimal.ToUInt16(numericUpDownColdRestartTime.Value);
-        }       
+        }
+
+        void ICommandHandler.Start()
+        {
+            
+        }
+
+        void ICommandHandler.End()
+        {
+            
+        }
+
+        CommandStatus ICommandHandler.Select(ControlRelayOutputBlock command, ushort index)
+        {
+            return OnControl(command, index, false);
+        }
+
+        CommandStatus ICommandHandler.Select(AnalogOutputInt32 command, ushort index)
+        {
+            throw new NotImplementedException();
+        }
+
+        CommandStatus ICommandHandler.Select(AnalogOutputInt16 command, ushort index)
+        {
+            throw new NotImplementedException();
+        }
+
+        CommandStatus ICommandHandler.Select(AnalogOutputFloat32 command, ushort index)
+        {
+            return OnControl(command, index, false);
+        }
+
+        CommandStatus ICommandHandler.Select(AnalogOutputDouble64 command, ushort index)
+        {
+            throw new NotImplementedException();
+        }
+
+        CommandStatus ICommandHandler.Operate(ControlRelayOutputBlock command, ushort index, OperateType opType)
+        {
+            return OnControl(command, index, true);
+        }
+
+        CommandStatus ICommandHandler.Operate(AnalogOutputInt32 command, ushort index, OperateType opType)
+        {
+            throw new NotImplementedException();
+        }
+
+        CommandStatus ICommandHandler.Operate(AnalogOutputInt16 command, ushort index, OperateType opType)
+        {
+            throw new NotImplementedException();
+        }
+
+        CommandStatus ICommandHandler.Operate(AnalogOutputFloat32 command, ushort index, OperateType opType)
+        {
+            return OnControl(command, index, true);
+        }
+
+        CommandStatus ICommandHandler.Operate(AnalogOutputDouble64 command, ushort index, OperateType opType)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

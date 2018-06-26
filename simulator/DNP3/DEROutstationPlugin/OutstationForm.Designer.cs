@@ -43,7 +43,8 @@
             this.numericUpDownColdRestartTime = new System.Windows.Forms.NumericUpDown();
             this.checkBoxLocalMode = new System.Windows.Forms.CheckBox();
             this.checkBoxNeedTime = new System.Windows.Forms.CheckBox();
-            this.commandHandlerControl1 = new Automatak.Simulator.DNP3.DEROutstationPlugin.CommandHandlerControl();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listBoxLog = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,8 +81,8 @@
             // 
             // listBoxEvents
             // 
-            this.listBoxEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.listBoxEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxEvents.FormattingEnabled = true;
             this.listBoxEvents.Location = new System.Drawing.Point(8, 209);
@@ -91,7 +92,7 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonClear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClear.Location = new System.Drawing.Point(5, 137);
             this.buttonClear.Name = "buttonClear";
@@ -103,7 +104,7 @@
             // 
             // buttonApply
             // 
-            this.buttonApply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonApply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonApply.Location = new System.Drawing.Point(5, 93);
             this.buttonApply.Name = "buttonApply";
@@ -115,7 +116,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEdit.Location = new System.Drawing.Point(5, 49);
             this.buttonEdit.Name = "buttonEdit";
@@ -127,7 +128,7 @@
             // 
             // comboBoxTypes
             // 
-            this.comboBoxTypes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxTypes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTypes.FormattingEnabled = true;
@@ -150,8 +151,9 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.label4);
+            this.splitContainer2.Panel2.Controls.Add(this.listBoxLog);
             this.splitContainer2.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer2.Panel2.Controls.Add(this.commandHandlerControl1);
             this.splitContainer2.Size = new System.Drawing.Size(877, 563);
             this.splitContainer2.SplitterDistance = 268;
             this.splitContainer2.TabIndex = 0;
@@ -245,12 +247,24 @@
             this.checkBoxNeedTime.UseVisualStyleBackColor = true;
             this.checkBoxNeedTime.CheckedChanged += new System.EventHandler(this.checkBoxNeedTime_CheckedChanged);
             // 
-            // commandHandlerControl1
+            // label4
             // 
-            this.commandHandlerControl1.Location = new System.Drawing.Point(190, 2);
-            this.commandHandlerControl1.Name = "commandHandlerControl1";
-            this.commandHandlerControl1.Size = new System.Drawing.Size(694, 316);
-            this.commandHandlerControl1.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(195, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 13);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Communications Log";
+            // 
+            // listBoxLog
+            // 
+            this.listBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxLog.FormattingEnabled = true;
+            this.listBoxLog.Location = new System.Drawing.Point(198, 36);
+            this.listBoxLog.Name = "listBoxLog";
+            this.listBoxLog.Size = new System.Drawing.Size(679, 238);
+            this.listBoxLog.TabIndex = 21;
             // 
             // OutstationForm
             // 
@@ -272,6 +286,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -291,7 +306,6 @@
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.ListBox listBoxEvents;
-        private CommandHandlerControl commandHandlerControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkBoxNeedTime;
         private System.Windows.Forms.CheckBox checkBoxLocalMode;
@@ -299,6 +313,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxColdRestartMode;
-
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox listBoxLog;
     }
 }
