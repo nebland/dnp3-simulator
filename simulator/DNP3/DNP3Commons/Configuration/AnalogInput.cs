@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Automatak.Simulator.Commons.Configuration
+namespace Automatak.Simulator.DNP3.Commons.Configuration
 {
     public class AnalogInput
     {

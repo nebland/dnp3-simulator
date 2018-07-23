@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\AnalogInput.cs" />
+    <Compile Include="Configuration\AnalogOutput.cs" />
+    <Compile Include="Configuration\BinaryInput.cs" />
+    <Compile Include="Configuration\BInaryOutput.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\IndexMap.cs" />
     <Compile Include="EventedOutstationApplication.cs" />
     <Compile Include="GUI\DBListView.cs">
       <SubType>Component</SubType>

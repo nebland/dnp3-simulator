@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Newtonsoft.Json;
+
 using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.API;
 using Automatak.Simulator.DNP3.Commons;
+using Automatak.Simulator.DNP3.Commons.Configuration;
 using Automatak.Simulator.DNP3.DEROutstationPlugin;
 
 namespace Automatak.Simulator.DNP3.DerOutstationPlugin
@@ -39,6 +42,10 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
         {
             get
             {
+                string text = System.IO.File.ReadAllText(@"config\indexes-config.json");
+
+                Configuration configuration = JsonConvert.DeserializeObject<Configuration>(text);
+
                 OutstationStackConfig config = new OutstationStackConfig();
 
                 config.databaseTemplate = new DatabaseTemplate(76, 1, 74, 4, 0, 46, 917, 11);
