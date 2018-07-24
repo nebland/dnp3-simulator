@@ -200,7 +200,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             ListviewDatabaseAdapter.Process(changes, listBoxEvents);
 
             // merge these changes onto the main changeset
-            changes.Apply(events);                        
+            changes.Apply(events);
             
             this.CheckState();
         }
@@ -213,11 +213,19 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                var output = String.Format("Accepted CROB: {0} - {1}", command.code, index);
-                this.listBoxLog.Items.Add(output);
+                ushort inputIndex = m_configuration.binaryIndexOutputToInput[index];
+
+                this.listBoxLog.Items.Add(String.Format("Accepted CROB: {0} - {1}", command.code, index));
+                this.listBoxLog.Items.Add(String.Format("Writing CROB: {0}", inputIndex));
 
                 var changes = new ChangeSet();
-                changes.Update(new BinaryOutputStatus(value, 0x01, DateTime.Now), index);
+
+                DateTime dateTime = DateTime.Now;
+                byte quality = 0x01;
+
+                changes.Update(new BinaryOutputStatus(value, quality, dateTime), index);
+                changes.Update(new Binary(value, quality, dateTime), inputIndex);
+
                 loader.Load(changes);
             }
         }
@@ -230,11 +238,17 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                var output = String.Format("Accepted AOB: {0} - {1}", value, index);
-                this.listBoxLog.Items.Add(output);
+                ushort inputIndex = m_configuration.analogIndexOutputToInput[index];
+
+                this.listBoxLog.Items.Add(String.Format("Accepted AOB: {0} - {1}", value, index));
+                this.listBoxLog.Items.Add(String.Format("Writing AI: {0}", inputIndex));
 
                 var changes = new ChangeSet();
-                changes.Update(new AnalogOutputStatus(value, 0x01, DateTime.Now), index);
+                byte quality = 0x01;
+
+                changes.Update(new AnalogOutputStatus(value, quality, DateTime.Now), index);
+                changes.Update(new Analog(value, quality), inputIndex);
+
                 loader.Load(changes);
             }
         }
