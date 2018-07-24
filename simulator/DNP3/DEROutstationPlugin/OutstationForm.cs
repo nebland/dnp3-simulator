@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.Commons;
+using Automatak.Simulator.DNP3.Commons.Configuration;
 
 namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 {
@@ -20,9 +21,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         readonly EventedOutstationApplication application;
         readonly MeasurementCache cache;
         readonly ProxyCommandHandler proxy;
-        readonly IMeasurementLoader loader;        
+        readonly IMeasurementLoader loader;
 
         readonly ChangeSet events = new ChangeSet();
+
+        readonly Configuration m_configuration;
 
         public OutstationForm(IOutstation outstation, EventedOutstationApplication application, MeasurementCache cache, ProxyCommandHandler proxy, String alias)
         {
@@ -50,6 +53,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
             // and use this form as the proxy
             proxy.CommandProxy = this;
+
+            m_configuration = Configuration.LoadConfiguration();
         }
 
         void application_TimeWrite(ulong millisecSinceEpoch)
@@ -239,47 +244,39 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
          */
         CommandStatus OnControl(ControlRelayOutputBlock command, ushort index, bool operate)
         {
-            bool isIndexValid = true;
-
-            if (isIndexValid)
+            if (!(index < m_configuration.binaryOutputs.Count))
             {
-                switch (command.code)
-                {
-                    case (ControlCode.LATCH_ON):
-                        if (operate) this.LoadSingleBinaryOutputStatus(command, index, true);
-                        return CommandStatus.SUCCESS;
-
-                    case (ControlCode.LATCH_OFF):
-                        if (operate) this.LoadSingleBinaryOutputStatus(command, index, false);
-                        return CommandStatus.SUCCESS;
-
-                    default:
-                        return CommandStatus.NOT_SUPPORTED;
-                }
+                return CommandStatus.OUT_OF_RANGE;
             }
-            else
+
+            switch (command.code)
             {
-                return CommandStatus.NOT_SUPPORTED;
+                case (ControlCode.LATCH_ON):
+                    if (operate) this.LoadSingleBinaryOutputStatus(command, index, true);
+                    return CommandStatus.SUCCESS;
+
+                case (ControlCode.LATCH_OFF):
+                    if (operate) this.LoadSingleBinaryOutputStatus(command, index, false);
+                    return CommandStatus.SUCCESS;
+
+                default:
+                    return CommandStatus.NOT_SUPPORTED;
             }
         }
 
         CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
-            bool isIndexValid = true;
-
-            if (isIndexValid)
+            if (!(index < m_configuration.analogOutputs.Count))
             {
-                if (operate)
-                {
-                    LoadSingleAnalogOutputStatus(index, value);
-                }
+                return CommandStatus.OUT_OF_RANGE;
+            }
 
-                return CommandStatus.SUCCESS;
-            }
-            else
+            if (operate)
             {
-                return CommandStatus.NOT_SUPPORTED;
+                LoadSingleAnalogOutputStatus(index, value);
             }
+
+            return CommandStatus.SUCCESS;
         }
 
         private void measurementView_OnRowSelectionChanged(IEnumerable<UInt16> selection)
