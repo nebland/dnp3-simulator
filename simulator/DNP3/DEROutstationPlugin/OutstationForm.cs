@@ -225,7 +225,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                var output = String.Format("Accepted CROB: {0} - {1}", value, index);
+                var output = String.Format("Accepted AOB: {0} - {1}", value, index);
                 this.listBoxLog.Items.Add(output);
 
                 var changes = new ChangeSet();
