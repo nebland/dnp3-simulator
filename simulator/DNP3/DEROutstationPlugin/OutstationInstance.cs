@@ -48,7 +48,15 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
 
                 OutstationStackConfig config = new OutstationStackConfig();
 
-                config.databaseTemplate = new DatabaseTemplate(76, 1, 74, 4, 0, 46, 917, 11);
+                config.databaseTemplate = new DatabaseTemplate(
+                    (ushort) configuration.binaryInputs.Count, 
+                    1, 
+                    (ushort) configuration.analogInputs.Count, 
+                    4, 
+                    0, 
+                    (ushort) configuration.binaryOutputs.Count, 
+                    (ushort) configuration.analogOutputs.Count, 
+                    11);
 
                 config.outstation.config.allowUnsolicited = true;
 
