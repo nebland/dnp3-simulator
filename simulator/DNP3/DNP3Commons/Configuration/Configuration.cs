@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Automatak.DNP3.Interface;
+
 using Newtonsoft.Json;
 
 namespace Automatak.Simulator.DNP3.Commons.Configuration
@@ -22,6 +24,47 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         // additional containers created for convenience
         public Dictionary<ushort, ushort> analogIndexOutputToInput { get; private set; }
         public Dictionary<ushort, ushort> binaryIndexOutputToInput { get; private set; }
+        private static Dictionary<ushort, PointClass> pointClass { get; set; }
+
+        /*
+         * Convert index from format like "AI0" to a number
+         */
+        public static ushort covertIndex(string index)
+        {
+            string indexNumber = index.Substring(2, index.Count() - 2);
+
+            return ushort.Parse(indexNumber);
+        }
+
+        public static PointClass convertPointClass(string pointIndexString)
+        {
+            if (String.IsNullOrEmpty(pointIndexString))
+            {
+                return PointClass.Class1;
+            }
+
+            ushort pointIndex = ushort.Parse(pointIndexString);
+
+            if (!Configuration.pointClass.ContainsKey(pointIndex))
+            {
+                return PointClass.Class1;
+            }
+
+            return Configuration.pointClass[pointIndex];
+        }
+
+        static Configuration()
+        {
+            //
+            // convert point class numbers to PointClass type
+            //
+            Configuration.pointClass = new Dictionary<ushort, PointClass>();
+
+            Configuration.pointClass[0] = PointClass.Class0;
+            Configuration.pointClass[1] = PointClass.Class1;
+            Configuration.pointClass[2] = PointClass.Class2;
+            Configuration.pointClass[3] = PointClass.Class3;
+        }
 
         public static Configuration LoadConfiguration()
         {
@@ -42,20 +85,20 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
 
             foreach (AnalogIndexMap map in configuration.analogIndexMap)
             {
-                string aiIndexNumber = map.aiIndex.Substring(2, map.aiIndex.Count() - 2);
-                string aoIndexNumber = map.aoIndex.Substring(2, map.aoIndex.Count() - 2);
+                ushort aiIndexNumber = Configuration.covertIndex(map.aiIndex);
+                ushort aoIndexNumber = Configuration.covertIndex(map.aoIndex);
 
-                configuration.analogIndexOutputToInput[ushort.Parse(aoIndexNumber)] = ushort.Parse(aiIndexNumber);
+                configuration.analogIndexOutputToInput[aoIndexNumber] = aiIndexNumber;
             }
 
             configuration.binaryIndexOutputToInput = new Dictionary<ushort, ushort>();
 
             foreach (BinaryIndexMap map in configuration.binaryIndexMap)
             {
-                string biIndexNumber = map.biIndex.Substring(2, map.biIndex.Count() - 2);
-                string boIndexNumber = map.boIndex.Substring(2, map.boIndex.Count() - 2);
+                ushort biIndexNumber = Configuration.covertIndex(map.biIndex);
+                ushort boIndexNumber = Configuration.covertIndex(map.boIndex);
 
-                configuration.binaryIndexOutputToInput[ushort.Parse(boIndexNumber)] = ushort.Parse(biIndexNumber);
+                configuration.binaryIndexOutputToInput[boIndexNumber] = biIndexNumber;
             }
 
             return configuration;

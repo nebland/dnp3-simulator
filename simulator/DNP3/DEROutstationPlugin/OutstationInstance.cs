@@ -58,22 +58,26 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
 
                 config.outstation.config.unsolClassMask = ClassField.AllClasses;
 
-                for (int index = 0; index < config.databaseTemplate.analogs.Count; index++)
+                foreach (AnalogInput analogInput in configuration.analogInputs)
                 {
-                    config.databaseTemplate.analogs[index].clazz = PointClass.Class1;
+                    ushort index = Configuration.covertIndex(analogInput.pointIndex);
+
+                    config.databaseTemplate.analogs[index].clazz = Configuration.convertPointClass(analogInput.defaultEventClass);
 
                     config.databaseTemplate.analogs[index].eventVariation = EventAnalogVariation.Group32Var7;
 
                     config.databaseTemplate.analogs[index].staticVariation = StaticAnalogVariation.Group30Var5;
                 }
 
-                for (int index = 0; index < config.databaseTemplate.binaries.Count; index++)
+                foreach (BinaryInput binaryInput in configuration.binaryInputs)
                 {
-                    config.databaseTemplate.binaries[index].clazz = PointClass.Class1;
+                    ushort index = Configuration.covertIndex(binaryInput.pointIndex);
 
-                    config.databaseTemplate.binaries[index].staticVariation = StaticBinaryVariation.Group1Var2;
+                    config.databaseTemplate.analogs[index].clazz = Configuration.convertPointClass(binaryInput.defaultEventClass);
 
-                    config.databaseTemplate.binaries[index].eventVariation = EventBinaryVariation.Group2Var2;
+                    config.databaseTemplate.analogs[index].eventVariation = EventAnalogVariation.Group32Var7;
+
+                    config.databaseTemplate.analogs[index].staticVariation = StaticAnalogVariation.Group30Var5;
                 }
 
                 return config;

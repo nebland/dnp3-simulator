@@ -24,6 +24,5 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public string resolution { get; set; }
         public string lnClass { get; set; }
         public string description { get; set; }
-
     }
 }
