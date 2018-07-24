@@ -58,20 +58,6 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
 
                 config.outstation.config.unsolClassMask = ClassField.AllClasses;
 
-                for (int index = 0; index < config.databaseTemplate.analogOutputStatii.Count; index++)
-                {
-                    config.databaseTemplate.analogOutputStatii[index].clazz = PointClass.Class0;
-
-                    config.databaseTemplate.analogOutputStatii[index].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
-                }
-
-                for (int index = 0; index < config.databaseTemplate.binaryOutputStatii.Count; index++)
-                {
-                    config.databaseTemplate.binaryOutputStatii[index].clazz = PointClass.Class0;
-
-                    config.databaseTemplate.binaryOutputStatii[index].staticVariation = StaticBinaryOutputStatusVariation.Group10Var2;
-                }
-
                 for (int index = 0; index < config.databaseTemplate.analogs.Count; index++)
                 {
                     config.databaseTemplate.analogs[index].clazz = PointClass.Class1;

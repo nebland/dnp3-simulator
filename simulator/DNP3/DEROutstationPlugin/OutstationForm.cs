@@ -213,19 +213,30 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                ushort inputIndex = m_configuration.binaryIndexOutputToInput[index];
-
-                this.listBoxLog.Items.Add(String.Format("Accepted CROB: {0} - {1}", command.code, index));
-                this.listBoxLog.Items.Add(String.Format("Writing CROB: {0}", inputIndex));
-
                 var changes = new ChangeSet();
 
                 DateTime dateTime = DateTime.Now;
                 byte quality = 0x01;
 
-                changes.Update(new BinaryOutputStatus(value, quality, dateTime), index);
-                changes.Update(new Binary(value, quality, dateTime), inputIndex);
+                string logText = String.Format("Accepted CROB: {0} - {1}", command.code, index);
 
+                //
+                // set the output point in the change set
+                //
+                changes.Update(new BinaryOutputStatus(value, quality, dateTime), index);
+
+                //
+                // set the mapped input point in the change set
+                //
+                if (m_configuration.binaryIndexOutputToInput.ContainsKey(index))
+                {
+                    ushort inputIndex = m_configuration.binaryIndexOutputToInput[index];
+
+                    logText += String.Format(", writing CROB: {0}", inputIndex);
+                    changes.Update(new Binary(value, quality, dateTime), inputIndex);
+                }
+
+                this.listBoxLog.Items.Add(logText);
                 loader.Load(changes);
             }
         }
@@ -238,16 +249,31 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                ushort inputIndex = m_configuration.analogIndexOutputToInput[index];
-
-                this.listBoxLog.Items.Add(String.Format("Accepted AOB: {0} - {1}", value, index));
-                this.listBoxLog.Items.Add(String.Format("Writing AI: {0}", inputIndex));
-
                 var changes = new ChangeSet();
+
                 byte quality = 0x01;
 
+                string logText = String.Format("Accepted AOB: {0} - {1}", value, index);
+
+                //
+                // set the output point in the change set
+                //
+                this.listBoxLog.Items.Add(logText);
                 changes.Update(new AnalogOutputStatus(value, quality, DateTime.Now), index);
-                changes.Update(new Analog(value, quality), inputIndex);
+
+                //
+                // set the mapped input point in the change set
+                //
+                if (m_configuration.analogIndexOutputToInput.ContainsKey(index))
+                {
+                    ushort inputIndex = m_configuration.analogIndexOutputToInput[index];
+
+                    changes.Update(new Analog(value, quality), inputIndex);
+
+                    logText += String.Format(", writing AI: {0}", inputIndex);
+                }
+
+                this.listBoxLog.Items.Add(logText);
 
                 loader.Load(changes);
             }
