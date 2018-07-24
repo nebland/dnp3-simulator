@@ -1521,11 +1521,37 @@
       "aoIndex": "AO220"
     },
     {
+      "aiIndex": "AI29",
+      "aoIndex": "AO0"
+    },
+    {
       "aiIndex": "AI190",
       "aoIndex": "AO127"
     }
   ],
   "analogOutputs": [
+    {
+      "cmd": 2,
+      "lnInst": "",
+      "name": "Reference Voltage",
+      "reference": "",
+      "chg": 2,
+      "resolution": "(1%)",
+      "offSet": 0,
+      "maximum": 2147483647,
+      "dataObject": "VRef",
+      "directOperateNoAck": "X",
+      "minimum": 0,
+      "pointIndex": "AO0",
+      "cdc": "ASG",
+      "multiplier": 0.1,
+      "units": "Volts",
+      "selectOperate": "X",
+      "uniqueString": "DECP.VRef",
+      "directOperate": "X",
+      "lnClass": "DECP",
+      "description": ""
+    },
     {
       "cmd": 2,
       "lnInst": "",
@@ -11648,6 +11674,24 @@
     }
   ],
   "analogInputs": [
+    {
+      "defaultEventClass": 3,
+      "lninst": "",
+      "name": "DER Profile Version Number",
+      "reference": "",
+      "cdc": "",
+      "offSet": 0,
+      "maximum": 100,
+      "dataObject": "",
+      "minimum": 100,
+      "pointIndex": "AI0",
+      "multiplier": 0.01,
+      "units": "n/a",
+      "uniqueString": ".",
+      "resolution": "",
+      "lnClass": "",
+      "description": "  Always the number 1.00 for this specification."
+    },
     {
       "defaultEventClass": 3,
       "lninst": "",
@@ -21878,6 +21922,20 @@
       "function": "",
       "defaultEventClass": 1,
       "lnInst": "",
+      "name": "System Communication Error",
+      "cdc": "SPS",
+      "dataObject": "ChLiv",
+      "state1": "Alarm: Communications error exists in the ESS",
+      "state0": "Normal",
+      "pointIndex": "BI0",
+      "uniqueString": "LCCH.ChLiv",
+      "lnClass": "LCCH",
+      "description": ""
+    },
+    {
+      "function": "",
+      "defaultEventClass": 1,
+      "lnInst": "",
       "name": "System Has Priority 1 Alarms",
       "cdc": "SPS",
       "dataObject": "GrAlm",
@@ -23435,8 +23493,16 @@
       "biIndex": "BI83"
     },
     {
+      "boIndex": "BO17",
+      "biIndex": "BI69"
+    },
+    {
       "boIndex": "BO11",
       "biIndex": "BI30"
+    },
+    {
+      "boIndex": "BO0",
+      "biIndex": "BI11"
     },
     {
       "boIndex": "BO26",
@@ -23483,10 +23549,6 @@
       "biIndex": "BI90"
     },
     {
-      "boIndex": "BO17",
-      "biIndex": "BI69"
-    },
-    {
       "boIndex": "BO15",
       "biIndex": "BI67"
     },
@@ -23512,6 +23574,31 @@
     }
   ],
   "binaryOutputs": [
+    {
+      "latchOff": "X",
+      "cdc": "ENS",
+      "dataObject": "DEROpSt.disconnected and blocked",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DSTO.DEROpSt.disconnected and blocked",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Lock Out",
+      "state0": "Not Locked Out",
+      "pointIndex": "BO0",
+      "directOperate": "X",
+      "lnClass": "DSTO",
+      "pulseOn": "X",
+      "name": "System Set Lockout State",
+      "selectOperate": "X"
+    },
     {
       "latchOff": "X",
       "cdc": "SPC",

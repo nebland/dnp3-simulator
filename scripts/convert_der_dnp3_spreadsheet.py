@@ -40,7 +40,7 @@ df = pd.read_excel(
 analog_input_objects = []
 analog_input_point_index_map = {}
 
-for row_index in range(4, 379):
+for row_index in range(3, 379):
 
     if row_index == 340:
         # this cell has point index as AI337 - AI530
@@ -106,7 +106,7 @@ df = pd.read_excel(
 analog_output_objects = []
 analog_output_point_index_map = {}
 
-for row_index in range(4, 271):
+for row_index in range(3, 271):
     if row_index == 256:
         # this cell has point index as AO253 - AO446
         # create separate pointIndex entries for each, create a unique string
@@ -180,7 +180,7 @@ df = pd.read_excel(
 binary_input_objects = []
 binary_input_point_index_map = {}
 
-for row_index in range(4, 111):
+for row_index in range(3, 111):
     fields = {}
 
     fields["pointIndex"] = df.iat[row_index, 0]
@@ -215,7 +215,7 @@ df = pd.read_excel(
 binary_output_objects = []
 binary_output_point_index_map = {}
 
-for row_index in range(4, 45):
+for row_index in range(3, 45):
     fields = {}
 
     fields["pointIndex"] = df.iat[row_index, 0]
