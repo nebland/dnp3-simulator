@@ -24537,5 +24537,35 @@
       "name": "Volt-VAr Enable Autonomous Voltage Reference Adjustment",
       "selectOperate": "X"
     }
+  ],
+  "counters": [
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C0",
+      "name": "System Active Energy Delivered",
+      "description": "  Measured in watt-hours."
+    },
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C1",
+      "name": "System Active Energy Received",
+      "description": "  Measured in watt-hours."
+    },
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C2",
+      "name": "System Reactive Energy Delivered",
+      "description": "  Measured in VAr-hours."
+    },
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C3",
+      "name": "System Reactive Energy Received",
+      "description": "  Measured in VAr-hours."
+    }
   ]
 }

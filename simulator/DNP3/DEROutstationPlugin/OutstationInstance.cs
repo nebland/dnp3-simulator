@@ -52,7 +52,7 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     (ushort) configuration.binaryInputs.Count, 
                     1, 
                     (ushort) configuration.analogInputs.Count, 
-                    4, 
+                    (ushort) configuration.counters.Count, 
                     0, 
                     (ushort) configuration.binaryOutputs.Count, 
                     (ushort) configuration.analogOutputs.Count, 

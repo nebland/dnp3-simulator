@@ -251,6 +251,30 @@ for row_index in range(4, 45):
 
 
 ################################################################################
+### convert counters tab
+
+df = pd.read_excel(
+    spreadsheet_name,
+    sheet_name='CTR',
+    keep_default_na=False)
+
+counter_objects = []
+
+for row_index in range(3, 7):
+    fields = {}
+
+    fields["pointIndex"] = df.iat[row_index, 0].strip()
+    process_name_description(fields, df, row_index)
+    fields["frozenCounterExists"] = df.iat[row_index, 3]
+    fields["frozenCounterEventDefaultClass"] = df.iat[row_index, 4]
+
+    counter_objects.append(fields)
+
+### end convert counters tab
+################################################################################
+
+
+################################################################################
 ### cretae mapping from input indexs to output indexs
 
 analog_input_to_output_indexes = []
@@ -284,6 +308,7 @@ with open("dnp3_profile_for_der_communications.json", "w") as outputfile:
         "binaryOutputs": binary_output_objects,
         "analogInputs": analog_input_objects,
         "analogOutputs": analog_output_objects,
+        "counters": counter_objects,
         "analogIndexMap": analog_input_to_output_indexes,
         "binaryIndexMap": binary_input_to_output_indexes
     }
