@@ -300,6 +300,10 @@
       <Project>{1abc9a1a-6026-4803-bab4-c1190375a531}</Project>
       <Name>DefaultOutstationPlugin</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DerOutstationPlugin\DEROutstationPlugin.csproj">
+      <Project>{83698967-ff95-4383-818c-b70f9b5aeee2}</Project>
+      <Name>DEROutstationPlugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DNP3Commons\DNP3Commons.csproj">
       <Project>{bf90d749-22fb-49fd-b840-4ff875d12cc6}</Project>
       <Name>DNP3Commons</Name>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "simulator", "simulator", "{3E6996FF-807F-4F9D-8C72-932EE398B6A1}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNP3Module", "Simulator\DNP3\DNP3Simulator\DNP3Module.csproj", "{2EDBD258-1A19-4527-9C92-7418191BEE87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulator", "Simulator\Simulator\Simulator.csproj", "{9850AA24-6847-4611-81DA-6F04F92B3400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEROutstationPlugin", "simulator\DNP3\DerOutstationPlugin\DEROutstationPlugin.csproj", "{83698967-FF95-4383-818C-B70F9B5AEEE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,14 @@ Global
 		{9850AA24-6847-4611-81DA-6F04F92B3400}.Release|Any CPU.Build.0 = Release|x86
 		{9850AA24-6847-4611-81DA-6F04F92B3400}.Release|x86.ActiveCfg = Release|x86
 		{9850AA24-6847-4611-81DA-6F04F92B3400}.Release|x86.Build.0 = Release|x86
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{83698967-FF95-4383-818C-B70F9B5AEEE2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,5 +130,6 @@ Global
 		{BF90D749-22FB-49FD-B840-4FF875D12CC6} = {3FFDA7A5-5925-4644-9B43-9C118DA6FFE5}
 		{2EDBD258-1A19-4527-9C92-7418191BEE87} = {3FFDA7A5-5925-4644-9B43-9C118DA6FFE5}
 		{9850AA24-6847-4611-81DA-6F04F92B3400} = {3E6996FF-807F-4F9D-8C72-932EE398B6A1}
+		{83698967-FF95-4383-818C-B70F9B5AEEE2} = {3FFDA7A5-5925-4644-9B43-9C118DA6FFE5}
 	EndGlobalSection
 EndGlobal
