@@ -12,12 +12,12 @@ def process_name_description(fields, dataframe, row_index):
     # field_name = "Name / Description"
     field_name = 1
     field = dataframe.iat[row_index, field_name]
-    
+
     # print("process_name_description field '" + str(field)) + "'"
-    
+
     # name and description are in same cell, they delimited by a period
     name_description = field.split(".", 1)
-    
+
     fields["name"] = name_description[0]
     # print("  Name: " + str(name_description[0]))
     if len(name_description) == 2:
@@ -33,15 +33,15 @@ spreadsheet_name = 'Draft-DNP3-Profile-for-DER-Communications-2018-06-28.xlsx'
 ### convert analog inputs tab
 
 df = pd.read_excel(
-    spreadsheet_name, 
+    spreadsheet_name,
     sheet_name='AI',
     keep_default_na=False)
- 
+
 analog_input_objects = []
 analog_input_point_index_map = {}
 
 for row_index in range(4, 379):
-    
+
     if row_index == 340:
         # this cell has point index as AI337 - AI530
         # create separate pointIndex entries for each, create a unique string
@@ -63,9 +63,9 @@ for row_index in range(4, 379):
             fields["cdc"] = df.iat[row_index, 12]
             fields["reference"] = df.iat[row_index, 13]
             fields["uniqueString"] = df.iat[row_index, 14] + " mapping range " + str(i - 337)
-            
+
             analog_input_objects.append(fields)
-            
+
             # map the name to a point index
             analog_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
     else:
@@ -85,10 +85,10 @@ for row_index in range(4, 379):
       fields["cdc"] = df.iat[row_index, 12]
       fields["reference"] = df.iat[row_index, 13]
       fields["uniqueString"] = df.iat[row_index, 14]
-      
+
       # map the name to a point index
       analog_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
-    
+
       analog_input_objects.append(fields)
 
 ### end convert analog inputs tab
@@ -99,16 +99,15 @@ for row_index in range(4, 379):
 ### convert analog outputs tab
 
 df = pd.read_excel(
-    spreadsheet_name, 
+    spreadsheet_name,
     sheet_name='AO',
     keep_default_na=False)
- 
+
 analog_output_objects = []
 analog_output_point_index_map = {}
 
 for row_index in range(4, 271):
     if row_index == 256:
-        print("---------------------------------------------------" + str(row_index) + " " + str(df.iat[row_index, 0]))
         # this cell has point index as AO253 - AO446
         # create separate pointIndex entries for each, create a unique string
         # to match with analog input point indexes
@@ -134,9 +133,9 @@ for row_index in range(4, 271):
             fields["reference"] = df.iat[row_index, 17]
             # "Unique String" cell in AI tab has a single "." for some reason
             fields["uniqueString"] = df.iat[row_index, 18] + ". mapping range " + str(i - 253)
-            
+
             analog_output_objects.append(fields)
-            
+
             # map the name to a point index
             analog_output_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
     else:
@@ -160,9 +159,9 @@ for row_index in range(4, 271):
         fields["cdc"] = df.iat[row_index, 16]
         fields["reference"] = df.iat[row_index, 17]
         fields["uniqueString"] = df.iat[row_index, 18]
-        
+
         analog_output_objects.append(fields)
-        
+
         # map the name to a point index
         analog_output_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
 
@@ -174,7 +173,7 @@ for row_index in range(4, 271):
 ### convert binary inputs tab
 
 df = pd.read_excel(
-    spreadsheet_name, 
+    spreadsheet_name,
     sheet_name='BI',
     keep_default_na=False)
 
@@ -183,7 +182,7 @@ binary_input_point_index_map = {}
 
 for row_index in range(4, 111):
     fields = {}
-    
+
     fields["pointIndex"] = df.iat[row_index, 0]
     process_name_description(fields, df, row_index)
     fields["defaultEventClass"] = df.iat[row_index, 2]
@@ -195,9 +194,9 @@ for row_index in range(4, 111):
     fields["cdc"] = df.iat[row_index, 8]
     fields["function"] = df.iat[row_index, 9]
     fields["uniqueString"] = df.iat[row_index, 10]
-    
+
     binary_input_objects.append(fields)
-    
+
     # map the name to a point index
     binary_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
 
@@ -209,7 +208,7 @@ for row_index in range(4, 111):
 ### convert binary outputs tab
 
 df = pd.read_excel(
-    spreadsheet_name, 
+    spreadsheet_name,
     sheet_name='BO',
     keep_default_na=False)
 
@@ -218,7 +217,7 @@ binary_output_point_index_map = {}
 
 for row_index in range(4, 45):
     fields = {}
-    
+
     fields["pointIndex"] = df.iat[row_index, 0]
     process_name_description(fields, df, row_index)
     fields["selectOperate"] = df.iat[row_index, 2]
@@ -241,9 +240,9 @@ for row_index in range(4, 45):
     fields["dataObject"] = df.iat[row_index, 19]
     fields["cdc"] = df.iat[row_index, 20]
     fields["uniqueString"] = df.iat[row_index, 21]
-    
+
     binary_output_objects.append(fields)
-    
+
     # map the name to a point index
     binary_output_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
 
@@ -254,11 +253,12 @@ for row_index in range(4, 45):
 ################################################################################
 ### cretae mapping from input indexs to output indexs
 
-input_to_output_indexes = []
+analog_input_to_output_indexes = []
+binary_input_to_output_indexes = []
 
 for name in analog_output_point_index_map:
     if name in analog_input_point_index_map:
-        input_to_output_indexes.append({
+        analog_input_to_output_indexes.append({
             "aiIndex": analog_input_point_index_map[name],
             "aoIndex": analog_output_point_index_map[name]
         })
@@ -267,7 +267,7 @@ for name in analog_output_point_index_map:
 
 for name in binary_output_point_index_map:
     if name in binary_input_point_index_map:
-        input_to_output_indexes.append({
+        binary_input_to_output_indexes.append({
             "biIndex": binary_input_point_index_map[name],
             "boIndex": binary_output_point_index_map[name]
         })
@@ -284,7 +284,8 @@ with open("dnp3_profile_for_der_communications.json", "w") as outputfile:
         "binaryOutputs": binary_output_objects,
         "analogInputs": analog_input_objects,
         "analogOutputs": analog_output_objects,
-        "map": input_to_output_indexes
+        "analogIndexMap": analog_input_to_output_indexes,
+        "binaryIndexMap": binary_input_to_output_indexes
     }
-    
+
     outputfile.write(json.dumps(data))

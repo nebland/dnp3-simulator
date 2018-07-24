@@ -12,6 +12,7 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public List<AnalogOutput> analogOutputs { get; set; }
         public List<BinaryInput> binaryInputs { get; set; }
         public List<BinaryOutput> binaryOutputs { get; set; }
-        public List<IndexMap> map { get; set; }
+        public List<AnalogIndexMap> analogIndexMap { get; set; }
+        public List<BinaryIndexMap> binaryIndexMap { get; set; }
     }
 }
