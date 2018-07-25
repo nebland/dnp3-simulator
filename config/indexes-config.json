@@ -1,5 +1,1557 @@
 {
+  "analogIndexMap": [
+    {
+      "aiIndex": "AI110",
+      "aoIndex": "AO53"
+    },
+    {
+      "aiIndex": "AI169",
+      "aoIndex": "AO108"
+    },
+    {
+      "aiIndex": "AI566",
+      "aoIndex": "AO458"
+    },
+    {
+      "aiIndex": "AI561",
+      "aoIndex": "AO453"
+    },
+    {
+      "aiIndex": "AI310",
+      "aoIndex": "AO228"
+    },
+    {
+      "aiIndex": "AI559",
+      "aoIndex": "AO451"
+    },
+    {
+      "aiIndex": "AI244",
+      "aoIndex": "AO170"
+    },
+    {
+      "aiIndex": "AI221",
+      "aoIndex": "AO154"
+    },
+    {
+      "aiIndex": "AI53",
+      "aoIndex": "AO9"
+    },
+    {
+      "aiIndex": "AI41",
+      "aoIndex": "AO4"
+    },
+    {
+      "aiIndex": "AI195",
+      "aoIndex": "AO131"
+    },
+    {
+      "aiIndex": "AI189",
+      "aoIndex": "AO126"
+    },
+    {
+      "aiIndex": "AI207",
+      "aoIndex": "AO141"
+    },
+    {
+      "aiIndex": "AI289",
+      "aoIndex": "AO211"
+    },
+    {
+      "aiIndex": "AI165",
+      "aoIndex": "AO104"
+    },
+    {
+      "aiIndex": "AI563",
+      "aoIndex": "AO455"
+    },
+    {
+      "aiIndex": "AI312",
+      "aoIndex": "AO229"
+    },
+    {
+      "aiIndex": "AI61",
+      "aoIndex": "AO17"
+    },
+    {
+      "aiIndex": "AI227",
+      "aoIndex": "AO155"
+    },
+    {
+      "aiIndex": "AI269",
+      "aoIndex": "AO192"
+    },
+    {
+      "aiIndex": "AI511",
+      "aoIndex": "AO427"
+    },
+    {
+      "aiIndex": "AI512",
+      "aoIndex": "AO428"
+    },
+    {
+      "aiIndex": "AI513",
+      "aoIndex": "AO429"
+    },
+    {
+      "aiIndex": "AI514",
+      "aoIndex": "AO430"
+    },
+    {
+      "aiIndex": "AI507",
+      "aoIndex": "AO423"
+    },
+    {
+      "aiIndex": "AI508",
+      "aoIndex": "AO424"
+    },
+    {
+      "aiIndex": "AI509",
+      "aoIndex": "AO425"
+    },
+    {
+      "aiIndex": "AI510",
+      "aoIndex": "AO426"
+    },
+    {
+      "aiIndex": "AI515",
+      "aoIndex": "AO431"
+    },
+    {
+      "aiIndex": "AI516",
+      "aoIndex": "AO432"
+    },
+    {
+      "aiIndex": "AI204",
+      "aoIndex": "AO138"
+    },
+    {
+      "aiIndex": "AI152",
+      "aoIndex": "AO91"
+    },
+    {
+      "aiIndex": "AI450",
+      "aoIndex": "AO366"
+    },
+    {
+      "aiIndex": "AI205",
+      "aoIndex": "AO139"
+    },
+    {
+      "aiIndex": "AI454",
+      "aoIndex": "AO370"
+    },
+    {
+      "aiIndex": "AI299",
+      "aoIndex": "AO219"
+    },
+    {
+      "aiIndex": "AI415",
+      "aoIndex": "AO331"
+    },
+    {
+      "aiIndex": "AI416",
+      "aoIndex": "AO332"
+    },
+    {
+      "aiIndex": "AI409",
+      "aoIndex": "AO325"
+    },
+    {
+      "aiIndex": "AI410",
+      "aoIndex": "AO326"
+    },
+    {
+      "aiIndex": "AI407",
+      "aoIndex": "AO323"
+    },
+    {
+      "aiIndex": "AI408",
+      "aoIndex": "AO324"
+    },
+    {
+      "aiIndex": "AI413",
+      "aoIndex": "AO329"
+    },
+    {
+      "aiIndex": "AI414",
+      "aoIndex": "AO330"
+    },
+    {
+      "aiIndex": "AI411",
+      "aoIndex": "AO327"
+    },
+    {
+      "aiIndex": "AI412",
+      "aoIndex": "AO328"
+    },
+    {
+      "aiIndex": "AI144",
+      "aoIndex": "AO84"
+    },
+    {
+      "aiIndex": "AI115",
+      "aoIndex": "AO57"
+    },
+    {
+      "aiIndex": "AI277",
+      "aoIndex": "AO199"
+    },
+    {
+      "aiIndex": "AI235",
+      "aoIndex": "AO162"
+    },
+    {
+      "aiIndex": "AI257",
+      "aoIndex": "AO181"
+    },
+    {
+      "aiIndex": "AI358",
+      "aoIndex": "AO274"
+    },
+    {
+      "aiIndex": "AI171",
+      "aoIndex": "AO110"
+    },
+    {
+      "aiIndex": "AI102",
+      "aoIndex": "AO48"
+    },
+    {
+      "aiIndex": "AI124",
+      "aoIndex": "AO65"
+    },
+    {
+      "aiIndex": "AI321",
+      "aoIndex": "AO237"
+    },
+    {
+      "aiIndex": "AI142",
+      "aoIndex": "AO82"
+    },
+    {
+      "aiIndex": "AI562",
+      "aoIndex": "AO454"
+    },
+    {
+      "aiIndex": "AI91",
+      "aoIndex": "AO37"
+    },
+    {
+      "aiIndex": "AI479",
+      "aoIndex": "AO395"
+    },
+    {
+      "aiIndex": "AI229",
+      "aoIndex": "AO157"
+    },
+    {
+      "aiIndex": "AI446",
+      "aoIndex": "AO362"
+    },
+    {
+      "aiIndex": "AI445",
+      "aoIndex": "AO361"
+    },
+    {
+      "aiIndex": "AI442",
+      "aoIndex": "AO358"
+    },
+    {
+      "aiIndex": "AI441",
+      "aoIndex": "AO357"
+    },
+    {
+      "aiIndex": "AI444",
+      "aoIndex": "AO360"
+    },
+    {
+      "aiIndex": "AI443",
+      "aoIndex": "AO359"
+    },
+    {
+      "aiIndex": "AI438",
+      "aoIndex": "AO354"
+    },
+    {
+      "aiIndex": "AI437",
+      "aoIndex": "AO353"
+    },
+    {
+      "aiIndex": "AI440",
+      "aoIndex": "AO356"
+    },
+    {
+      "aiIndex": "AI439",
+      "aoIndex": "AO355"
+    },
+    {
+      "aiIndex": "AI50",
+      "aoIndex": "AO6"
+    },
+    {
+      "aiIndex": "AI278",
+      "aoIndex": "AO200"
+    },
+    {
+      "aiIndex": "AI143",
+      "aoIndex": "AO83"
+    },
+    {
+      "aiIndex": "AI184",
+      "aoIndex": "AO122"
+    },
+    {
+      "aiIndex": "AI567",
+      "aoIndex": "AO459"
+    },
+    {
+      "aiIndex": "AI529",
+      "aoIndex": "AO445"
+    },
+    {
+      "aiIndex": "AI530",
+      "aoIndex": "AO446"
+    },
+    {
+      "aiIndex": "AI527",
+      "aoIndex": "AO443"
+    },
+    {
+      "aiIndex": "AI528",
+      "aoIndex": "AO444"
+    },
+    {
+      "aiIndex": "AI234",
+      "aoIndex": "AO161"
+    },
+    {
+      "aiIndex": "AI275",
+      "aoIndex": "AO197"
+    },
+    {
+      "aiIndex": "AI187",
+      "aoIndex": "AO124"
+    },
+    {
+      "aiIndex": "AI123",
+      "aoIndex": "AO64"
+    },
+    {
+      "aiIndex": "AI183",
+      "aoIndex": "AO121"
+    },
+    {
+      "aiIndex": "AI373",
+      "aoIndex": "AO289"
+    },
+    {
+      "aiIndex": "AI374",
+      "aoIndex": "AO290"
+    },
+    {
+      "aiIndex": "AI371",
+      "aoIndex": "AO287"
+    },
+    {
+      "aiIndex": "AI372",
+      "aoIndex": "AO288"
+    },
+    {
+      "aiIndex": "AI369",
+      "aoIndex": "AO285"
+    },
+    {
+      "aiIndex": "AI370",
+      "aoIndex": "AO286"
+    },
+    {
+      "aiIndex": "AI367",
+      "aoIndex": "AO283"
+    },
+    {
+      "aiIndex": "AI368",
+      "aoIndex": "AO284"
+    },
+    {
+      "aiIndex": "AI375",
+      "aoIndex": "AO291"
+    },
+    {
+      "aiIndex": "AI376",
+      "aoIndex": "AO292"
+    },
+    {
+      "aiIndex": "AI76",
+      "aoIndex": "AO26"
+    },
+    {
+      "aiIndex": "AI560",
+      "aoIndex": "AO452"
+    },
+    {
+      "aiIndex": "AI322",
+      "aoIndex": "AO238"
+    },
+    {
+      "aiIndex": "AI565",
+      "aoIndex": "AO457"
+    },
+    {
+      "aiIndex": "AI292",
+      "aoIndex": "AO214"
+    },
+    {
+      "aiIndex": "AI564",
+      "aoIndex": "AO456"
+    },
+    {
+      "aiIndex": "AI297",
+      "aoIndex": "AO217"
+    },
+    {
+      "aiIndex": "AI267",
+      "aoIndex": "AO190"
+    },
+    {
+      "aiIndex": "AI58",
+      "aoIndex": "AO14"
+    },
+    {
+      "aiIndex": "AI51",
+      "aoIndex": "AO7"
+    },
+    {
+      "aiIndex": "AI433",
+      "aoIndex": "AO349"
+    },
+    {
+      "aiIndex": "AI435",
+      "aoIndex": "AO351"
+    },
+    {
+      "aiIndex": "AI206",
+      "aoIndex": "AO140"
+    },
+    {
+      "aiIndex": "AI103",
+      "aoIndex": "AO49"
+    },
+    {
+      "aiIndex": "AI166",
+      "aoIndex": "AO105"
+    },
+    {
+      "aiIndex": "AI280",
+      "aoIndex": "AO202"
+    },
+    {
+      "aiIndex": "AI196",
+      "aoIndex": "AO132"
+    },
+    {
+      "aiIndex": "AI154",
+      "aoIndex": "AO93"
+    },
+    {
+      "aiIndex": "AI320",
+      "aoIndex": "AO236"
+    },
+    {
+      "aiIndex": "AI98",
+      "aoIndex": "AO44"
+    },
+    {
+      "aiIndex": "AI243",
+      "aoIndex": "AO169"
+    },
+    {
+      "aiIndex": "AI163",
+      "aoIndex": "AO102"
+    },
+    {
+      "aiIndex": "AI486",
+      "aoIndex": "AO402"
+    },
+    {
+      "aiIndex": "AI485",
+      "aoIndex": "AO401"
+    },
+    {
+      "aiIndex": "AI128",
+      "aoIndex": "AO69"
+    },
+    {
+      "aiIndex": "AI478",
+      "aoIndex": "AO394"
+    },
+    {
+      "aiIndex": "AI477",
+      "aoIndex": "AO393"
+    },
+    {
+      "aiIndex": "AI480",
+      "aoIndex": "AO396"
+    },
+    {
+      "aiIndex": "AI212",
+      "aoIndex": "AO145"
+    },
+    {
+      "aiIndex": "AI482",
+      "aoIndex": "AO398"
+    },
+    {
+      "aiIndex": "AI481",
+      "aoIndex": "AO397"
+    },
+    {
+      "aiIndex": "AI286",
+      "aoIndex": "AO208"
+    },
+    {
+      "aiIndex": "AI483",
+      "aoIndex": "AO399"
+    },
+    {
+      "aiIndex": "AI473",
+      "aoIndex": "AO389"
+    },
+    {
+      "aiIndex": "AI105",
+      "aoIndex": "AO51"
+    },
+    {
+      "aiIndex": "AI271",
+      "aoIndex": "AO194"
+    },
+    {
+      "aiIndex": "AI176",
+      "aoIndex": "AO115"
+    },
+    {
+      "aiIndex": "AI406",
+      "aoIndex": "AO322"
+    },
+    {
+      "aiIndex": "AI405",
+      "aoIndex": "AO321"
+    },
+    {
+      "aiIndex": "AI188",
+      "aoIndex": "AO125"
+    },
+    {
+      "aiIndex": "AI398",
+      "aoIndex": "AO314"
+    },
+    {
+      "aiIndex": "AI397",
+      "aoIndex": "AO313"
+    },
+    {
+      "aiIndex": "AI400",
+      "aoIndex": "AO316"
+    },
+    {
+      "aiIndex": "AI399",
+      "aoIndex": "AO315"
+    },
+    {
+      "aiIndex": "AI402",
+      "aoIndex": "AO318"
+    },
+    {
+      "aiIndex": "AI401",
+      "aoIndex": "AO317"
+    },
+    {
+      "aiIndex": "AI404",
+      "aoIndex": "AO320"
+    },
+    {
+      "aiIndex": "AI403",
+      "aoIndex": "AO319"
+    },
+    {
+      "aiIndex": "AI284",
+      "aoIndex": "AO206"
+    },
+    {
+      "aiIndex": "AI162",
+      "aoIndex": "AO101"
+    },
+    {
+      "aiIndex": "AI198",
+      "aoIndex": "AO133"
+    },
+    {
+      "aiIndex": "AI97",
+      "aoIndex": "AO43"
+    },
+    {
+      "aiIndex": "AI185",
+      "aoIndex": "AO123"
+    },
+    {
+      "aiIndex": "AI332",
+      "aoIndex": "AO248"
+    },
+    {
+      "aiIndex": "AI345",
+      "aoIndex": "AO261"
+    },
+    {
+      "aiIndex": "AI346",
+      "aoIndex": "AO262"
+    },
+    {
+      "aiIndex": "AI343",
+      "aoIndex": "AO259"
+    },
+    {
+      "aiIndex": "AI344",
+      "aoIndex": "AO260"
+    },
+    {
+      "aiIndex": "AI341",
+      "aoIndex": "AO257"
+    },
+    {
+      "aiIndex": "AI342",
+      "aoIndex": "AO258"
+    },
+    {
+      "aiIndex": "AI339",
+      "aoIndex": "AO255"
+    },
+    {
+      "aiIndex": "AI340",
+      "aoIndex": "AO256"
+    },
+    {
+      "aiIndex": "AI337",
+      "aoIndex": "AO253"
+    },
+    {
+      "aiIndex": "AI338",
+      "aoIndex": "AO254"
+    },
+    {
+      "aiIndex": "AI335",
+      "aoIndex": "AO251"
+    },
+    {
+      "aiIndex": "AI175",
+      "aoIndex": "AO114"
+    },
+    {
+      "aiIndex": "AI167",
+      "aoIndex": "AO106"
+    },
+    {
+      "aiIndex": "AI245",
+      "aoIndex": "AO171"
+    },
+    {
+      "aiIndex": "AI179",
+      "aoIndex": "AO118"
+    },
+    {
+      "aiIndex": "AI272",
+      "aoIndex": "AO195"
+    },
+    {
+      "aiIndex": "AI199",
+      "aoIndex": "AO134"
+    },
+    {
+      "aiIndex": "AI259",
+      "aoIndex": "AO183"
+    },
+    {
+      "aiIndex": "AI334",
+      "aoIndex": "AO250"
+    },
+    {
+      "aiIndex": "AI60",
+      "aoIndex": "AO16"
+    },
+    {
+      "aiIndex": "AI174",
+      "aoIndex": "AO113"
+    },
+    {
+      "aiIndex": "AI113",
+      "aoIndex": "AO56"
+    },
+    {
+      "aiIndex": "AI260",
+      "aoIndex": "AO184"
+    },
+    {
+      "aiIndex": "AI236",
+      "aoIndex": "AO163"
+    },
+    {
+      "aiIndex": "AI449",
+      "aoIndex": "AO365"
+    },
+    {
+      "aiIndex": "AI276",
+      "aoIndex": "AO198"
+    },
+    {
+      "aiIndex": "AI447",
+      "aoIndex": "AO363"
+    },
+    {
+      "aiIndex": "AI448",
+      "aoIndex": "AO364"
+    },
+    {
+      "aiIndex": "AI453",
+      "aoIndex": "AO369"
+    },
+    {
+      "aiIndex": "AI173",
+      "aoIndex": "AO112"
+    },
+    {
+      "aiIndex": "AI451",
+      "aoIndex": "AO367"
+    },
+    {
+      "aiIndex": "AI452",
+      "aoIndex": "AO368"
+    },
+    {
+      "aiIndex": "AI455",
+      "aoIndex": "AO371"
+    },
+    {
+      "aiIndex": "AI456",
+      "aoIndex": "AO372"
+    },
+    {
+      "aiIndex": "AI362",
+      "aoIndex": "AO278"
+    },
+    {
+      "aiIndex": "AI361",
+      "aoIndex": "AO277"
+    },
+    {
+      "aiIndex": "AI364",
+      "aoIndex": "AO280"
+    },
+    {
+      "aiIndex": "AI363",
+      "aoIndex": "AO279"
+    },
+    {
+      "aiIndex": "AI258",
+      "aoIndex": "AO182"
+    },
+    {
+      "aiIndex": "AI357",
+      "aoIndex": "AO273"
+    },
+    {
+      "aiIndex": "AI360",
+      "aoIndex": "AO276"
+    },
+    {
+      "aiIndex": "AI359",
+      "aoIndex": "AO275"
+    },
+    {
+      "aiIndex": "AI474",
+      "aoIndex": "AO390"
+    },
+    {
+      "aiIndex": "AI366",
+      "aoIndex": "AO282"
+    },
+    {
+      "aiIndex": "AI365",
+      "aoIndex": "AO281"
+    },
+    {
+      "aiIndex": "AI324",
+      "aoIndex": "AO240"
+    },
+    {
+      "aiIndex": "AI484",
+      "aoIndex": "AO400"
+    },
+    {
+      "aiIndex": "AI288",
+      "aoIndex": "AO210"
+    },
+    {
+      "aiIndex": "AI148",
+      "aoIndex": "AO87"
+    },
+    {
+      "aiIndex": "AI427",
+      "aoIndex": "AO343"
+    },
+    {
+      "aiIndex": "AI428",
+      "aoIndex": "AO344"
+    },
+    {
+      "aiIndex": "AI429",
+      "aoIndex": "AO345"
+    },
+    {
+      "aiIndex": "AI430",
+      "aoIndex": "AO346"
+    },
+    {
+      "aiIndex": "AI431",
+      "aoIndex": "AO347"
+    },
+    {
+      "aiIndex": "AI432",
+      "aoIndex": "AO348"
+    },
+    {
+      "aiIndex": "AI318",
+      "aoIndex": "AO234"
+    },
+    {
+      "aiIndex": "AI434",
+      "aoIndex": "AO350"
+    },
+    {
+      "aiIndex": "AI75",
+      "aoIndex": "AO25"
+    },
+    {
+      "aiIndex": "AI436",
+      "aoIndex": "AO352"
+    },
+    {
+      "aiIndex": "AI85",
+      "aoIndex": "AO34"
+    },
+    {
+      "aiIndex": "AI96",
+      "aoIndex": "AO42"
+    },
+    {
+      "aiIndex": "AI92",
+      "aoIndex": "AO38"
+    },
+    {
+      "aiIndex": "AI100",
+      "aoIndex": "AO47"
+    },
+    {
+      "aiIndex": "AI230",
+      "aoIndex": "AO158"
+    },
+    {
+      "aiIndex": "AI279",
+      "aoIndex": "AO201"
+    },
+    {
+      "aiIndex": "AI99",
+      "aoIndex": "AO45"
+    },
+    {
+      "aiIndex": "AI327",
+      "aoIndex": "AO243"
+    },
+    {
+      "aiIndex": "AI303",
+      "aoIndex": "AO222"
+    },
+    {
+      "aiIndex": "AI86",
+      "aoIndex": "AO35"
+    },
+    {
+      "aiIndex": "AI112",
+      "aoIndex": "AO55"
+    },
+    {
+      "aiIndex": "AI211",
+      "aoIndex": "AO144"
+    },
+    {
+      "aiIndex": "AI304",
+      "aoIndex": "AO223"
+    },
+    {
+      "aiIndex": "AI250",
+      "aoIndex": "AO174"
+    },
+    {
+      "aiIndex": "AI329",
+      "aoIndex": "AO245"
+    },
+    {
+      "aiIndex": "AI466",
+      "aoIndex": "AO382"
+    },
+    {
+      "aiIndex": "AI465",
+      "aoIndex": "AO381"
+    },
+    {
+      "aiIndex": "AI460",
+      "aoIndex": "AO376"
+    },
+    {
+      "aiIndex": "AI459",
+      "aoIndex": "AO375"
+    },
+    {
+      "aiIndex": "AI458",
+      "aoIndex": "AO374"
+    },
+    {
+      "aiIndex": "AI457",
+      "aoIndex": "AO373"
+    },
+    {
+      "aiIndex": "AI464",
+      "aoIndex": "AO380"
+    },
+    {
+      "aiIndex": "AI463",
+      "aoIndex": "AO379"
+    },
+    {
+      "aiIndex": "AI462",
+      "aoIndex": "AO378"
+    },
+    {
+      "aiIndex": "AI461",
+      "aoIndex": "AO377"
+    },
+    {
+      "aiIndex": "AI495",
+      "aoIndex": "AO411"
+    },
+    {
+      "aiIndex": "AI496",
+      "aoIndex": "AO412"
+    },
+    {
+      "aiIndex": "AI493",
+      "aoIndex": "AO409"
+    },
+    {
+      "aiIndex": "AI494",
+      "aoIndex": "AO410"
+    },
+    {
+      "aiIndex": "AI491",
+      "aoIndex": "AO407"
+    },
+    {
+      "aiIndex": "AI30",
+      "aoIndex": "AO1"
+    },
+    {
+      "aiIndex": "AI200",
+      "aoIndex": "AO135"
+    },
+    {
+      "aiIndex": "AI490",
+      "aoIndex": "AO406"
+    },
+    {
+      "aiIndex": "AI487",
+      "aoIndex": "AO403"
+    },
+    {
+      "aiIndex": "AI70",
+      "aoIndex": "AO21"
+    },
+    {
+      "aiIndex": "AI242",
+      "aoIndex": "AO168"
+    },
+    {
+      "aiIndex": "AI210",
+      "aoIndex": "AO143"
+    },
+    {
+      "aiIndex": "AI228",
+      "aoIndex": "AO156"
+    },
+    {
+      "aiIndex": "AI313",
+      "aoIndex": "AO230"
+    },
+    {
+      "aiIndex": "AI130",
+      "aoIndex": "AO71"
+    },
+    {
+      "aiIndex": "AI290",
+      "aoIndex": "AO212"
+    },
+    {
+      "aiIndex": "AI395",
+      "aoIndex": "AO311"
+    },
+    {
+      "aiIndex": "AI396",
+      "aoIndex": "AO312"
+    },
+    {
+      "aiIndex": "AI391",
+      "aoIndex": "AO307"
+    },
+    {
+      "aiIndex": "AI392",
+      "aoIndex": "AO308"
+    },
+    {
+      "aiIndex": "AI393",
+      "aoIndex": "AO309"
+    },
+    {
+      "aiIndex": "AI394",
+      "aoIndex": "AO310"
+    },
+    {
+      "aiIndex": "AI387",
+      "aoIndex": "AO303"
+    },
+    {
+      "aiIndex": "AI388",
+      "aoIndex": "AO304"
+    },
+    {
+      "aiIndex": "AI389",
+      "aoIndex": "AO305"
+    },
+    {
+      "aiIndex": "AI390",
+      "aoIndex": "AO306"
+    },
+    {
+      "aiIndex": "AI172",
+      "aoIndex": "AO111"
+    },
+    {
+      "aiIndex": "AI83",
+      "aoIndex": "AO32"
+    },
+    {
+      "aiIndex": "AI557",
+      "aoIndex": "AO449"
+    },
+    {
+      "aiIndex": "AI248",
+      "aoIndex": "AO173"
+    },
+    {
+      "aiIndex": "AI308",
+      "aoIndex": "AO226"
+    },
+    {
+      "aiIndex": "AI336",
+      "aoIndex": "AO252"
+    },
+    {
+      "aiIndex": "AI31",
+      "aoIndex": "AO2"
+    },
+    {
+      "aiIndex": "AI265",
+      "aoIndex": "AO188"
+    },
+    {
+      "aiIndex": "AI331",
+      "aoIndex": "AO247"
+    },
+    {
+      "aiIndex": "AI328",
+      "aoIndex": "AO244"
+    },
+    {
+      "aiIndex": "AI302",
+      "aoIndex": "AO221"
+    },
+    {
+      "aiIndex": "AI127",
+      "aoIndex": "AO68"
+    },
+    {
+      "aiIndex": "AI201",
+      "aoIndex": "AO136"
+    },
+    {
+      "aiIndex": "AI273",
+      "aoIndex": "AO196"
+    },
+    {
+      "aiIndex": "AI305",
+      "aoIndex": "AO224"
+    },
+    {
+      "aiIndex": "AI325",
+      "aoIndex": "AO241"
+    },
+    {
+      "aiIndex": "AI81",
+      "aoIndex": "AO30"
+    },
+    {
+      "aiIndex": "AI266",
+      "aoIndex": "AO189"
+    },
+    {
+      "aiIndex": "AI233",
+      "aoIndex": "AO160"
+    },
+    {
+      "aiIndex": "AI293",
+      "aoIndex": "AO215"
+    },
+    {
+      "aiIndex": "AI283",
+      "aoIndex": "AO205"
+    },
+    {
+      "aiIndex": "AI150",
+      "aoIndex": "AO89"
+    },
+    {
+      "aiIndex": "AI264",
+      "aoIndex": "AO187"
+    },
+    {
+      "aiIndex": "AI104",
+      "aoIndex": "AO50"
+    },
+    {
+      "aiIndex": "AI193",
+      "aoIndex": "AO129"
+    },
+    {
+      "aiIndex": "AI384",
+      "aoIndex": "AO300"
+    },
+    {
+      "aiIndex": "AI84",
+      "aoIndex": "AO33"
+    },
+    {
+      "aiIndex": "AI52",
+      "aoIndex": "AO8"
+    },
+    {
+      "aiIndex": "AI504",
+      "aoIndex": "AO420"
+    },
+    {
+      "aiIndex": "AI503",
+      "aoIndex": "AO419"
+    },
+    {
+      "aiIndex": "AI502",
+      "aoIndex": "AO418"
+    },
+    {
+      "aiIndex": "AI501",
+      "aoIndex": "AO417"
+    },
+    {
+      "aiIndex": "AI500",
+      "aoIndex": "AO416"
+    },
+    {
+      "aiIndex": "AI499",
+      "aoIndex": "AO415"
+    },
+    {
+      "aiIndex": "AI498",
+      "aoIndex": "AO414"
+    },
+    {
+      "aiIndex": "AI497",
+      "aoIndex": "AO413"
+    },
+    {
+      "aiIndex": "AI506",
+      "aoIndex": "AO422"
+    },
+    {
+      "aiIndex": "AI505",
+      "aoIndex": "AO421"
+    },
+    {
+      "aiIndex": "AI355",
+      "aoIndex": "AO271"
+    },
+    {
+      "aiIndex": "AI356",
+      "aoIndex": "AO272"
+    },
+    {
+      "aiIndex": "AI270",
+      "aoIndex": "AO193"
+    },
+    {
+      "aiIndex": "AI348",
+      "aoIndex": "AO264"
+    },
+    {
+      "aiIndex": "AI349",
+      "aoIndex": "AO265"
+    },
+    {
+      "aiIndex": "AI350",
+      "aoIndex": "AO266"
+    },
+    {
+      "aiIndex": "AI351",
+      "aoIndex": "AO267"
+    },
+    {
+      "aiIndex": "AI352",
+      "aoIndex": "AO268"
+    },
+    {
+      "aiIndex": "AI353",
+      "aoIndex": "AO269"
+    },
+    {
+      "aiIndex": "AI354",
+      "aoIndex": "AO270"
+    },
+    {
+      "aiIndex": "AI194",
+      "aoIndex": "AO130"
+    },
+    {
+      "aiIndex": "AI93",
+      "aoIndex": "AO39"
+    },
+    {
+      "aiIndex": "AI287",
+      "aoIndex": "AO209"
+    },
+    {
+      "aiIndex": "AI178",
+      "aoIndex": "AO117"
+    },
+    {
+      "aiIndex": "AI281",
+      "aoIndex": "AO203"
+    },
+    {
+      "aiIndex": "AI424",
+      "aoIndex": "AO340"
+    },
+    {
+      "aiIndex": "AI291",
+      "aoIndex": "AO213"
+    },
+    {
+      "aiIndex": "AI421",
+      "aoIndex": "AO337"
+    },
+    {
+      "aiIndex": "AI420",
+      "aoIndex": "AO336"
+    },
+    {
+      "aiIndex": "AI419",
+      "aoIndex": "AO335"
+    },
+    {
+      "aiIndex": "AI418",
+      "aoIndex": "AO334"
+    },
+    {
+      "aiIndex": "AI417",
+      "aoIndex": "AO333"
+    },
+    {
+      "aiIndex": "AI558",
+      "aoIndex": "AO450"
+    },
+    {
+      "aiIndex": "AI426",
+      "aoIndex": "AO342"
+    },
+    {
+      "aiIndex": "AI425",
+      "aoIndex": "AO341"
+    },
+    {
+      "aiIndex": "AI263",
+      "aoIndex": "AO186"
+    },
+    {
+      "aiIndex": "AI82",
+      "aoIndex": "AO31"
+    },
+    {
+      "aiIndex": "AI95",
+      "aoIndex": "AO41"
+    },
+    {
+      "aiIndex": "AI111",
+      "aoIndex": "AO54"
+    },
+    {
+      "aiIndex": "AI56",
+      "aoIndex": "AO12"
+    },
+    {
+      "aiIndex": "AI347",
+      "aoIndex": "AO263"
+    },
+    {
+      "aiIndex": "AI182",
+      "aoIndex": "AO120"
+    },
+    {
+      "aiIndex": "AI568",
+      "aoIndex": "AO460"
+    },
+    {
+      "aiIndex": "AI492",
+      "aoIndex": "AO408"
+    },
+    {
+      "aiIndex": "AI489",
+      "aoIndex": "AO405"
+    },
+    {
+      "aiIndex": "AI285",
+      "aoIndex": "AO207"
+    },
+    {
+      "aiIndex": "AI488",
+      "aoIndex": "AO404"
+    },
+    {
+      "aiIndex": "AI161",
+      "aoIndex": "AO100"
+    },
+    {
+      "aiIndex": "AI153",
+      "aoIndex": "AO92"
+    },
+    {
+      "aiIndex": "AI164",
+      "aoIndex": "AO103"
+    },
+    {
+      "aiIndex": "AI333",
+      "aoIndex": "AO249"
+    },
+    {
+      "aiIndex": "AI94",
+      "aoIndex": "AO40"
+    },
+    {
+      "aiIndex": "AI475",
+      "aoIndex": "AO391"
+    },
+    {
+      "aiIndex": "AI476",
+      "aoIndex": "AO392"
+    },
+    {
+      "aiIndex": "AI129",
+      "aoIndex": "AO70"
+    },
+    {
+      "aiIndex": "AI467",
+      "aoIndex": "AO383"
+    },
+    {
+      "aiIndex": "AI468",
+      "aoIndex": "AO384"
+    },
+    {
+      "aiIndex": "AI469",
+      "aoIndex": "AO385"
+    },
+    {
+      "aiIndex": "AI470",
+      "aoIndex": "AO386"
+    },
+    {
+      "aiIndex": "AI471",
+      "aoIndex": "AO387"
+    },
+    {
+      "aiIndex": "AI472",
+      "aoIndex": "AO388"
+    },
+    {
+      "aiIndex": "AI151",
+      "aoIndex": "AO90"
+    },
+    {
+      "aiIndex": "AI213",
+      "aoIndex": "AO146"
+    },
+    {
+      "aiIndex": "AI170",
+      "aoIndex": "AO109"
+    },
+    {
+      "aiIndex": "AI522",
+      "aoIndex": "AO438"
+    },
+    {
+      "aiIndex": "AI521",
+      "aoIndex": "AO437"
+    },
+    {
+      "aiIndex": "AI524",
+      "aoIndex": "AO440"
+    },
+    {
+      "aiIndex": "AI523",
+      "aoIndex": "AO439"
+    },
+    {
+      "aiIndex": "AI518",
+      "aoIndex": "AO434"
+    },
+    {
+      "aiIndex": "AI517",
+      "aoIndex": "AO433"
+    },
+    {
+      "aiIndex": "AI520",
+      "aoIndex": "AO436"
+    },
+    {
+      "aiIndex": "AI519",
+      "aoIndex": "AO435"
+    },
+    {
+      "aiIndex": "AI209",
+      "aoIndex": "AO142"
+    },
+    {
+      "aiIndex": "AI526",
+      "aoIndex": "AO442"
+    },
+    {
+      "aiIndex": "AI525",
+      "aoIndex": "AO441"
+    },
+    {
+      "aiIndex": "AI380",
+      "aoIndex": "AO296"
+    },
+    {
+      "aiIndex": "AI379",
+      "aoIndex": "AO295"
+    },
+    {
+      "aiIndex": "AI378",
+      "aoIndex": "AO294"
+    },
+    {
+      "aiIndex": "AI377",
+      "aoIndex": "AO293"
+    },
+    {
+      "aiIndex": "AI145",
+      "aoIndex": "AO85"
+    },
+    {
+      "aiIndex": "AI383",
+      "aoIndex": "AO299"
+    },
+    {
+      "aiIndex": "AI382",
+      "aoIndex": "AO298"
+    },
+    {
+      "aiIndex": "AI381",
+      "aoIndex": "AO297"
+    },
+    {
+      "aiIndex": "AI177",
+      "aoIndex": "AO116"
+    },
+    {
+      "aiIndex": "AI386",
+      "aoIndex": "AO302"
+    },
+    {
+      "aiIndex": "AI385",
+      "aoIndex": "AO301"
+    },
+    {
+      "aiIndex": "AI423",
+      "aoIndex": "AO339"
+    },
+    {
+      "aiIndex": "AI422",
+      "aoIndex": "AO338"
+    },
+    {
+      "aiIndex": "AI323",
+      "aoIndex": "AO239"
+    },
+    {
+      "aiIndex": "AI149",
+      "aoIndex": "AO88"
+    },
+    {
+      "aiIndex": "AI315",
+      "aoIndex": "AO232"
+    },
+    {
+      "aiIndex": "AI220",
+      "aoIndex": "AO153"
+    },
+    {
+      "aiIndex": "AI300",
+      "aoIndex": "AO220"
+    },
+    {
+      "aiIndex": "AI29",
+      "aoIndex": "AO0"
+    },
+    {
+      "aiIndex": "AI190",
+      "aoIndex": "AO127"
+    }
+  ],
   "analogOutputs": [
+    {
+      "cmd": 2,
+      "lnInst": "",
+      "name": "Reference Voltage",
+      "reference": "",
+      "chg": 2,
+      "resolution": "(1%)",
+      "offSet": 0,
+      "maximum": 2147483647,
+      "dataObject": "VRef",
+      "directOperateNoAck": "X",
+      "minimum": 0,
+      "pointIndex": "AO0",
+      "cdc": "ASG",
+      "multiplier": 0.1,
+      "units": "Volts",
+      "selectOperate": "X",
+      "uniqueString": "DECP.VRef",
+      "directOperate": "X",
+      "lnClass": "DECP",
+      "description": ""
+    },
     {
       "cmd": 2,
       "lnInst": "",
@@ -10121,1034 +11673,25 @@
       "description": ""
     }
   ],
-  "binaryOutputs": [
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "RtnSrvReq",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DCTE.RtnSrvReq",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  Additional start-up status can be found in AI \"System Start-up Status\".\n   - Instructs all batteries to connect.\n   - Once each battery has reported that it has connect successfully, instructs corresponding DER Unit to start.\nSystem can be shut down by executing B0 \"Emergency Stop\" command.\n\nThis operation is the same as California Rule 21 \"Soft Start\".",
-      "state1": "Initiate Start-up",
-      "state0": 47,
-      "pointIndex": "BO1",
-      "directOperate": "X",
-      "lnClass": "DCTE",
-      "pulseOn": "X",
-      "name": "System Initiate Start-up Sequence (Return to Service)\nSetting this to 1 does the following:\n   - Sets BI \"System Is Starting Up\" to 1 indicating that the system is starting up",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "CeaEngzReq",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DCTE.CeaEngzReq",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "\n   - Ensures that any executing operating modes are shut down (disabled).\n   - Ensures that any executing schedules are shut down (disabled).\n  - Instructs all inverters to shut down.\n   - Instructs all batteries to disconnect.\nSystem can be started again by executing BO \"Initiate Start-up Sequence\" command.",
-      "state1": "Stop (Emergency)",
-      "state0": "No Change",
-      "pointIndex": "BO2",
-      "directOperate": "X",
-      "lnClass": "DCTE",
-      "pulseOn": "X",
-      "name": "System Execute Stop (Cease to Energize)\n Setting this to 1 does the following: \n   - Sets BI \"System Is Emergency Stopping\" to 1 indicating that an emergency stop is in progress",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "PrmConn",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DSTO.PrmConn",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Start Permission Granted",
-      "state0": "DCTE",
-      "pointIndex": "BO3",
-      "directOperate": "X",
-      "lnClass": "DSTO",
-      "pulseOn": "X",
-      "name": "System Permission to Start ",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "PrmDscon",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DSTO.PrmDscon",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Stop Permission Granted",
-      "state0": "DCTE",
-      "pointIndex": "BO4",
-      "directOperate": "X",
-      "lnClass": "DSTO",
-      "pulseOn": "X",
-      "name": "System Permission to Stop",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "DPC",
-      "dataObject": " Pos  ",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "CSWI. Pos  ",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Close Switch",
-      "state0": "Open Switch",
-      "pointIndex": "BO5",
-      "directOperate": "X",
-      "lnClass": "CSWI",
-      "pulseOn": "X",
-      "name": "DER Connect/Disconnect Switch",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "IsldCtlFol",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DGEN.IsldCtlFol",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  Determines how the DER behaves when in an Islanded configuration.\n    <0>  Isochronous Mode.  DER attempts to control voltage and frequency independent of configured curves and settings up to the limits of the machine's capabilities in order to achieve AO reference voltage and AO nominal frequency.\n    <1> Droop Mode.  DER acts as a follower using Volt/VAR and Freq/Watt curves.",
-      "state1": "Droop Mode",
-      "state0": "Isochronous Mode",
-      "pointIndex": "BO6",
-      "directOperate": "X",
-      "lnClass": "DGEN",
-      "pulseOn": "X",
-      "name": "Islanded Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "ECPIsldAuto",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DECP.ECPIsldAuto",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  If Enabled, the DER may independently change its Active Settings Group based on locally observed grid conditions.\n    <0> No Autonomous Detection.\n    <1> Autonomous Detection.  Inverter's Active Settings Group  may differ from the Requested Settings Group",
-      "state1": "Autonomous Detection",
-      "state0": "No Autonomous Detection",
-      "pointIndex": "BO7",
-      "directOperate": "X",
-      "lnClass": "DECP",
-      "pulseOn": "X",
-      "name": "Enable Sensed Grid Config Detection",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "ASG",
-      "dataObject": "AGra",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DSTO.AGra",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  Determines whether the energy storage values are expressed in Amp-hrs or Watt-hrs.",
-      "state1": "Watt-hrs",
-      "state0": "Amp-hrs (default)",
-      "pointIndex": "BO8",
-      "directOperate": "X",
-      "lnClass": "DSTO",
-      "pulseOn": "X",
-      "name": "Storage Capacity Units",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "",
-      "cdc": "SPG",
-      "dataObject": "OpnLoopTau",
-      "directOperateNoAck": "",
-      "close": "",
-      "trip": "",
-      "defaultEventClass": "",
-      "countGreaterThanOne": "",
-      "pulseOff": "",
-      "latchOn": "",
-      "defaultCmdClass": "",
-      "uniqueString": "DSTO.OpnLoopTau",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  Indicates whether Time Constant Ramp parameters are interpreted as Open Loop Response times or 3Tau values.",
-      "state1": "3Tau Value",
-      "state0": "Open Loop Response Time",
-      "pointIndex": "BO9",
-      "directOperate": "",
-      "lnClass": "DSTO",
-      "pulseOn": "",
-      "name": "Time Constant Mode",
-      "selectOperate": ""
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "PFGnExtSet",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DFPF.PFGnExtSet",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Absorbing VARs - Q4",
-      "state0": "Producing VARs - Q1",
-      "pointIndex": "BO10",
-      "directOperate": "X",
-      "lnClass": "DFPF",
-      "pulseOn": "X",
-      "name": "Power Factor Excitation When Discharging/Generating",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "PFLodExtSet",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DFPF.PFLodExtSet",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Absorbing VARs - Q3",
-      "state0": "Producing VARs - Q2",
-      "pointIndex": "BO11",
-      "directOperate": "X",
-      "lnClass": "DFPF",
-      "pulseOn": "X",
-      "name": "Power Factor Excitation When Charging",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DHVT.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO12",
-      "directOperate": "X",
-      "lnClass": "DHVT",
-      "pulseOn": "X",
-      "name": "Enable Low/High Voltage Ride-Through Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DHFT.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO13",
-      "directOperate": "X",
-      "lnClass": "DHFT",
-      "pulseOn": "X",
-      "name": "Enable Low/High Frequency Ride-Through Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DRGS.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO14",
-      "directOperate": "X",
-      "lnClass": "DRGS",
-      "pulseOn": "X",
-      "name": "Enable Dynamic Reactive Current Support Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DVWD.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO15",
-      "directOperate": "X",
-      "lnClass": "DVWD",
-      "pulseOn": "DCTE",
-      "name": "Enable Dynamic Volt-Watt Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DHFW.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO16",
-      "directOperate": "X",
-      "lnClass": "DHFW",
-      "pulseOn": "X",
-      "name": "Enable  Frequency-Watt Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DWLM.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO17",
-      "directOperate": "X",
-      "lnClass": "DWLM",
-      "pulseOn": "X",
-      "name": "Enable Active Power Limit Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DWGC.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO18",
-      "directOperate": "X",
-      "lnClass": "DWGC",
-      "pulseOn": "X",
-      "name": "Enable Charge/Discharge Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DTCD.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO19",
-      "directOperate": "X",
-      "lnClass": "DTCD",
-      "pulseOn": "X",
-      "name": "Enable Coordinated Charge/Discharge Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DPKP.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO20",
-      "directOperate": "X",
-      "lnClass": "DPKP",
-      "pulseOn": "X",
-      "name": "Enable Active Power Response Mode #1",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DGFL.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO21",
-      "directOperate": "X",
-      "lnClass": "DGFL",
-      "pulseOn": "X",
-      "name": "Enable Active Power Response Mode #2",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DLFL.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO22",
-      "directOperate": "X",
-      "lnClass": "DLFL",
-      "pulseOn": "X",
-      "name": "Enable Active Power Response Mode #3",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DAGC.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO23",
-      "directOperate": "X",
-      "lnClass": "DAGC",
-      "pulseOn": "X",
-      "name": "Enable Automatic Generation Control Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DWSM.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO24",
-      "directOperate": "X",
-      "lnClass": "DWSM",
-      "pulseOn": "X",
-      "name": "Enable Active Power Smoothing Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DVWC.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO25",
-      "directOperate": "X",
-      "lnClass": "DVWC",
-      "pulseOn": "X",
-      "name": "Enable Volt-Watt Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DHFW.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO26",
-      "directOperate": "X",
-      "lnClass": "DHFW",
-      "pulseOn": "X",
-      "name": "Enable Frequency-Watt Curve Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DVAR.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO27",
-      "directOperate": "X",
-      "lnClass": "DVAR",
-      "pulseOn": "X",
-      "name": "Enable Constant VArs Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DFPF.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO28",
-      "directOperate": "X",
-      "lnClass": "DFPF",
-      "pulseOn": "X",
-      "name": "Enable Fixed Power Factor Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DVVC.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO29",
-      "directOperate": "X",
-      "lnClass": "DVVC",
-      "pulseOn": "X",
-      "name": "Enable Volt-VAR Control Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DWVR.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO30",
-      "directOperate": "X",
-      "lnClass": "DWVR",
-      "pulseOn": "X",
-      "name": "Enable Watt-VAr Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DPFC.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO31",
-      "directOperate": "X",
-      "lnClass": "DPFC",
-      "pulseOn": "X",
-      "name": "Enable Power Factor Correction Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ModEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DPRG.ModEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO32",
-      "directOperate": "X",
-      "lnClass": "DPRG",
-      "pulseOn": "X",
-      "name": "Enable Pricing Mode",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPC",
-      "dataObject": "ArGraMod",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DRGS.ArGraMod",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  Dynamic Reactive Current Support mode must be Enabled for this setting to apply.",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO33",
-      "directOperate": "X",
-      "lnClass": "DRGS",
-      "pulseOn": "X",
-      "name": "Enable Event-Based Reactive Current Support Mode, in which the moving average voltage and the base reactive current are frozen until after the voltage has returned to within the deadband for a specified hold time",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "HysEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DHFW.HysEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO34",
-      "directOperate": "X",
-      "lnClass": "DHFW",
-      "pulseOn": "X",
-      "name": "Frequency-Watt Mode - Use Hysteresis",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "SnptEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DHFW.SnptEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Active",
-      "state0": "Not Active",
-      "pointIndex": "BO35",
-      "directOperate": "X",
-      "lnClass": "DHFW",
-      "pulseOn": "X",
-      "name": "Frequency-Watt Mode - Snapshot of Power",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "HysEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DLFW.HysEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO36",
-      "directOperate": "X",
-      "lnClass": "DLFW",
-      "pulseOn": "X",
-      "name": "Frequency-Watt Curve Mode - Use Hysteresis",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "SnptEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DLFW.SnptEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Active",
-      "state0": "Not Active",
-      "pointIndex": "BO37",
-      "directOperate": "X",
-      "lnClass": "DLFW",
-      "pulseOn": "X",
-      "name": "Frequency-Watt Curve Mode - Snapshot of Power",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "UseRmpRte",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DWGC.UseRmpRte",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": " Indicates whether or not Charge/Discharge should use specified ramp rates or time constants.",
-      "state1": "Use Ramp Rates",
-      "state0": "Use Time Constatnts",
-      "pointIndex": "BO38",
-      "directOperate": "X",
-      "lnClass": "DWGC",
-      "pulseOn": "X",
-      "name": "Charge/Discharge Mode - Use Ramp Rates",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "UseRmpRte",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DAGC.UseRmpRte",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": " Indicates whether or not AGC mode should use specified ramp rates or time constants.",
-      "state1": "Use Ramp Rates",
-      "state0": "Use Time Constatnts",
-      "pointIndex": "BO39",
-      "directOperate": "X",
-      "lnClass": "DAGC",
-      "pulseOn": "X",
-      "name": "AGC Mode - Use Ramp Rates",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "UseRmpRte",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DVWC.UseRmpRte",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "  Indicates whether Volt-Watt mode should use only Time Constants, or both Time Constants and Ramp Rates",
-      "state1": "Use Ramp Rates AND Time Constants",
-      "state0": "Use Time Constatnts",
-      "pointIndex": "BO40",
-      "directOperate": "X",
-      "lnClass": "DVWC",
-      "pulseOn": "X",
-      "name": "Volt-Watt - Use Ramp Rates and Time Constants",
-      "selectOperate": "X"
-    },
-    {
-      "latchOff": "X",
-      "cdc": "SPG",
-      "dataObject": "VRefAdjEna",
-      "directOperateNoAck": "X",
-      "close": "X",
-      "trip": "X",
-      "defaultEventClass": 2,
-      "countGreaterThanOne": "",
-      "pulseOff": "X",
-      "latchOn": "X",
-      "defaultCmdClass": 2,
-      "uniqueString": "DVVR.VRefAdjEna",
-      "cancelCurrentOperation": "",
-      "lnInst": "",
-      "description": "",
-      "state1": "Enabled",
-      "state0": "Disabled",
-      "pointIndex": "BO41",
-      "directOperate": "X",
-      "lnClass": "DVVR",
-      "pulseOn": "X",
-      "name": "Volt-VAr Enable Autonomous Voltage Reference Adjustment",
-      "selectOperate": "X"
-    }
-  ],
   "analogInputs": [
+    {
+      "defaultEventClass": 3,
+      "lninst": "",
+      "name": "DER Profile Version Number",
+      "reference": "",
+      "cdc": "",
+      "offSet": 0,
+      "maximum": 100,
+      "dataObject": "",
+      "minimum": 100,
+      "pointIndex": "AI0",
+      "multiplier": 0.01,
+      "units": "n/a",
+      "uniqueString": ".",
+      "resolution": "",
+      "lnClass": "",
+      "description": "  Always the number 1.00 for this specification."
+    },
     {
       "defaultEventClass": 3,
       "lninst": "",
@@ -21379,6 +21922,20 @@
       "function": "",
       "defaultEventClass": 1,
       "lnInst": "",
+      "name": "System Communication Error",
+      "cdc": "SPS",
+      "dataObject": "ChLiv",
+      "state1": "Alarm: Communications error exists in the ESS",
+      "state0": "Normal",
+      "pointIndex": "BI0",
+      "uniqueString": "LCCH.ChLiv",
+      "lnClass": "LCCH",
+      "description": ""
+    },
+    {
+      "function": "",
+      "defaultEventClass": 1,
+      "lnInst": "",
       "name": "System Has Priority 1 Alarms",
       "cdc": "SPS",
       "dataObject": "GrAlm",
@@ -22874,1531 +23431,7 @@
       "description": ""
     }
   ],
-  "map": [
-    {
-      "aiIndex": "AI110",
-      "aoIndex": "AO53"
-    },
-    {
-      "aiIndex": "AI169",
-      "aoIndex": "AO108"
-    },
-    {
-      "aiIndex": "AI566",
-      "aoIndex": "AO458"
-    },
-    {
-      "aiIndex": "AI561",
-      "aoIndex": "AO453"
-    },
-    {
-      "aiIndex": "AI310",
-      "aoIndex": "AO228"
-    },
-    {
-      "aiIndex": "AI559",
-      "aoIndex": "AO451"
-    },
-    {
-      "aiIndex": "AI244",
-      "aoIndex": "AO170"
-    },
-    {
-      "aiIndex": "AI221",
-      "aoIndex": "AO154"
-    },
-    {
-      "aiIndex": "AI53",
-      "aoIndex": "AO9"
-    },
-    {
-      "aiIndex": "AI41",
-      "aoIndex": "AO4"
-    },
-    {
-      "aiIndex": "AI195",
-      "aoIndex": "AO131"
-    },
-    {
-      "aiIndex": "AI189",
-      "aoIndex": "AO126"
-    },
-    {
-      "aiIndex": "AI207",
-      "aoIndex": "AO141"
-    },
-    {
-      "aiIndex": "AI289",
-      "aoIndex": "AO211"
-    },
-    {
-      "aiIndex": "AI165",
-      "aoIndex": "AO104"
-    },
-    {
-      "aiIndex": "AI563",
-      "aoIndex": "AO455"
-    },
-    {
-      "aiIndex": "AI312",
-      "aoIndex": "AO229"
-    },
-    {
-      "aiIndex": "AI61",
-      "aoIndex": "AO17"
-    },
-    {
-      "aiIndex": "AI227",
-      "aoIndex": "AO155"
-    },
-    {
-      "aiIndex": "AI269",
-      "aoIndex": "AO192"
-    },
-    {
-      "aiIndex": "AI511",
-      "aoIndex": "AO427"
-    },
-    {
-      "aiIndex": "AI512",
-      "aoIndex": "AO428"
-    },
-    {
-      "aiIndex": "AI513",
-      "aoIndex": "AO429"
-    },
-    {
-      "aiIndex": "AI514",
-      "aoIndex": "AO430"
-    },
-    {
-      "aiIndex": "AI507",
-      "aoIndex": "AO423"
-    },
-    {
-      "aiIndex": "AI508",
-      "aoIndex": "AO424"
-    },
-    {
-      "aiIndex": "AI509",
-      "aoIndex": "AO425"
-    },
-    {
-      "aiIndex": "AI510",
-      "aoIndex": "AO426"
-    },
-    {
-      "aiIndex": "AI515",
-      "aoIndex": "AO431"
-    },
-    {
-      "aiIndex": "AI516",
-      "aoIndex": "AO432"
-    },
-    {
-      "aiIndex": "AI204",
-      "aoIndex": "AO138"
-    },
-    {
-      "aiIndex": "AI152",
-      "aoIndex": "AO91"
-    },
-    {
-      "aiIndex": "AI450",
-      "aoIndex": "AO366"
-    },
-    {
-      "aiIndex": "AI205",
-      "aoIndex": "AO139"
-    },
-    {
-      "aiIndex": "AI454",
-      "aoIndex": "AO370"
-    },
-    {
-      "aiIndex": "AI299",
-      "aoIndex": "AO219"
-    },
-    {
-      "aiIndex": "AI415",
-      "aoIndex": "AO331"
-    },
-    {
-      "aiIndex": "AI416",
-      "aoIndex": "AO332"
-    },
-    {
-      "aiIndex": "AI409",
-      "aoIndex": "AO325"
-    },
-    {
-      "aiIndex": "AI410",
-      "aoIndex": "AO326"
-    },
-    {
-      "aiIndex": "AI407",
-      "aoIndex": "AO323"
-    },
-    {
-      "aiIndex": "AI408",
-      "aoIndex": "AO324"
-    },
-    {
-      "aiIndex": "AI413",
-      "aoIndex": "AO329"
-    },
-    {
-      "aiIndex": "AI414",
-      "aoIndex": "AO330"
-    },
-    {
-      "aiIndex": "AI411",
-      "aoIndex": "AO327"
-    },
-    {
-      "aiIndex": "AI412",
-      "aoIndex": "AO328"
-    },
-    {
-      "aiIndex": "AI144",
-      "aoIndex": "AO84"
-    },
-    {
-      "aiIndex": "AI115",
-      "aoIndex": "AO57"
-    },
-    {
-      "aiIndex": "AI277",
-      "aoIndex": "AO199"
-    },
-    {
-      "aiIndex": "AI235",
-      "aoIndex": "AO162"
-    },
-    {
-      "aiIndex": "AI257",
-      "aoIndex": "AO181"
-    },
-    {
-      "aiIndex": "AI358",
-      "aoIndex": "AO274"
-    },
-    {
-      "aiIndex": "AI171",
-      "aoIndex": "AO110"
-    },
-    {
-      "aiIndex": "AI102",
-      "aoIndex": "AO48"
-    },
-    {
-      "aiIndex": "AI124",
-      "aoIndex": "AO65"
-    },
-    {
-      "aiIndex": "AI321",
-      "aoIndex": "AO237"
-    },
-    {
-      "aiIndex": "AI142",
-      "aoIndex": "AO82"
-    },
-    {
-      "aiIndex": "AI562",
-      "aoIndex": "AO454"
-    },
-    {
-      "aiIndex": "AI91",
-      "aoIndex": "AO37"
-    },
-    {
-      "aiIndex": "AI479",
-      "aoIndex": "AO395"
-    },
-    {
-      "aiIndex": "AI229",
-      "aoIndex": "AO157"
-    },
-    {
-      "aiIndex": "AI446",
-      "aoIndex": "AO362"
-    },
-    {
-      "aiIndex": "AI445",
-      "aoIndex": "AO361"
-    },
-    {
-      "aiIndex": "AI442",
-      "aoIndex": "AO358"
-    },
-    {
-      "aiIndex": "AI441",
-      "aoIndex": "AO357"
-    },
-    {
-      "aiIndex": "AI444",
-      "aoIndex": "AO360"
-    },
-    {
-      "aiIndex": "AI443",
-      "aoIndex": "AO359"
-    },
-    {
-      "aiIndex": "AI438",
-      "aoIndex": "AO354"
-    },
-    {
-      "aiIndex": "AI437",
-      "aoIndex": "AO353"
-    },
-    {
-      "aiIndex": "AI440",
-      "aoIndex": "AO356"
-    },
-    {
-      "aiIndex": "AI439",
-      "aoIndex": "AO355"
-    },
-    {
-      "aiIndex": "AI50",
-      "aoIndex": "AO6"
-    },
-    {
-      "aiIndex": "AI278",
-      "aoIndex": "AO200"
-    },
-    {
-      "aiIndex": "AI143",
-      "aoIndex": "AO83"
-    },
-    {
-      "aiIndex": "AI184",
-      "aoIndex": "AO122"
-    },
-    {
-      "aiIndex": "AI567",
-      "aoIndex": "AO459"
-    },
-    {
-      "aiIndex": "AI529",
-      "aoIndex": "AO445"
-    },
-    {
-      "aiIndex": "AI530",
-      "aoIndex": "AO446"
-    },
-    {
-      "aiIndex": "AI527",
-      "aoIndex": "AO443"
-    },
-    {
-      "aiIndex": "AI528",
-      "aoIndex": "AO444"
-    },
-    {
-      "aiIndex": "AI234",
-      "aoIndex": "AO161"
-    },
-    {
-      "aiIndex": "AI275",
-      "aoIndex": "AO197"
-    },
-    {
-      "aiIndex": "AI187",
-      "aoIndex": "AO124"
-    },
-    {
-      "aiIndex": "AI123",
-      "aoIndex": "AO64"
-    },
-    {
-      "aiIndex": "AI183",
-      "aoIndex": "AO121"
-    },
-    {
-      "aiIndex": "AI373",
-      "aoIndex": "AO289"
-    },
-    {
-      "aiIndex": "AI374",
-      "aoIndex": "AO290"
-    },
-    {
-      "aiIndex": "AI371",
-      "aoIndex": "AO287"
-    },
-    {
-      "aiIndex": "AI372",
-      "aoIndex": "AO288"
-    },
-    {
-      "aiIndex": "AI369",
-      "aoIndex": "AO285"
-    },
-    {
-      "aiIndex": "AI370",
-      "aoIndex": "AO286"
-    },
-    {
-      "aiIndex": "AI367",
-      "aoIndex": "AO283"
-    },
-    {
-      "aiIndex": "AI368",
-      "aoIndex": "AO284"
-    },
-    {
-      "aiIndex": "AI375",
-      "aoIndex": "AO291"
-    },
-    {
-      "aiIndex": "AI376",
-      "aoIndex": "AO292"
-    },
-    {
-      "aiIndex": "AI76",
-      "aoIndex": "AO26"
-    },
-    {
-      "aiIndex": "AI560",
-      "aoIndex": "AO452"
-    },
-    {
-      "aiIndex": "AI322",
-      "aoIndex": "AO238"
-    },
-    {
-      "aiIndex": "AI565",
-      "aoIndex": "AO457"
-    },
-    {
-      "aiIndex": "AI292",
-      "aoIndex": "AO214"
-    },
-    {
-      "aiIndex": "AI564",
-      "aoIndex": "AO456"
-    },
-    {
-      "aiIndex": "AI297",
-      "aoIndex": "AO217"
-    },
-    {
-      "aiIndex": "AI267",
-      "aoIndex": "AO190"
-    },
-    {
-      "aiIndex": "AI58",
-      "aoIndex": "AO14"
-    },
-    {
-      "aiIndex": "AI51",
-      "aoIndex": "AO7"
-    },
-    {
-      "aiIndex": "AI433",
-      "aoIndex": "AO349"
-    },
-    {
-      "aiIndex": "AI435",
-      "aoIndex": "AO351"
-    },
-    {
-      "aiIndex": "AI206",
-      "aoIndex": "AO140"
-    },
-    {
-      "aiIndex": "AI103",
-      "aoIndex": "AO49"
-    },
-    {
-      "aiIndex": "AI166",
-      "aoIndex": "AO105"
-    },
-    {
-      "aiIndex": "AI280",
-      "aoIndex": "AO202"
-    },
-    {
-      "aiIndex": "AI196",
-      "aoIndex": "AO132"
-    },
-    {
-      "aiIndex": "AI154",
-      "aoIndex": "AO93"
-    },
-    {
-      "aiIndex": "AI320",
-      "aoIndex": "AO236"
-    },
-    {
-      "aiIndex": "AI98",
-      "aoIndex": "AO44"
-    },
-    {
-      "aiIndex": "AI243",
-      "aoIndex": "AO169"
-    },
-    {
-      "aiIndex": "AI163",
-      "aoIndex": "AO102"
-    },
-    {
-      "aiIndex": "AI486",
-      "aoIndex": "AO402"
-    },
-    {
-      "aiIndex": "AI485",
-      "aoIndex": "AO401"
-    },
-    {
-      "aiIndex": "AI128",
-      "aoIndex": "AO69"
-    },
-    {
-      "aiIndex": "AI478",
-      "aoIndex": "AO394"
-    },
-    {
-      "aiIndex": "AI477",
-      "aoIndex": "AO393"
-    },
-    {
-      "aiIndex": "AI480",
-      "aoIndex": "AO396"
-    },
-    {
-      "aiIndex": "AI212",
-      "aoIndex": "AO145"
-    },
-    {
-      "aiIndex": "AI482",
-      "aoIndex": "AO398"
-    },
-    {
-      "aiIndex": "AI481",
-      "aoIndex": "AO397"
-    },
-    {
-      "aiIndex": "AI286",
-      "aoIndex": "AO208"
-    },
-    {
-      "aiIndex": "AI483",
-      "aoIndex": "AO399"
-    },
-    {
-      "aiIndex": "AI473",
-      "aoIndex": "AO389"
-    },
-    {
-      "aiIndex": "AI105",
-      "aoIndex": "AO51"
-    },
-    {
-      "aiIndex": "AI271",
-      "aoIndex": "AO194"
-    },
-    {
-      "aiIndex": "AI176",
-      "aoIndex": "AO115"
-    },
-    {
-      "aiIndex": "AI406",
-      "aoIndex": "AO322"
-    },
-    {
-      "aiIndex": "AI405",
-      "aoIndex": "AO321"
-    },
-    {
-      "aiIndex": "AI188",
-      "aoIndex": "AO125"
-    },
-    {
-      "aiIndex": "AI398",
-      "aoIndex": "AO314"
-    },
-    {
-      "aiIndex": "AI397",
-      "aoIndex": "AO313"
-    },
-    {
-      "aiIndex": "AI400",
-      "aoIndex": "AO316"
-    },
-    {
-      "aiIndex": "AI399",
-      "aoIndex": "AO315"
-    },
-    {
-      "aiIndex": "AI402",
-      "aoIndex": "AO318"
-    },
-    {
-      "aiIndex": "AI401",
-      "aoIndex": "AO317"
-    },
-    {
-      "aiIndex": "AI404",
-      "aoIndex": "AO320"
-    },
-    {
-      "aiIndex": "AI403",
-      "aoIndex": "AO319"
-    },
-    {
-      "aiIndex": "AI284",
-      "aoIndex": "AO206"
-    },
-    {
-      "aiIndex": "AI162",
-      "aoIndex": "AO101"
-    },
-    {
-      "aiIndex": "AI198",
-      "aoIndex": "AO133"
-    },
-    {
-      "aiIndex": "AI97",
-      "aoIndex": "AO43"
-    },
-    {
-      "aiIndex": "AI185",
-      "aoIndex": "AO123"
-    },
-    {
-      "aiIndex": "AI332",
-      "aoIndex": "AO248"
-    },
-    {
-      "aiIndex": "AI345",
-      "aoIndex": "AO261"
-    },
-    {
-      "aiIndex": "AI346",
-      "aoIndex": "AO262"
-    },
-    {
-      "aiIndex": "AI343",
-      "aoIndex": "AO259"
-    },
-    {
-      "aiIndex": "AI344",
-      "aoIndex": "AO260"
-    },
-    {
-      "aiIndex": "AI341",
-      "aoIndex": "AO257"
-    },
-    {
-      "aiIndex": "AI342",
-      "aoIndex": "AO258"
-    },
-    {
-      "aiIndex": "AI339",
-      "aoIndex": "AO255"
-    },
-    {
-      "aiIndex": "AI340",
-      "aoIndex": "AO256"
-    },
-    {
-      "aiIndex": "AI337",
-      "aoIndex": "AO253"
-    },
-    {
-      "aiIndex": "AI338",
-      "aoIndex": "AO254"
-    },
-    {
-      "aiIndex": "AI335",
-      "aoIndex": "AO251"
-    },
-    {
-      "aiIndex": "AI175",
-      "aoIndex": "AO114"
-    },
-    {
-      "aiIndex": "AI167",
-      "aoIndex": "AO106"
-    },
-    {
-      "aiIndex": "AI245",
-      "aoIndex": "AO171"
-    },
-    {
-      "aiIndex": "AI179",
-      "aoIndex": "AO118"
-    },
-    {
-      "aiIndex": "AI272",
-      "aoIndex": "AO195"
-    },
-    {
-      "aiIndex": "AI199",
-      "aoIndex": "AO134"
-    },
-    {
-      "aiIndex": "AI259",
-      "aoIndex": "AO183"
-    },
-    {
-      "aiIndex": "AI334",
-      "aoIndex": "AO250"
-    },
-    {
-      "aiIndex": "AI60",
-      "aoIndex": "AO16"
-    },
-    {
-      "aiIndex": "AI174",
-      "aoIndex": "AO113"
-    },
-    {
-      "aiIndex": "AI113",
-      "aoIndex": "AO56"
-    },
-    {
-      "aiIndex": "AI260",
-      "aoIndex": "AO184"
-    },
-    {
-      "aiIndex": "AI236",
-      "aoIndex": "AO163"
-    },
-    {
-      "aiIndex": "AI449",
-      "aoIndex": "AO365"
-    },
-    {
-      "aiIndex": "AI276",
-      "aoIndex": "AO198"
-    },
-    {
-      "aiIndex": "AI447",
-      "aoIndex": "AO363"
-    },
-    {
-      "aiIndex": "AI448",
-      "aoIndex": "AO364"
-    },
-    {
-      "aiIndex": "AI453",
-      "aoIndex": "AO369"
-    },
-    {
-      "aiIndex": "AI173",
-      "aoIndex": "AO112"
-    },
-    {
-      "aiIndex": "AI451",
-      "aoIndex": "AO367"
-    },
-    {
-      "aiIndex": "AI452",
-      "aoIndex": "AO368"
-    },
-    {
-      "aiIndex": "AI455",
-      "aoIndex": "AO371"
-    },
-    {
-      "aiIndex": "AI456",
-      "aoIndex": "AO372"
-    },
-    {
-      "aiIndex": "AI362",
-      "aoIndex": "AO278"
-    },
-    {
-      "aiIndex": "AI361",
-      "aoIndex": "AO277"
-    },
-    {
-      "aiIndex": "AI364",
-      "aoIndex": "AO280"
-    },
-    {
-      "aiIndex": "AI363",
-      "aoIndex": "AO279"
-    },
-    {
-      "aiIndex": "AI258",
-      "aoIndex": "AO182"
-    },
-    {
-      "aiIndex": "AI357",
-      "aoIndex": "AO273"
-    },
-    {
-      "aiIndex": "AI360",
-      "aoIndex": "AO276"
-    },
-    {
-      "aiIndex": "AI359",
-      "aoIndex": "AO275"
-    },
-    {
-      "aiIndex": "AI474",
-      "aoIndex": "AO390"
-    },
-    {
-      "aiIndex": "AI366",
-      "aoIndex": "AO282"
-    },
-    {
-      "aiIndex": "AI365",
-      "aoIndex": "AO281"
-    },
-    {
-      "aiIndex": "AI324",
-      "aoIndex": "AO240"
-    },
-    {
-      "aiIndex": "AI484",
-      "aoIndex": "AO400"
-    },
-    {
-      "aiIndex": "AI288",
-      "aoIndex": "AO210"
-    },
-    {
-      "aiIndex": "AI148",
-      "aoIndex": "AO87"
-    },
-    {
-      "aiIndex": "AI427",
-      "aoIndex": "AO343"
-    },
-    {
-      "aiIndex": "AI428",
-      "aoIndex": "AO344"
-    },
-    {
-      "aiIndex": "AI429",
-      "aoIndex": "AO345"
-    },
-    {
-      "aiIndex": "AI430",
-      "aoIndex": "AO346"
-    },
-    {
-      "aiIndex": "AI431",
-      "aoIndex": "AO347"
-    },
-    {
-      "aiIndex": "AI432",
-      "aoIndex": "AO348"
-    },
-    {
-      "aiIndex": "AI318",
-      "aoIndex": "AO234"
-    },
-    {
-      "aiIndex": "AI434",
-      "aoIndex": "AO350"
-    },
-    {
-      "aiIndex": "AI75",
-      "aoIndex": "AO25"
-    },
-    {
-      "aiIndex": "AI436",
-      "aoIndex": "AO352"
-    },
-    {
-      "aiIndex": "AI85",
-      "aoIndex": "AO34"
-    },
-    {
-      "aiIndex": "AI96",
-      "aoIndex": "AO42"
-    },
-    {
-      "aiIndex": "AI92",
-      "aoIndex": "AO38"
-    },
-    {
-      "aiIndex": "AI100",
-      "aoIndex": "AO47"
-    },
-    {
-      "aiIndex": "AI230",
-      "aoIndex": "AO158"
-    },
-    {
-      "aiIndex": "AI279",
-      "aoIndex": "AO201"
-    },
-    {
-      "aiIndex": "AI99",
-      "aoIndex": "AO45"
-    },
-    {
-      "aiIndex": "AI327",
-      "aoIndex": "AO243"
-    },
-    {
-      "aiIndex": "AI303",
-      "aoIndex": "AO222"
-    },
-    {
-      "aiIndex": "AI86",
-      "aoIndex": "AO35"
-    },
-    {
-      "aiIndex": "AI112",
-      "aoIndex": "AO55"
-    },
-    {
-      "aiIndex": "AI211",
-      "aoIndex": "AO144"
-    },
-    {
-      "aiIndex": "AI304",
-      "aoIndex": "AO223"
-    },
-    {
-      "aiIndex": "AI250",
-      "aoIndex": "AO174"
-    },
-    {
-      "aiIndex": "AI329",
-      "aoIndex": "AO245"
-    },
-    {
-      "aiIndex": "AI466",
-      "aoIndex": "AO382"
-    },
-    {
-      "aiIndex": "AI465",
-      "aoIndex": "AO381"
-    },
-    {
-      "aiIndex": "AI460",
-      "aoIndex": "AO376"
-    },
-    {
-      "aiIndex": "AI459",
-      "aoIndex": "AO375"
-    },
-    {
-      "aiIndex": "AI458",
-      "aoIndex": "AO374"
-    },
-    {
-      "aiIndex": "AI457",
-      "aoIndex": "AO373"
-    },
-    {
-      "aiIndex": "AI464",
-      "aoIndex": "AO380"
-    },
-    {
-      "aiIndex": "AI463",
-      "aoIndex": "AO379"
-    },
-    {
-      "aiIndex": "AI462",
-      "aoIndex": "AO378"
-    },
-    {
-      "aiIndex": "AI461",
-      "aoIndex": "AO377"
-    },
-    {
-      "aiIndex": "AI495",
-      "aoIndex": "AO411"
-    },
-    {
-      "aiIndex": "AI496",
-      "aoIndex": "AO412"
-    },
-    {
-      "aiIndex": "AI493",
-      "aoIndex": "AO409"
-    },
-    {
-      "aiIndex": "AI494",
-      "aoIndex": "AO410"
-    },
-    {
-      "aiIndex": "AI491",
-      "aoIndex": "AO407"
-    },
-    {
-      "aiIndex": "AI30",
-      "aoIndex": "AO1"
-    },
-    {
-      "aiIndex": "AI200",
-      "aoIndex": "AO135"
-    },
-    {
-      "aiIndex": "AI490",
-      "aoIndex": "AO406"
-    },
-    {
-      "aiIndex": "AI487",
-      "aoIndex": "AO403"
-    },
-    {
-      "aiIndex": "AI70",
-      "aoIndex": "AO21"
-    },
-    {
-      "aiIndex": "AI242",
-      "aoIndex": "AO168"
-    },
-    {
-      "aiIndex": "AI210",
-      "aoIndex": "AO143"
-    },
-    {
-      "aiIndex": "AI228",
-      "aoIndex": "AO156"
-    },
-    {
-      "aiIndex": "AI313",
-      "aoIndex": "AO230"
-    },
-    {
-      "aiIndex": "AI130",
-      "aoIndex": "AO71"
-    },
-    {
-      "aiIndex": "AI290",
-      "aoIndex": "AO212"
-    },
-    {
-      "aiIndex": "AI395",
-      "aoIndex": "AO311"
-    },
-    {
-      "aiIndex": "AI396",
-      "aoIndex": "AO312"
-    },
-    {
-      "aiIndex": "AI391",
-      "aoIndex": "AO307"
-    },
-    {
-      "aiIndex": "AI392",
-      "aoIndex": "AO308"
-    },
-    {
-      "aiIndex": "AI393",
-      "aoIndex": "AO309"
-    },
-    {
-      "aiIndex": "AI394",
-      "aoIndex": "AO310"
-    },
-    {
-      "aiIndex": "AI387",
-      "aoIndex": "AO303"
-    },
-    {
-      "aiIndex": "AI388",
-      "aoIndex": "AO304"
-    },
-    {
-      "aiIndex": "AI389",
-      "aoIndex": "AO305"
-    },
-    {
-      "aiIndex": "AI390",
-      "aoIndex": "AO306"
-    },
-    {
-      "aiIndex": "AI172",
-      "aoIndex": "AO111"
-    },
-    {
-      "aiIndex": "AI83",
-      "aoIndex": "AO32"
-    },
-    {
-      "aiIndex": "AI557",
-      "aoIndex": "AO449"
-    },
-    {
-      "aiIndex": "AI248",
-      "aoIndex": "AO173"
-    },
-    {
-      "aiIndex": "AI308",
-      "aoIndex": "AO226"
-    },
-    {
-      "aiIndex": "AI336",
-      "aoIndex": "AO252"
-    },
-    {
-      "aiIndex": "AI31",
-      "aoIndex": "AO2"
-    },
-    {
-      "aiIndex": "AI265",
-      "aoIndex": "AO188"
-    },
-    {
-      "aiIndex": "AI331",
-      "aoIndex": "AO247"
-    },
-    {
-      "aiIndex": "AI328",
-      "aoIndex": "AO244"
-    },
-    {
-      "aiIndex": "AI302",
-      "aoIndex": "AO221"
-    },
-    {
-      "aiIndex": "AI127",
-      "aoIndex": "AO68"
-    },
-    {
-      "aiIndex": "AI201",
-      "aoIndex": "AO136"
-    },
-    {
-      "aiIndex": "AI273",
-      "aoIndex": "AO196"
-    },
-    {
-      "aiIndex": "AI305",
-      "aoIndex": "AO224"
-    },
-    {
-      "aiIndex": "AI325",
-      "aoIndex": "AO241"
-    },
-    {
-      "aiIndex": "AI81",
-      "aoIndex": "AO30"
-    },
-    {
-      "aiIndex": "AI266",
-      "aoIndex": "AO189"
-    },
-    {
-      "aiIndex": "AI233",
-      "aoIndex": "AO160"
-    },
-    {
-      "aiIndex": "AI293",
-      "aoIndex": "AO215"
-    },
-    {
-      "aiIndex": "AI283",
-      "aoIndex": "AO205"
-    },
-    {
-      "aiIndex": "AI150",
-      "aoIndex": "AO89"
-    },
-    {
-      "aiIndex": "AI264",
-      "aoIndex": "AO187"
-    },
-    {
-      "aiIndex": "AI104",
-      "aoIndex": "AO50"
-    },
-    {
-      "aiIndex": "AI193",
-      "aoIndex": "AO129"
-    },
-    {
-      "aiIndex": "AI384",
-      "aoIndex": "AO300"
-    },
-    {
-      "aiIndex": "AI84",
-      "aoIndex": "AO33"
-    },
-    {
-      "aiIndex": "AI52",
-      "aoIndex": "AO8"
-    },
-    {
-      "aiIndex": "AI504",
-      "aoIndex": "AO420"
-    },
-    {
-      "aiIndex": "AI503",
-      "aoIndex": "AO419"
-    },
-    {
-      "aiIndex": "AI502",
-      "aoIndex": "AO418"
-    },
-    {
-      "aiIndex": "AI501",
-      "aoIndex": "AO417"
-    },
-    {
-      "aiIndex": "AI500",
-      "aoIndex": "AO416"
-    },
-    {
-      "aiIndex": "AI499",
-      "aoIndex": "AO415"
-    },
-    {
-      "aiIndex": "AI498",
-      "aoIndex": "AO414"
-    },
-    {
-      "aiIndex": "AI497",
-      "aoIndex": "AO413"
-    },
-    {
-      "aiIndex": "AI506",
-      "aoIndex": "AO422"
-    },
-    {
-      "aiIndex": "AI505",
-      "aoIndex": "AO421"
-    },
-    {
-      "aiIndex": "AI355",
-      "aoIndex": "AO271"
-    },
-    {
-      "aiIndex": "AI356",
-      "aoIndex": "AO272"
-    },
-    {
-      "aiIndex": "AI270",
-      "aoIndex": "AO193"
-    },
-    {
-      "aiIndex": "AI348",
-      "aoIndex": "AO264"
-    },
-    {
-      "aiIndex": "AI349",
-      "aoIndex": "AO265"
-    },
-    {
-      "aiIndex": "AI350",
-      "aoIndex": "AO266"
-    },
-    {
-      "aiIndex": "AI351",
-      "aoIndex": "AO267"
-    },
-    {
-      "aiIndex": "AI352",
-      "aoIndex": "AO268"
-    },
-    {
-      "aiIndex": "AI353",
-      "aoIndex": "AO269"
-    },
-    {
-      "aiIndex": "AI354",
-      "aoIndex": "AO270"
-    },
-    {
-      "aiIndex": "AI194",
-      "aoIndex": "AO130"
-    },
-    {
-      "aiIndex": "AI93",
-      "aoIndex": "AO39"
-    },
-    {
-      "aiIndex": "AI287",
-      "aoIndex": "AO209"
-    },
-    {
-      "aiIndex": "AI178",
-      "aoIndex": "AO117"
-    },
-    {
-      "aiIndex": "AI281",
-      "aoIndex": "AO203"
-    },
-    {
-      "aiIndex": "AI424",
-      "aoIndex": "AO340"
-    },
-    {
-      "aiIndex": "AI291",
-      "aoIndex": "AO213"
-    },
-    {
-      "aiIndex": "AI421",
-      "aoIndex": "AO337"
-    },
-    {
-      "aiIndex": "AI420",
-      "aoIndex": "AO336"
-    },
-    {
-      "aiIndex": "AI419",
-      "aoIndex": "AO335"
-    },
-    {
-      "aiIndex": "AI418",
-      "aoIndex": "AO334"
-    },
-    {
-      "aiIndex": "AI417",
-      "aoIndex": "AO333"
-    },
-    {
-      "aiIndex": "AI558",
-      "aoIndex": "AO450"
-    },
-    {
-      "aiIndex": "AI426",
-      "aoIndex": "AO342"
-    },
-    {
-      "aiIndex": "AI425",
-      "aoIndex": "AO341"
-    },
-    {
-      "aiIndex": "AI263",
-      "aoIndex": "AO186"
-    },
-    {
-      "aiIndex": "AI82",
-      "aoIndex": "AO31"
-    },
-    {
-      "aiIndex": "AI95",
-      "aoIndex": "AO41"
-    },
-    {
-      "aiIndex": "AI111",
-      "aoIndex": "AO54"
-    },
-    {
-      "aiIndex": "AI56",
-      "aoIndex": "AO12"
-    },
-    {
-      "aiIndex": "AI347",
-      "aoIndex": "AO263"
-    },
-    {
-      "aiIndex": "AI182",
-      "aoIndex": "AO120"
-    },
-    {
-      "aiIndex": "AI568",
-      "aoIndex": "AO460"
-    },
-    {
-      "aiIndex": "AI492",
-      "aoIndex": "AO408"
-    },
-    {
-      "aiIndex": "AI489",
-      "aoIndex": "AO405"
-    },
-    {
-      "aiIndex": "AI285",
-      "aoIndex": "AO207"
-    },
-    {
-      "aiIndex": "AI488",
-      "aoIndex": "AO404"
-    },
-    {
-      "aiIndex": "AI161",
-      "aoIndex": "AO100"
-    },
-    {
-      "aiIndex": "AI153",
-      "aoIndex": "AO92"
-    },
-    {
-      "aiIndex": "AI164",
-      "aoIndex": "AO103"
-    },
-    {
-      "aiIndex": "AI333",
-      "aoIndex": "AO249"
-    },
-    {
-      "aiIndex": "AI94",
-      "aoIndex": "AO40"
-    },
-    {
-      "aiIndex": "AI475",
-      "aoIndex": "AO391"
-    },
-    {
-      "aiIndex": "AI476",
-      "aoIndex": "AO392"
-    },
-    {
-      "aiIndex": "AI129",
-      "aoIndex": "AO70"
-    },
-    {
-      "aiIndex": "AI467",
-      "aoIndex": "AO383"
-    },
-    {
-      "aiIndex": "AI468",
-      "aoIndex": "AO384"
-    },
-    {
-      "aiIndex": "AI469",
-      "aoIndex": "AO385"
-    },
-    {
-      "aiIndex": "AI470",
-      "aoIndex": "AO386"
-    },
-    {
-      "aiIndex": "AI471",
-      "aoIndex": "AO387"
-    },
-    {
-      "aiIndex": "AI472",
-      "aoIndex": "AO388"
-    },
-    {
-      "aiIndex": "AI151",
-      "aoIndex": "AO90"
-    },
-    {
-      "aiIndex": "AI213",
-      "aoIndex": "AO146"
-    },
-    {
-      "aiIndex": "AI170",
-      "aoIndex": "AO109"
-    },
-    {
-      "aiIndex": "AI522",
-      "aoIndex": "AO438"
-    },
-    {
-      "aiIndex": "AI521",
-      "aoIndex": "AO437"
-    },
-    {
-      "aiIndex": "AI524",
-      "aoIndex": "AO440"
-    },
-    {
-      "aiIndex": "AI523",
-      "aoIndex": "AO439"
-    },
-    {
-      "aiIndex": "AI518",
-      "aoIndex": "AO434"
-    },
-    {
-      "aiIndex": "AI517",
-      "aoIndex": "AO433"
-    },
-    {
-      "aiIndex": "AI520",
-      "aoIndex": "AO436"
-    },
-    {
-      "aiIndex": "AI519",
-      "aoIndex": "AO435"
-    },
-    {
-      "aiIndex": "AI209",
-      "aoIndex": "AO142"
-    },
-    {
-      "aiIndex": "AI526",
-      "aoIndex": "AO442"
-    },
-    {
-      "aiIndex": "AI525",
-      "aoIndex": "AO441"
-    },
-    {
-      "aiIndex": "AI380",
-      "aoIndex": "AO296"
-    },
-    {
-      "aiIndex": "AI379",
-      "aoIndex": "AO295"
-    },
-    {
-      "aiIndex": "AI378",
-      "aoIndex": "AO294"
-    },
-    {
-      "aiIndex": "AI377",
-      "aoIndex": "AO293"
-    },
-    {
-      "aiIndex": "AI145",
-      "aoIndex": "AO85"
-    },
-    {
-      "aiIndex": "AI383",
-      "aoIndex": "AO299"
-    },
-    {
-      "aiIndex": "AI382",
-      "aoIndex": "AO298"
-    },
-    {
-      "aiIndex": "AI381",
-      "aoIndex": "AO297"
-    },
-    {
-      "aiIndex": "AI177",
-      "aoIndex": "AO116"
-    },
-    {
-      "aiIndex": "AI386",
-      "aoIndex": "AO302"
-    },
-    {
-      "aiIndex": "AI385",
-      "aoIndex": "AO301"
-    },
-    {
-      "aiIndex": "AI423",
-      "aoIndex": "AO339"
-    },
-    {
-      "aiIndex": "AI422",
-      "aoIndex": "AO338"
-    },
-    {
-      "aiIndex": "AI323",
-      "aoIndex": "AO239"
-    },
-    {
-      "aiIndex": "AI149",
-      "aoIndex": "AO88"
-    },
-    {
-      "aiIndex": "AI315",
-      "aoIndex": "AO232"
-    },
-    {
-      "aiIndex": "AI220",
-      "aoIndex": "AO153"
-    },
-    {
-      "aiIndex": "AI300",
-      "aoIndex": "AO220"
-    },
-    {
-      "aiIndex": "AI190",
-      "aoIndex": "AO127"
-    },
+  "binaryIndexMap": [
     {
       "boIndex": "BO18",
       "biIndex": "BI70"
@@ -24460,8 +23493,16 @@
       "biIndex": "BI83"
     },
     {
+      "boIndex": "BO17",
+      "biIndex": "BI69"
+    },
+    {
       "boIndex": "BO11",
       "biIndex": "BI30"
+    },
+    {
+      "boIndex": "BO0",
+      "biIndex": "BI11"
     },
     {
       "boIndex": "BO26",
@@ -24508,10 +23549,6 @@
       "biIndex": "BI90"
     },
     {
-      "boIndex": "BO17",
-      "biIndex": "BI69"
-    },
-    {
       "boIndex": "BO15",
       "biIndex": "BI67"
     },
@@ -24534,6 +23571,1088 @@
     {
       "boIndex": "BO12",
       "biIndex": "BI64"
+    }
+  ],
+  "binaryOutputs": [
+    {
+      "latchOff": "X",
+      "cdc": "ENS",
+      "dataObject": "DEROpSt.disconnected and blocked",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DSTO.DEROpSt.disconnected and blocked",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Lock Out",
+      "state0": "Not Locked Out",
+      "pointIndex": "BO0",
+      "directOperate": "X",
+      "lnClass": "DSTO",
+      "pulseOn": "X",
+      "name": "System Set Lockout State",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "RtnSrvReq",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DCTE.RtnSrvReq",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  Additional start-up status can be found in AI \"System Start-up Status\".\n   - Instructs all batteries to connect.\n   - Once each battery has reported that it has connect successfully, instructs corresponding DER Unit to start.\nSystem can be shut down by executing B0 \"Emergency Stop\" command.\n\nThis operation is the same as California Rule 21 \"Soft Start\".",
+      "state1": "Initiate Start-up",
+      "state0": 47,
+      "pointIndex": "BO1",
+      "directOperate": "X",
+      "lnClass": "DCTE",
+      "pulseOn": "X",
+      "name": "System Initiate Start-up Sequence (Return to Service)\nSetting this to 1 does the following:\n   - Sets BI \"System Is Starting Up\" to 1 indicating that the system is starting up",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "CeaEngzReq",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DCTE.CeaEngzReq",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "\n   - Ensures that any executing operating modes are shut down (disabled).\n   - Ensures that any executing schedules are shut down (disabled).\n  - Instructs all inverters to shut down.\n   - Instructs all batteries to disconnect.\nSystem can be started again by executing BO \"Initiate Start-up Sequence\" command.",
+      "state1": "Stop (Emergency)",
+      "state0": "No Change",
+      "pointIndex": "BO2",
+      "directOperate": "X",
+      "lnClass": "DCTE",
+      "pulseOn": "X",
+      "name": "System Execute Stop (Cease to Energize)\n Setting this to 1 does the following: \n   - Sets BI \"System Is Emergency Stopping\" to 1 indicating that an emergency stop is in progress",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "PrmConn",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DSTO.PrmConn",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Start Permission Granted",
+      "state0": "DCTE",
+      "pointIndex": "BO3",
+      "directOperate": "X",
+      "lnClass": "DSTO",
+      "pulseOn": "X",
+      "name": "System Permission to Start ",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "PrmDscon",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DSTO.PrmDscon",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Stop Permission Granted",
+      "state0": "DCTE",
+      "pointIndex": "BO4",
+      "directOperate": "X",
+      "lnClass": "DSTO",
+      "pulseOn": "X",
+      "name": "System Permission to Stop",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "DPC",
+      "dataObject": " Pos  ",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "CSWI. Pos  ",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Close Switch",
+      "state0": "Open Switch",
+      "pointIndex": "BO5",
+      "directOperate": "X",
+      "lnClass": "CSWI",
+      "pulseOn": "X",
+      "name": "DER Connect/Disconnect Switch",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "IsldCtlFol",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DGEN.IsldCtlFol",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  Determines how the DER behaves when in an Islanded configuration.\n    <0>  Isochronous Mode.  DER attempts to control voltage and frequency independent of configured curves and settings up to the limits of the machine's capabilities in order to achieve AO reference voltage and AO nominal frequency.\n    <1> Droop Mode.  DER acts as a follower using Volt/VAR and Freq/Watt curves.",
+      "state1": "Droop Mode",
+      "state0": "Isochronous Mode",
+      "pointIndex": "BO6",
+      "directOperate": "X",
+      "lnClass": "DGEN",
+      "pulseOn": "X",
+      "name": "Islanded Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "ECPIsldAuto",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DECP.ECPIsldAuto",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  If Enabled, the DER may independently change its Active Settings Group based on locally observed grid conditions.\n    <0> No Autonomous Detection.\n    <1> Autonomous Detection.  Inverter's Active Settings Group  may differ from the Requested Settings Group",
+      "state1": "Autonomous Detection",
+      "state0": "No Autonomous Detection",
+      "pointIndex": "BO7",
+      "directOperate": "X",
+      "lnClass": "DECP",
+      "pulseOn": "X",
+      "name": "Enable Sensed Grid Config Detection",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "ASG",
+      "dataObject": "AGra",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DSTO.AGra",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  Determines whether the energy storage values are expressed in Amp-hrs or Watt-hrs.",
+      "state1": "Watt-hrs",
+      "state0": "Amp-hrs (default)",
+      "pointIndex": "BO8",
+      "directOperate": "X",
+      "lnClass": "DSTO",
+      "pulseOn": "X",
+      "name": "Storage Capacity Units",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "",
+      "cdc": "SPG",
+      "dataObject": "OpnLoopTau",
+      "directOperateNoAck": "",
+      "close": "",
+      "trip": "",
+      "defaultEventClass": "",
+      "countGreaterThanOne": "",
+      "pulseOff": "",
+      "latchOn": "",
+      "defaultCmdClass": "",
+      "uniqueString": "DSTO.OpnLoopTau",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  Indicates whether Time Constant Ramp parameters are interpreted as Open Loop Response times or 3Tau values.",
+      "state1": "3Tau Value",
+      "state0": "Open Loop Response Time",
+      "pointIndex": "BO9",
+      "directOperate": "",
+      "lnClass": "DSTO",
+      "pulseOn": "",
+      "name": "Time Constant Mode",
+      "selectOperate": ""
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "PFGnExtSet",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DFPF.PFGnExtSet",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Absorbing VARs - Q4",
+      "state0": "Producing VARs - Q1",
+      "pointIndex": "BO10",
+      "directOperate": "X",
+      "lnClass": "DFPF",
+      "pulseOn": "X",
+      "name": "Power Factor Excitation When Discharging/Generating",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "PFLodExtSet",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DFPF.PFLodExtSet",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Absorbing VARs - Q3",
+      "state0": "Producing VARs - Q2",
+      "pointIndex": "BO11",
+      "directOperate": "X",
+      "lnClass": "DFPF",
+      "pulseOn": "X",
+      "name": "Power Factor Excitation When Charging",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DHVT.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO12",
+      "directOperate": "X",
+      "lnClass": "DHVT",
+      "pulseOn": "X",
+      "name": "Enable Low/High Voltage Ride-Through Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DHFT.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO13",
+      "directOperate": "X",
+      "lnClass": "DHFT",
+      "pulseOn": "X",
+      "name": "Enable Low/High Frequency Ride-Through Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DRGS.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO14",
+      "directOperate": "X",
+      "lnClass": "DRGS",
+      "pulseOn": "X",
+      "name": "Enable Dynamic Reactive Current Support Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DVWD.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO15",
+      "directOperate": "X",
+      "lnClass": "DVWD",
+      "pulseOn": "DCTE",
+      "name": "Enable Dynamic Volt-Watt Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DHFW.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO16",
+      "directOperate": "X",
+      "lnClass": "DHFW",
+      "pulseOn": "X",
+      "name": "Enable  Frequency-Watt Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DWLM.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO17",
+      "directOperate": "X",
+      "lnClass": "DWLM",
+      "pulseOn": "X",
+      "name": "Enable Active Power Limit Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DWGC.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO18",
+      "directOperate": "X",
+      "lnClass": "DWGC",
+      "pulseOn": "X",
+      "name": "Enable Charge/Discharge Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DTCD.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO19",
+      "directOperate": "X",
+      "lnClass": "DTCD",
+      "pulseOn": "X",
+      "name": "Enable Coordinated Charge/Discharge Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DPKP.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO20",
+      "directOperate": "X",
+      "lnClass": "DPKP",
+      "pulseOn": "X",
+      "name": "Enable Active Power Response Mode #1",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DGFL.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO21",
+      "directOperate": "X",
+      "lnClass": "DGFL",
+      "pulseOn": "X",
+      "name": "Enable Active Power Response Mode #2",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DLFL.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO22",
+      "directOperate": "X",
+      "lnClass": "DLFL",
+      "pulseOn": "X",
+      "name": "Enable Active Power Response Mode #3",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DAGC.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO23",
+      "directOperate": "X",
+      "lnClass": "DAGC",
+      "pulseOn": "X",
+      "name": "Enable Automatic Generation Control Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DWSM.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO24",
+      "directOperate": "X",
+      "lnClass": "DWSM",
+      "pulseOn": "X",
+      "name": "Enable Active Power Smoothing Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DVWC.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO25",
+      "directOperate": "X",
+      "lnClass": "DVWC",
+      "pulseOn": "X",
+      "name": "Enable Volt-Watt Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DHFW.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO26",
+      "directOperate": "X",
+      "lnClass": "DHFW",
+      "pulseOn": "X",
+      "name": "Enable Frequency-Watt Curve Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DVAR.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO27",
+      "directOperate": "X",
+      "lnClass": "DVAR",
+      "pulseOn": "X",
+      "name": "Enable Constant VArs Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DFPF.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO28",
+      "directOperate": "X",
+      "lnClass": "DFPF",
+      "pulseOn": "X",
+      "name": "Enable Fixed Power Factor Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DVVC.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO29",
+      "directOperate": "X",
+      "lnClass": "DVVC",
+      "pulseOn": "X",
+      "name": "Enable Volt-VAR Control Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DWVR.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO30",
+      "directOperate": "X",
+      "lnClass": "DWVR",
+      "pulseOn": "X",
+      "name": "Enable Watt-VAr Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DPFC.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO31",
+      "directOperate": "X",
+      "lnClass": "DPFC",
+      "pulseOn": "X",
+      "name": "Enable Power Factor Correction Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ModEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DPRG.ModEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO32",
+      "directOperate": "X",
+      "lnClass": "DPRG",
+      "pulseOn": "X",
+      "name": "Enable Pricing Mode",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPC",
+      "dataObject": "ArGraMod",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DRGS.ArGraMod",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  Dynamic Reactive Current Support mode must be Enabled for this setting to apply.",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO33",
+      "directOperate": "X",
+      "lnClass": "DRGS",
+      "pulseOn": "X",
+      "name": "Enable Event-Based Reactive Current Support Mode, in which the moving average voltage and the base reactive current are frozen until after the voltage has returned to within the deadband for a specified hold time",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "HysEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DHFW.HysEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO34",
+      "directOperate": "X",
+      "lnClass": "DHFW",
+      "pulseOn": "X",
+      "name": "Frequency-Watt Mode - Use Hysteresis",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "SnptEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DHFW.SnptEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Active",
+      "state0": "Not Active",
+      "pointIndex": "BO35",
+      "directOperate": "X",
+      "lnClass": "DHFW",
+      "pulseOn": "X",
+      "name": "Frequency-Watt Mode - Snapshot of Power",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "HysEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DLFW.HysEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO36",
+      "directOperate": "X",
+      "lnClass": "DLFW",
+      "pulseOn": "X",
+      "name": "Frequency-Watt Curve Mode - Use Hysteresis",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "SnptEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DLFW.SnptEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Active",
+      "state0": "Not Active",
+      "pointIndex": "BO37",
+      "directOperate": "X",
+      "lnClass": "DLFW",
+      "pulseOn": "X",
+      "name": "Frequency-Watt Curve Mode - Snapshot of Power",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "UseRmpRte",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DWGC.UseRmpRte",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": " Indicates whether or not Charge/Discharge should use specified ramp rates or time constants.",
+      "state1": "Use Ramp Rates",
+      "state0": "Use Time Constatnts",
+      "pointIndex": "BO38",
+      "directOperate": "X",
+      "lnClass": "DWGC",
+      "pulseOn": "X",
+      "name": "Charge/Discharge Mode - Use Ramp Rates",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "UseRmpRte",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DAGC.UseRmpRte",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": " Indicates whether or not AGC mode should use specified ramp rates or time constants.",
+      "state1": "Use Ramp Rates",
+      "state0": "Use Time Constatnts",
+      "pointIndex": "BO39",
+      "directOperate": "X",
+      "lnClass": "DAGC",
+      "pulseOn": "X",
+      "name": "AGC Mode - Use Ramp Rates",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "UseRmpRte",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DVWC.UseRmpRte",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "  Indicates whether Volt-Watt mode should use only Time Constants, or both Time Constants and Ramp Rates",
+      "state1": "Use Ramp Rates AND Time Constants",
+      "state0": "Use Time Constatnts",
+      "pointIndex": "BO40",
+      "directOperate": "X",
+      "lnClass": "DVWC",
+      "pulseOn": "X",
+      "name": "Volt-Watt - Use Ramp Rates and Time Constants",
+      "selectOperate": "X"
+    },
+    {
+      "latchOff": "X",
+      "cdc": "SPG",
+      "dataObject": "VRefAdjEna",
+      "directOperateNoAck": "X",
+      "close": "X",
+      "trip": "X",
+      "defaultEventClass": 2,
+      "countGreaterThanOne": "",
+      "pulseOff": "X",
+      "latchOn": "X",
+      "defaultCmdClass": 2,
+      "uniqueString": "DVVR.VRefAdjEna",
+      "cancelCurrentOperation": "",
+      "lnInst": "",
+      "description": "",
+      "state1": "Enabled",
+      "state0": "Disabled",
+      "pointIndex": "BO41",
+      "directOperate": "X",
+      "lnClass": "DVVR",
+      "pulseOn": "X",
+      "name": "Volt-VAr Enable Autonomous Voltage Reference Adjustment",
+      "selectOperate": "X"
+    }
+  ],
+  "counters": [
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C0",
+      "name": "System Active Energy Delivered",
+      "description": "  Measured in watt-hours."
+    },
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C1",
+      "name": "System Active Energy Received",
+      "description": "  Measured in watt-hours."
+    },
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C2",
+      "name": "System Reactive Energy Delivered",
+      "description": "  Measured in VAr-hours."
+    },
+    {
+      "frozenCounterExists": "Yes",
+      "frozenCounterEventDefaultClass": 3,
+      "pointIndex": "C3",
+      "name": "System Reactive Energy Received",
+      "description": "  Measured in VAr-hours."
     }
   ]
 }

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.Commons;
+using Automatak.Simulator.DNP3.Commons.Configuration;
 
 namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 {
@@ -20,9 +21,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         readonly EventedOutstationApplication application;
         readonly MeasurementCache cache;
         readonly ProxyCommandHandler proxy;
-        readonly IMeasurementLoader loader;        
+        readonly IMeasurementLoader loader;
 
         readonly ChangeSet events = new ChangeSet();
+
+        readonly Configuration m_configuration;
 
         public OutstationForm(IOutstation outstation, EventedOutstationApplication application, MeasurementCache cache, ProxyCommandHandler proxy, String alias)
         {
@@ -50,6 +53,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
             // and use this form as the proxy
             proxy.CommandProxy = this;
+
+            m_configuration = Configuration.LoadConfiguration();
         }
 
         void application_TimeWrite(ulong millisecSinceEpoch)
@@ -195,7 +200,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             ListviewDatabaseAdapter.Process(changes, listBoxEvents);
 
             // merge these changes onto the main changeset
-            changes.Apply(events);                        
+            changes.Apply(events);
             
             this.CheckState();
         }
@@ -208,11 +213,30 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                var output = String.Format("Accepted CROB: {0} - {1}", command.code, index);
-                this.listBoxLog.Items.Add(output);
-
                 var changes = new ChangeSet();
-                changes.Update(new BinaryOutputStatus(value, 0x01, DateTime.Now), index);
+
+                DateTime dateTime = DateTime.Now;
+                byte quality = 0x01;
+
+                string logText = String.Format("Accepted CROB: {0} - {1}", command.code, index);
+
+                //
+                // set the output point in the change set
+                //
+                changes.Update(new BinaryOutputStatus(value, quality, dateTime), index);
+
+                //
+                // set the mapped input point in the change set
+                //
+                if (m_configuration.binaryIndexOutputToInput.ContainsKey(index))
+                {
+                    ushort inputIndex = m_configuration.binaryIndexOutputToInput[index];
+
+                    logText += String.Format(", writing CROB: {0}", inputIndex);
+                    changes.Update(new Binary(value, quality, dateTime), inputIndex);
+                }
+
+                this.listBoxLog.Items.Add(logText);
                 loader.Load(changes);
             }
         }
@@ -225,11 +249,32 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                var output = String.Format("Accepted CROB: {0} - {1}", value, index);
-                this.listBoxLog.Items.Add(output);
-
                 var changes = new ChangeSet();
-                changes.Update(new AnalogOutputStatus(value, 0x01, DateTime.Now), index);
+
+                byte quality = 0x01;
+
+                string logText = String.Format("Accepted AOB: {0} - {1}", value, index);
+
+                //
+                // set the output point in the change set
+                //
+                this.listBoxLog.Items.Add(logText);
+                changes.Update(new AnalogOutputStatus(value, quality, DateTime.Now), index);
+
+                //
+                // set the mapped input point in the change set
+                //
+                if (m_configuration.analogIndexOutputToInput.ContainsKey(index))
+                {
+                    ushort inputIndex = m_configuration.analogIndexOutputToInput[index];
+
+                    changes.Update(new Analog(value, quality), inputIndex);
+
+                    logText += String.Format(", writing AI: {0}", inputIndex);
+                }
+
+                this.listBoxLog.Items.Add(logText);
+
                 loader.Load(changes);
             }
         }
@@ -239,47 +284,39 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
          */
         CommandStatus OnControl(ControlRelayOutputBlock command, ushort index, bool operate)
         {
-            bool isIndexValid = true;
-
-            if (isIndexValid)
+            if (!(index < m_configuration.binaryOutputs.Count))
             {
-                switch (command.code)
-                {
-                    case (ControlCode.LATCH_ON):
-                        if (operate) this.LoadSingleBinaryOutputStatus(command, index, true);
-                        return CommandStatus.SUCCESS;
-
-                    case (ControlCode.LATCH_OFF):
-                        if (operate) this.LoadSingleBinaryOutputStatus(command, index, false);
-                        return CommandStatus.SUCCESS;
-
-                    default:
-                        return CommandStatus.NOT_SUPPORTED;
-                }
+                return CommandStatus.OUT_OF_RANGE;
             }
-            else
+
+            switch (command.code)
             {
-                return CommandStatus.NOT_SUPPORTED;
+                case (ControlCode.LATCH_ON):
+                    if (operate) this.LoadSingleBinaryOutputStatus(command, index, true);
+                    return CommandStatus.SUCCESS;
+
+                case (ControlCode.LATCH_OFF):
+                    if (operate) this.LoadSingleBinaryOutputStatus(command, index, false);
+                    return CommandStatus.SUCCESS;
+
+                default:
+                    return CommandStatus.NOT_SUPPORTED;
             }
         }
 
         CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
-            bool isIndexValid = true;
-
-            if (isIndexValid)
+            if (!(index < m_configuration.analogOutputs.Count))
             {
-                if (operate)
-                {
-                    LoadSingleAnalogOutputStatus(index, value);
-                }
+                return CommandStatus.OUT_OF_RANGE;
+            }
 
-                return CommandStatus.SUCCESS;
-            }
-            else
+            if (operate)
             {
-                return CommandStatus.NOT_SUPPORTED;
+                LoadSingleAnalogOutputStatus(index, value);
             }
+
+            return CommandStatus.SUCCESS;
         }
 
         private void measurementView_OnRowSelectionChanged(IEnumerable<UInt16> selection)

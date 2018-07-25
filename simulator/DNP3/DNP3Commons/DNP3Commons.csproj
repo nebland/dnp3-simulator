@@ -56,6 +56,10 @@
       <HintPath>..\..\..\packages\opendnp3.2.1.0-RC6\lib\net45\DNP3CLRInterface.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -67,12 +71,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\BinaryIndexMap.cs" />
     <Compile Include="Configuration\AnalogInput.cs" />
     <Compile Include="Configuration\AnalogOutput.cs" />
     <Compile Include="Configuration\BinaryInput.cs" />
     <Compile Include="Configuration\BInaryOutput.cs" />
     <Compile Include="Configuration\Configuration.cs" />
-    <Compile Include="Configuration\IndexMap.cs" />
+    <Compile Include="Configuration\AnalogIndexMap.cs" />
+    <Compile Include="Configuration\Counter.cs" />
     <Compile Include="EventedOutstationApplication.cs" />
     <Compile Include="GUI\DBListView.cs">
       <SubType>Component</SubType>
