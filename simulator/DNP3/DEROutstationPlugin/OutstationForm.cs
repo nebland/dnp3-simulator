@@ -55,6 +55,60 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             proxy.CommandProxy = this;
 
             m_configuration = Configuration.LoadConfiguration();
+
+            SetDefaultValues(m_configuration);
+        }
+
+        void SetDefaultValues(Configuration configuration)
+        {
+            // set default values for outstation
+            var changes = new ChangeSet();
+
+            byte quality = 0x01;
+            DateTime dateTime = DateTime.Now;
+
+            //
+            // analog input
+            //
+            foreach (AnalogInput analogInput in configuration.analogInputs)
+            {
+                changes.Update(new Analog(
+                    analogInput.value, quality),
+                    Configuration.covertIndex(analogInput.pointIndex));
+            }
+
+            //
+            // analog output
+            //
+            foreach (AnalogOutput analogOutput in configuration.analogOutputs)
+            {
+                changes.Update(new AnalogOutputStatus(
+                    analogOutput.value, quality, DateTime.Now),
+                    Configuration.covertIndex(analogOutput.pointIndex));
+            }
+
+            //
+            // binary input
+            //
+
+            foreach (BinaryInput binaryInput in configuration.binaryInputs)
+            {
+                changes.Update(new Binary(
+                    binaryInput.value, quality, dateTime),
+                    Configuration.covertIndex(binaryInput.pointIndex));
+            }
+
+            //
+            // binary output
+            //
+            foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
+            {
+                changes.Update(new BinaryOutputStatus(
+                    binaryOutput.value, quality, dateTime),
+                    Configuration.covertIndex(binaryOutput.pointIndex));
+            }
+
+            loader.Load(changes);
         }
 
         void application_TimeWrite(ulong millisecSinceEpoch)

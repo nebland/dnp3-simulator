@@ -20,5 +20,6 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public string uniqueString { get; set; }
         public string lnClass { get; set; }
         public string description { get; set; }
+        public bool value { get; set; }
     }
 }

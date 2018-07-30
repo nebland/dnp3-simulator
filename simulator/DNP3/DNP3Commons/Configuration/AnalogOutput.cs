@@ -28,5 +28,6 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public string directOperate { get; set; }
         public string lnClass { get; set; }
         public string description { get; set; }
+        public double value { get; set; }
     }
 }

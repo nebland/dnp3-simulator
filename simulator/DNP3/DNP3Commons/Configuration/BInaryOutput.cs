@@ -31,5 +31,6 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public string pulseOn { get; set; }
         public string name { get; set; }
         public string selectOperate { get; set; }
+        public bool value { get; set; }
     }
 }
