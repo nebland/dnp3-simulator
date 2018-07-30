@@ -159,7 +159,7 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
 
         bool IOutstationInstance.ShowFormOnCreation
         {
-            get { return false; }
+            get { return true; }
         }
 
         void IOutstationInstance.ShowForm()
