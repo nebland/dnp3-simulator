@@ -83,7 +83,9 @@
     <Compile Include="GUI\DBListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI\DBListView.Designer.cs" />
+    <Compile Include="GUI\DBListView.Designer.cs">
+      <DependentUpon>DBListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MeasurementView.cs">
       <SubType>UserControl</SubType>
     </Compile>
