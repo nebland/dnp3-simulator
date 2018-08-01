@@ -22,8 +22,16 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public List<BinaryIndexMap> binaryIndexMap { get; set; }
 
         // additional containers created for convenience
+        public Dictionary<ushort, AnalogInput> analogInputsMap { get; private set; }
+        public Dictionary<ushort, AnalogOutput> analogOutputsMap { get; private set; }
+        public Dictionary<ushort, BinaryInput> binaryInputsMap { get; private set; }
+        public Dictionary<ushort, BinaryOutput> binaryOutputsMap { get; private set; }
+
+        public Dictionary<ushort, ushort> analogIndexInputToOutput { get; private set; }
         public Dictionary<ushort, ushort> analogIndexOutputToInput { get; private set; }
+        public Dictionary<ushort, ushort> binaryIndexInputToOutput { get; private set; }
         public Dictionary<ushort, ushort> binaryIndexOutputToInput { get; private set; }
+
         private static Dictionary<ushort, PointClass> pointClass { get; set; }
 
         /*
@@ -81,6 +89,51 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
             //
             // populate convenience containers
             //
+
+            //
+            // create map of analog inputs
+            //
+            configuration.analogInputsMap = new Dictionary<ushort, AnalogInput>();
+
+            foreach (AnalogInput analogInput in configuration.analogInputs)
+            {
+                configuration.analogInputsMap[Configuration.covertIndex(analogInput.pointIndex)] = analogInput;
+            }
+
+            //
+            // create map of analog outputs
+            //
+            configuration.analogOutputsMap = new Dictionary<ushort, AnalogOutput>();
+
+            foreach (AnalogOutput analogOutput in configuration.analogOutputs)
+            {
+                configuration.analogOutputsMap[Configuration.covertIndex(analogOutput.pointIndex)] = analogOutput;
+            }
+
+            //
+            // create map of binary inputs
+            //
+            configuration.binaryInputsMap = new Dictionary<ushort, BinaryInput>();
+
+            foreach (BinaryInput binaryInput in configuration.binaryInputs)
+            {
+                configuration.binaryInputsMap[Configuration.covertIndex(binaryInput.pointIndex)] = binaryInput;
+            }
+
+            //
+            // create map of binary outputs
+            //
+            configuration.binaryOutputsMap = new Dictionary<ushort, BinaryOutput>();
+
+            foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
+            {
+                configuration.binaryOutputsMap[Configuration.covertIndex(binaryOutput.pointIndex)] = binaryOutput;
+            }
+
+            //
+            // create analog index map
+            //
+            configuration.analogIndexInputToOutput = new Dictionary<ushort, ushort>();
             configuration.analogIndexOutputToInput = new Dictionary<ushort, ushort>();
 
             foreach (AnalogIndexMap map in configuration.analogIndexMap)
@@ -88,9 +141,11 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
                 ushort aiIndexNumber = Configuration.covertIndex(map.aiIndex);
                 ushort aoIndexNumber = Configuration.covertIndex(map.aoIndex);
 
+                configuration.analogIndexInputToOutput[aiIndexNumber] = aoIndexNumber;
                 configuration.analogIndexOutputToInput[aoIndexNumber] = aiIndexNumber;
             }
 
+            configuration.binaryIndexInputToOutput = new Dictionary<ushort, ushort>();
             configuration.binaryIndexOutputToInput = new Dictionary<ushort, ushort>();
 
             foreach (BinaryIndexMap map in configuration.binaryIndexMap)
@@ -98,6 +153,7 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
                 ushort biIndexNumber = Configuration.covertIndex(map.biIndex);
                 ushort boIndexNumber = Configuration.covertIndex(map.boIndex);
 
+                configuration.binaryIndexInputToOutput[biIndexNumber] = boIndexNumber;
                 configuration.binaryIndexOutputToInput[boIndexNumber] = biIndexNumber;
             }
 
