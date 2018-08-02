@@ -24,14 +24,21 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         bool allowSelection = false;
 
-        readonly Configuration m_configuration;
-
         public MeasurementView()
         {
-            m_configuration = Configuration.LoadConfiguration();
-
             InitializeComponent();
         }
+
+        /*
+         * Could not load Configuration in constructor because relative path to
+         * file would be incorrect in VS Designer, so would break loading of Forms
+         * that contain this class. Over loading OnLoad and implementing Load event
+         * did not work, neither functions were called for some reason.
+         * 
+         * Forms using this class need to call this function, this class assumes this
+         * object exists.
+         */
+        public Configuration Configuration { get; set; }
 
         public bool AllowSelection
         {
@@ -52,38 +59,38 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
             if (m.Type == MeasType.Analog)
             {
-                name = m_configuration.analogInputsMap[m.Index].name;
+                name = this.Configuration.analogInputsMap[m.Index].name;
 
-                if (m_configuration.analogIndexInputToOutput.ContainsKey(m.Index))
+                if (this.Configuration.analogIndexInputToOutput.ContainsKey(m.Index))
                 {
-                    mappedIndex = m_configuration.analogIndexInputToOutput[m.Index].ToString();
+                    mappedIndex = this.Configuration.analogIndexInputToOutput[m.Index].ToString();
                 }
             }
             else if (m.Type == MeasType.AnalogOutputStatus)
             {
-                name = m_configuration.analogOutputsMap[m.Index].name;
+                name = this.Configuration.analogOutputsMap[m.Index].name;
 
-                if (m_configuration.analogIndexOutputToInput.ContainsKey(m.Index))
+                if (this.Configuration.analogIndexOutputToInput.ContainsKey(m.Index))
                 {
-                    mappedIndex = m_configuration.analogIndexOutputToInput[m.Index].ToString();
+                    mappedIndex = this.Configuration.analogIndexOutputToInput[m.Index].ToString();
                 }
             }
             else if (m.Type == MeasType.Binary)
             {
-                name = m_configuration.binaryInputsMap[m.Index].name;
+                name = this.Configuration.binaryInputsMap[m.Index].name;
 
-                if (m_configuration.binaryIndexInputToOutput.ContainsKey(m.Index))
+                if (this.Configuration.binaryIndexInputToOutput.ContainsKey(m.Index))
                 {
-                    mappedIndex = m_configuration.binaryIndexInputToOutput[m.Index].ToString();
+                    mappedIndex = this.Configuration.binaryIndexInputToOutput[m.Index].ToString();
                 }
             }
             else if (m.Type == MeasType.BinaryOutputStatus)
             {
-                name = m_configuration.binaryOutputsMap[m.Index].name;
+                name = this.Configuration.binaryOutputsMap[m.Index].name;
 
-                if (m_configuration.binaryIndexOutputToInput.ContainsKey(m.Index))
+                if (this.Configuration.binaryIndexOutputToInput.ContainsKey(m.Index))
                 {
-                    mappedIndex = m_configuration.binaryIndexOutputToInput[m.Index].ToString();
+                    mappedIndex = this.Configuration.binaryIndexOutputToInput[m.Index].ToString();
                 }
             }
 

@@ -31,6 +31,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         {
             InitializeComponent();
 
+            m_configuration = Configuration.LoadConfiguration();
+
+            // this needs to happen before the MeasurementView is set as an observer
+            this.measurementView.Configuration = m_configuration;
+
             this.outstation = outstation;
             this.application = application;
             this.cache = cache;
@@ -53,8 +58,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
             // and use this form as the proxy
             proxy.CommandProxy = this;
-
-            m_configuration = Configuration.LoadConfiguration();
 
             SetDefaultValues(m_configuration);
         }
