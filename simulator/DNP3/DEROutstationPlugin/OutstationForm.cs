@@ -274,8 +274,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
                 DateTime dateTime = DateTime.Now;
                 byte quality = 0x01;
-
-                string logText = String.Format("Accepted CROB: {0} - {1}", command.code, index);
+                string mappedIndex = "---";
 
                 //
                 // set the output point in the change set
@@ -289,9 +288,12 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 {
                     ushort inputIndex = m_configuration.binaryIndexOutputToInput[index];
 
-                    logText += String.Format(", writing CROB: {0}", inputIndex);
+                    mappedIndex = inputIndex.ToString();
+
                     changes.Update(new Binary(value, quality, dateTime), inputIndex);
                 }
+
+                string logText = String.Format("Accepted CROB ({0}) - index: {1}, value: {2}, BI index: {3} ", m_configuration.binaryOutputsMap[index].name, index, value, mappedIndex);
 
                 this.listBoxLog.Items.Add(logText);
                 loader.Load(changes);
@@ -309,13 +311,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 var changes = new ChangeSet();
 
                 byte quality = 0x01;
-
-                string logText = String.Format("Accepted AOB: {0} - {1}", value, index);
+                string mappedIndex = "---";
 
                 //
                 // set the output point in the change set
                 //
-                this.listBoxLog.Items.Add(logText);
                 changes.Update(new AnalogOutputStatus(value, quality, DateTime.Now), index);
 
                 //
@@ -327,8 +327,10 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
                     changes.Update(new Analog(value, quality), inputIndex);
 
-                    logText += String.Format(", writing AI: {0}", inputIndex);
+                    mappedIndex = inputIndex.ToString();
                 }
+
+                string logText = String.Format("Accepted AOB ({0}) - index: {1}, value: {2}, AI index: {3} ", m_configuration.analogOutputsMap[index].name, index, value, mappedIndex);
 
                 this.listBoxLog.Items.Add(logText);
 
