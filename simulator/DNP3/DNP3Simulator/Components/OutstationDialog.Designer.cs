@@ -160,6 +160,8 @@ namespace Automatak.Simulator.DNP3.Components
             // 
             // linkConfigControl
             // 
+            linkConfig1.KeepAliveTimeoutMilliseconds = ((long)(60000000));
+            linkConfig1.ResponeTimeoutMilliseconds = ((long)(1000));
             this.linkConfigControl.Configuration = linkConfig1;
             this.linkConfigControl.Location = new System.Drawing.Point(6, 6);
             this.linkConfigControl.Name = "linkConfigControl";
@@ -386,8 +388,6 @@ namespace Automatak.Simulator.DNP3.Components
             // checkBoxEnableUnsol
             // 
             this.checkBoxEnableUnsol.AutoSize = true;
-            this.checkBoxEnableUnsol.Checked = true;
-            this.checkBoxEnableUnsol.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxEnableUnsol.Location = new System.Drawing.Point(20, 27);
             this.checkBoxEnableUnsol.Name = "checkBoxEnableUnsol";
             this.checkBoxEnableUnsol.Size = new System.Drawing.Size(144, 17);
