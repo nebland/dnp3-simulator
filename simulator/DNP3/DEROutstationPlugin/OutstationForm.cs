@@ -75,8 +75,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             //
             foreach (AnalogInput analogInput in configuration.analogInputs)
             {
-                changes.Update(new Analog(
-                    analogInput.value, quality),
+                changes.Update(
+                    new Analog(analogInput.value, quality, dateTime),
                     Configuration.covertIndex(analogInput.pointIndex));
             }
 
@@ -85,8 +85,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             //
             foreach (AnalogOutput analogOutput in configuration.analogOutputs)
             {
-                changes.Update(new AnalogOutputStatus(
-                    analogOutput.value, quality, DateTime.Now),
+                changes.Update(
+                    new AnalogOutputStatus(analogOutput.value, quality, dateTime),
                     Configuration.covertIndex(analogOutput.pointIndex));
             }
 
@@ -310,13 +310,14 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             {
                 var changes = new ChangeSet();
 
+                DateTime dateTime = DateTime.Now;
                 byte quality = 0x01;
                 string mappedIndex = "---";
 
                 //
                 // set the output point in the change set
                 //
-                changes.Update(new AnalogOutputStatus(value, quality, DateTime.Now), index);
+                changes.Update(new AnalogOutputStatus(value, quality, dateTime), index);
 
                 //
                 // set the mapped input point in the change set
@@ -325,7 +326,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 {
                     ushort inputIndex = m_configuration.analogIndexOutputToInput[index];
 
-                    changes.Update(new Analog(value, quality), inputIndex);
+                    changes.Update(new Analog(value, quality, dateTime), inputIndex);
 
                     mappedIndex = inputIndex.ToString();
                 }
