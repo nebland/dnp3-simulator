@@ -54,30 +54,28 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     (ushort) configuration.analogOutputs.Count, 
                     11);
 
-                config.outstation.config.allowUnsolicited = true;
+                config.outstation.config.allowUnsolicited = false;
 
                 config.outstation.config.unsolClassMask = ClassField.AllClasses;
 
-                foreach (AnalogInput analogInput in configuration.analogInputs)
+                foreach (AnalogOutput analogOutput in configuration.analogOutputs)
                 {
-                    ushort index = Configuration.covertIndex(analogInput.pointIndex);
+                    ushort index = Configuration.covertIndex(analogOutput.pointIndex);
 
-                    config.databaseTemplate.analogs[index].clazz = Configuration.convertPointClass(analogInput.defaultEventClass);
+                    config.databaseTemplate.analogOutputStatii[index].clazz = PointClass.Class0;
 
-                    config.databaseTemplate.analogs[index].eventVariation = EventAnalogVariation.Group32Var7;
-
-                    config.databaseTemplate.analogs[index].staticVariation = StaticAnalogVariation.Group30Var5;
+                    config.databaseTemplate.analogOutputStatii[index].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
                 }
 
                 foreach (BinaryInput binaryInput in configuration.binaryInputs)
                 {
                     ushort index = Configuration.covertIndex(binaryInput.pointIndex);
 
-                    config.databaseTemplate.analogs[index].clazz = Configuration.convertPointClass(binaryInput.defaultEventClass);
+                    config.databaseTemplate.binaries[index].clazz = PointClass.Class1;
 
-                    config.databaseTemplate.analogs[index].eventVariation = EventAnalogVariation.Group32Var7;
+                    config.databaseTemplate.binaries[index].staticVariation = StaticBinaryVariation.Group1Var2;
 
-                    config.databaseTemplate.analogs[index].staticVariation = StaticAnalogVariation.Group30Var5;
+                    config.databaseTemplate.binaries[index].eventVariation = EventBinaryVariation.Group2Var2;
                 }
 
                 return config;
