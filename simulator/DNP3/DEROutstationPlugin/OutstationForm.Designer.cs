@@ -35,6 +35,7 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.comboBoxTypes = new System.Windows.Forms.ComboBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.measurementView = new Automatak.Simulator.DNP3.DEROutstationPlugin.MeasurementView();
             this.label4 = new System.Windows.Forms.Label();
             this.listBoxLog = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,7 +45,6 @@
             this.numericUpDownColdRestartTime = new System.Windows.Forms.NumericUpDown();
             this.checkBoxLocalMode = new System.Windows.Forms.CheckBox();
             this.checkBoxNeedTime = new System.Windows.Forms.CheckBox();
-            this.measurementView = new Automatak.Simulator.DNP3.DEROutstationPlugin.MeasurementView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -158,6 +158,16 @@
             this.splitContainer2.SplitterDistance = 268;
             this.splitContainer2.TabIndex = 0;
             // 
+            // measurementView
+            // 
+            this.measurementView.AllowSelection = true;
+            this.measurementView.Configuration = null;
+            this.measurementView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.measurementView.Location = new System.Drawing.Point(0, 0);
+            this.measurementView.Name = "measurementView";
+            this.measurementView.Size = new System.Drawing.Size(877, 268);
+            this.measurementView.TabIndex = 0;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -172,6 +182,7 @@
             this.listBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxLog.FormattingEnabled = true;
+            this.listBoxLog.HorizontalScrollbar = true;
             this.listBoxLog.Location = new System.Drawing.Point(198, 36);
             this.listBoxLog.Name = "listBoxLog";
             this.listBoxLog.Size = new System.Drawing.Size(679, 238);
@@ -255,15 +266,6 @@
             this.checkBoxNeedTime.Text = "Need Time (IIN 1.4)";
             this.checkBoxNeedTime.UseVisualStyleBackColor = true;
             this.checkBoxNeedTime.CheckedChanged += new System.EventHandler(this.checkBoxNeedTime_CheckedChanged);
-            // 
-            // measurementView
-            // 
-            this.measurementView.AllowSelection = true;
-            this.measurementView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.measurementView.Location = new System.Drawing.Point(0, 0);
-            this.measurementView.Name = "measurementView";
-            this.measurementView.Size = new System.Drawing.Size(877, 268);
-            this.measurementView.TabIndex = 0;
             // 
             // OutstationForm
             // 

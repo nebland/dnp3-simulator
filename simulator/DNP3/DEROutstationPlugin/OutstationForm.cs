@@ -27,6 +27,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         readonly Configuration m_configuration;
 
+        string m_largestStringInLog = "";
+
         public OutstationForm(IOutstation outstation, EventedOutstationApplication application, MeasurementCache cache, ProxyCommandHandler proxy, String alias)
         {
             InitializeComponent();
@@ -296,6 +298,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 string logText = String.Format("Accepted CROB ({0}) - index: {1}, value: {2}, BI index: {3} ", m_configuration.binaryOutputsMap[index].name, index, value, mappedIndex);
 
                 this.listBoxLog.Items.Add(logText);
+                UpdateListBoxLogHScroll();
                 loader.Load(changes);
             }
         }
@@ -334,6 +337,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 string logText = String.Format("Accepted AOB ({0}) - index: {1}, value: {2}, AI index: {3} ", m_configuration.analogOutputsMap[index].name, index, value, mappedIndex);
 
                 this.listBoxLog.Items.Add(logText);
+                UpdateListBoxLogHScroll();
 
                 loader.Load(changes);
             }
@@ -479,6 +483,36 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         CommandStatus ICommandHandler.Operate(AnalogOutputDouble64 command, ushort index, OperateType opType)
         {
             return OnAnalogControl(command.value, index, true);
+        }
+
+        private void UpdateListBoxLogHScroll()
+        {
+            if (!(listBoxLog.Items.Count > 0))
+            {
+                return;
+            }
+
+            // Make sure no items are displayed partially.
+            listBoxLog.IntegralHeight = true;
+
+            // Display a horizontal scroll bar.
+            listBoxLog.HorizontalScrollbar = true;
+
+            string lastString = listBoxLog.Items[listBoxLog.Items.Count - 1].ToString();
+            if (lastString.Count() > m_largestStringInLog.Count())
+            {
+                m_largestStringInLog = lastString;
+            }
+
+            // Create a Graphics object to use when determining the size of the largest item in the ListBox.
+            Graphics g = listBoxLog.CreateGraphics();
+
+            // Determine the size for HorizontalExtent using the MeasureString method using the last item in the list.
+            float hzSize = g.MeasureString(m_largestStringInLog, listBoxLog.Font).Width;
+
+            // Set the HorizontalExtent property.
+            // the calculation doesn't work, doubling the value seems to be fine...
+            listBoxLog.HorizontalExtent = (int)(hzSize * 2);
         }
     }
 }
