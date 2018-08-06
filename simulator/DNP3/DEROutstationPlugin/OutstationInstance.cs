@@ -54,10 +54,6 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     (ushort) configuration.analogOutputs.Count, 
                     11);
 
-                config.outstation.config.allowUnsolicited = false;
-
-                config.outstation.config.unsolClassMask = ClassField.AllClasses;
-
                 foreach (AnalogOutput analogOutput in configuration.analogOutputs)
                 {
                     ushort index = Configuration.covertIndex(analogOutput.pointIndex);
