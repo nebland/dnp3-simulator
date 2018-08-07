@@ -83,11 +83,15 @@
     <Compile Include="GUI\DBListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI\DBListView.Designer.cs" />
+    <Compile Include="GUI\DBListView.Designer.cs">
+      <DependentUpon>DBListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MeasurementView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\MeasurementView.Designer.cs" />
+    <Compile Include="GUI\MeasurementView.Designer.cs">
+      <DependentUpon>MeasurementView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\TransparentButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,7 +112,9 @@
     <Compile Include="ProxyLoader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\MeasurementView.resx" />
+    <EmbeddedResource Include="GUI\MeasurementView.resx">
+      <DependentUpon>MeasurementView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\TransparentButton.resx">
       <DependentUpon>TransparentButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,7 +123,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

@@ -77,11 +77,23 @@
     <Compile Include="CounterValueDialog.Designer.cs">
       <DependentUpon>CounterValueDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBListView.Designer.cs">
+      <DependentUpon>DBListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoubleBinaryValueDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DoubleBinaryValueDialog.Designer.cs">
       <DependentUpon>DoubleBinaryValueDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasurementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MeasurementView.Designer.cs">
+      <DependentUpon>MeasurementView.cs</DependentUpon>
     </Compile>
     <Compile Include="OutstationForm.cs">
       <SubType>Form</SubType>
@@ -127,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoubleBinaryValueDialog.resx">
       <DependentUpon>DoubleBinaryValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasurementView.resx">
+      <DependentUpon>MeasurementView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OutstationForm.resx">
       <DependentUpon>OutstationForm.cs</DependentUpon>

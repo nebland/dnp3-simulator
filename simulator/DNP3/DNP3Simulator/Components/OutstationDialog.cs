@@ -77,8 +77,11 @@ namespace Automatak.Simulator.DNP3.Components
                 oc.link = this.linkConfigControl.Configuration;
                 
                 oc.outstation.config = this.OutstationParameters;
-                oc.outstation.buffer = this.eventBufferConfigControl1.Configuration;                
-                            
+                oc.outstation.buffer = this.eventBufferConfigControl1.Configuration;
+
+                // remove AnalogOutputStatus from integrity scan
+                oc.outstation.config.typesAllowedInClass0 = new StaticTypeBitField((ushort)(StaticTypeBitField.AllTypes().mask ^ (int)StaticTypeBitmask.AnalogOutputStatus));
+
                 if (this.allowTemplateEdit)
                 {
                     var templateId = this.comboBoxTemplate.SelectedItem.ToString();
