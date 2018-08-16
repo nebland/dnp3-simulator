@@ -27,6 +27,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         readonly Configuration m_configuration;
 
+        CurveCollection m_curves;
+
         string m_largestStringInLog = "";
 
         public OutstationForm(IOutstation outstation, EventedOutstationApplication application, MeasurementCache cache, ProxyCommandHandler proxy, String alias)
@@ -43,7 +45,9 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.cache = cache;
             this.proxy = proxy;
 
-            this.loader = new ProxyLoader(outstation, cache);
+            ProxyLoader proxyLoader = new ProxyLoader(outstation, cache);
+            this.loader = proxyLoader;
+            m_curves = new CurveCollection(proxyLoader);
 
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
@@ -158,7 +162,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         }
 
         void comboBoxTypes_SelectedIndexChanged(object sender, EventArgs e)
-        {        
+        {
             var index = this.comboBoxTypes.SelectedIndex;
             if(Enum.IsDefined(typeof(MeasType), index))
             {
@@ -311,6 +315,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
+                if (index == 244)
+                {
+                    m_curves.SelectCurve((int)value);
+                }
+
                 var changes = new ChangeSet();
 
                 DateTime dateTime = DateTime.Now;
