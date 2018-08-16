@@ -30,9 +30,14 @@ namespace Automatak.Simulator.DNP3.Commons
             m_selectedCurve = m_curves[1];
         }
 
+        public bool IsSelectedCurveIndexValid(int selectedCurveIndex)
+        {
+            return m_curves.ContainsKey(selectedCurveIndex);
+        }
+
         public void SelectCurve(int selectedCurveIndex)
         {
-            if (!m_curves.ContainsKey(selectedCurveIndex))
+            if (!IsSelectedCurveIndexValid(selectedCurveIndex))
             {
                 string message = "Curve index value must be between 1 and " + m_curves.Count + " inclusive";
                 message += "\nRequested index value is " + selectedCurveIndex;

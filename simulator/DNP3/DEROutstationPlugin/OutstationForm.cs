@@ -386,6 +386,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             {
                 return CommandStatus.OUT_OF_RANGE;
             }
+            // if selecting a curve, make sure it is valid
+            else if ((index == 244) && !m_curves.IsSelectedCurveIndexValid((int)value))
+            {
+                return CommandStatus.OUT_OF_RANGE;
+            }
 
             if (operate)
             {
