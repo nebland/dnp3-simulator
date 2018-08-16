@@ -70,6 +70,9 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         void SetDefaultValues(Configuration configuration)
         {
+            // select the default curve so it can be populated with default values too
+            m_curves.SelectCurve((int)configuration.analogOutputsMap[244].value);
+
             // set default values for outstation
             var changes = new ChangeSet();
 

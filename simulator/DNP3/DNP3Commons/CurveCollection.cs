@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Automatak.DNP3.Interface;
+using System.Windows.Forms;
 
 namespace Automatak.Simulator.DNP3.Commons
 {
@@ -25,28 +26,43 @@ namespace Automatak.Simulator.DNP3.Commons
             {
                 m_curves[index] = new Curve();
             }
+
+            m_selectedCurve = m_curves[1];
         }
 
         public void SelectCurve(int selectedCurveIndex)
         {
-            if (m_curves.ContainsKey(selectedCurveIndex))
+            if (!m_curves.ContainsKey(selectedCurveIndex))
             {
-                // remove previous curve from ProxyLoader
-                if (m_selectedCurve != null)
+                string message = "Curve index value must be between 1 and " + m_curves.Count + " inclusive";
+                message += "\nRequested index value is " + selectedCurveIndex;
+
+                if (m_selectedCurve == null)
                 {
-                    m_proxyLoader.RemoveLoader(m_selectedCurve);
+                    message += "\nSelecting curve 1";
+
+                    m_selectedCurve = m_curves[1];
+                }
+                else
+                {
+                    message += "\nKeeping currently selected curve";
                 }
 
-                m_selectedCurve = m_curves[selectedCurveIndex];
-
-                // load the values of the newly selected curve into the registers
-                ChangeSet selectedCurveChanges = m_selectedCurve.CreateChangeSet();
-
-                ((IMeasurementLoader) m_proxyLoader).Load(selectedCurveChanges);
-
-                // add new curve to ProxyLoader
-                m_proxyLoader.AddLoader(m_selectedCurve);
+                throw new IndexOutOfRangeException(message);
             }
+
+            // remove previous curve from ProxyLoader so it won't be written to
+            m_proxyLoader.RemoveLoader(m_selectedCurve);
+
+            m_selectedCurve = m_curves[selectedCurveIndex];
+
+            // load the values of the newly selected curve into the registers
+            ChangeSet selectedCurveChanges = m_selectedCurve.CreateChangeSet();
+
+            ((IMeasurementLoader) m_proxyLoader).Load(selectedCurveChanges);
+
+            // add the newly selected curve to ProxyLoader so it can be written to
+            m_proxyLoader.AddLoader(m_selectedCurve);
         }
     }
 }
