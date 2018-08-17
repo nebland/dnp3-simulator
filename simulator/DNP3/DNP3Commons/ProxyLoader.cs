@@ -10,12 +10,22 @@ namespace Automatak.Simulator.DNP3.Commons
 {
     public class ProxyLoader : IMeasurementLoader
     {
-        IEnumerable<IMeasurementLoader> loaders;
+        IList<IMeasurementLoader> loaders;
+
+        public void AddLoader(IMeasurementLoader loader)
+        {
+            this.loaders.Add(loader);
+        }
+
+        public void RemoveLoader(IMeasurementLoader loader)
+        {
+            this.loaders.Remove(loader);
+        }
 
         public ProxyLoader(params IMeasurementLoader[] loaders)
         {
             this.loaders = new List<IMeasurementLoader>(loaders);
-        }              
+        }
 
         void IMeasurementLoader.Load(IChangeSet updates)
         {

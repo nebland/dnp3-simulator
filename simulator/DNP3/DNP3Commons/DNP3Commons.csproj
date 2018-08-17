@@ -79,6 +79,8 @@
     <Compile Include="Configuration\Configuration.cs" />
     <Compile Include="Configuration\AnalogIndexMap.cs" />
     <Compile Include="Configuration\Counter.cs" />
+    <Compile Include="Curve.cs" />
+    <Compile Include="CurveCollection.cs" />
     <Compile Include="EventedOutstationApplication.cs" />
     <Compile Include="GUI\DBListView.cs">
       <SubType>Component</SubType>

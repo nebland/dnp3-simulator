@@ -27,6 +27,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         readonly Configuration m_configuration;
 
+        CurveCollection m_curves;
+
         string m_largestStringInLog = "";
 
         public OutstationForm(IOutstation outstation, EventedOutstationApplication application, MeasurementCache cache, ProxyCommandHandler proxy, String alias)
@@ -43,7 +45,9 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.cache = cache;
             this.proxy = proxy;
 
-            this.loader = new ProxyLoader(outstation, cache);
+            ProxyLoader proxyLoader = new ProxyLoader(outstation, cache);
+            this.loader = proxyLoader;
+            m_curves = new CurveCollection(proxyLoader);
 
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
@@ -66,6 +70,9 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         void SetDefaultValues(Configuration configuration)
         {
+            // select the default curve so it can be populated with default values too
+            m_curves.SelectCurve((int)configuration.analogOutputsMap[244].value);
+
             // set default values for outstation
             var changes = new ChangeSet();
 
@@ -158,7 +165,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         }
 
         void comboBoxTypes_SelectedIndexChanged(object sender, EventArgs e)
-        {        
+        {
             var index = this.comboBoxTypes.SelectedIndex;
             if(Enum.IsDefined(typeof(MeasType), index))
             {
@@ -311,6 +318,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
+                if (index == 244)
+                {
+                    m_curves.SelectCurve((int)value);
+                }
+
                 var changes = new ChangeSet();
 
                 DateTime dateTime = DateTime.Now;
@@ -371,6 +383,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
             if (!(index < m_configuration.analogOutputs.Count))
+            {
+                return CommandStatus.OUT_OF_RANGE;
+            }
+            // if selecting a curve, make sure it is valid
+            else if ((index == 244) && !m_curves.IsSelectedCurveIndexValid((int)value))
             {
                 return CommandStatus.OUT_OF_RANGE;
             }

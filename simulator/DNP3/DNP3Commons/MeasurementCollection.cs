@@ -8,11 +8,11 @@ using System.Collections.ObjectModel;
 namespace Automatak.Simulator.DNP3.Commons
 {
     public interface IMeasurementObserver
-    { 
+    {
         void Refresh(IEnumerable<Measurement> rows);
 
-        void Update(Measurement meas);   
-    }   
+        void Update(Measurement meas);
+    }
 
     public class MeasurementCollection
     {
@@ -60,7 +60,7 @@ namespace Automatak.Simulator.DNP3.Commons
                     {
                         o.Update(m);
                     }
-                }                
+                }
             }
         }
         
