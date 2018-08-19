@@ -3,9 +3,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
     <StartArguments>-nosplash</StartArguments>
-    <StartWorkingDirectory>D:\development\sunspec-svp-dnp3agent-workspace\dnp3-simulator\</StartWorkingDirectory>
+    <StartWorkingDirectory>X:\work\projects\sunspec\source\dnp3-simulator\</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>
