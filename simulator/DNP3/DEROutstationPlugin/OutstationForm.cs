@@ -71,6 +71,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         void SetDefaultValues(Configuration configuration)
         {
             // select the default curve so it can be populated with default values too
+            // TODO: how to handle if configuration setting is out of range
             m_curves.SelectCurve((int)configuration.analogOutputsMap[244].value);
 
             // set default values for outstation
@@ -310,17 +311,26 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
         }
 
-        void LoadSingleAnalogOutputStatus(ushort index, double value)
+        CommandStatus LoadSingleAnalogOutputStatus(ushort index, double value)
         {
             if (this.InvokeRequired)
             {
-                this.BeginInvoke(new Action(() => LoadSingleAnalogOutputStatus(index, value)));
+                Func<ushort, double, CommandStatus> func = (x, y) => LoadSingleAnalogOutputStatus(x, y);
+
+                object[] values = new object[] { index, value };
+
+                return (CommandStatus) this.Invoke(func, values);
             }
             else
             {
                 if (index == 244)
                 {
-                    m_curves.SelectCurve((int)value);
+                    CommandStatus result = m_curves.SelectCurve((int)value);
+
+                    if (result != CommandStatus.SUCCESS)
+                    {
+                        return result;
+                    }
                 }
 
                 var changes = new ChangeSet();
@@ -352,6 +362,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 UpdateListBoxLogHScroll();
 
                 loader.Load(changes);
+
+                return CommandStatus.SUCCESS;
             }
         }
 
@@ -382,19 +394,15 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
+            // check if index is support
             if (!(index < m_configuration.analogOutputs.Count))
-            {
-                return CommandStatus.OUT_OF_RANGE;
-            }
-            // if selecting a curve, make sure it is valid
-            else if ((index == 244) && !m_curves.IsSelectedCurveIndexValid((int)value))
             {
                 return CommandStatus.OUT_OF_RANGE;
             }
 
             if (operate)
             {
-                LoadSingleAnalogOutputStatus(index, value);
+                return LoadSingleAnalogOutputStatus(index, value);
             }
 
             return CommandStatus.SUCCESS;

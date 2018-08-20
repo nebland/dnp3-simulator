@@ -35,25 +35,11 @@ namespace Automatak.Simulator.DNP3.Commons
             return m_curves.ContainsKey(selectedCurveIndex);
         }
 
-        public void SelectCurve(int selectedCurveIndex)
+        public CommandStatus SelectCurve(int selectedCurveIndex)
         {
             if (!IsSelectedCurveIndexValid(selectedCurveIndex))
             {
-                string message = "Curve index value must be between 1 and " + m_curves.Count + " inclusive";
-                message += "\nRequested index value is " + selectedCurveIndex;
-
-                if (m_selectedCurve == null)
-                {
-                    message += "\nSelecting curve 1";
-
-                    m_selectedCurve = m_curves[1];
-                }
-                else
-                {
-                    message += "\nKeeping currently selected curve";
-                }
-
-                throw new IndexOutOfRangeException(message);
+                return CommandStatus.OUT_OF_RANGE;
             }
 
             // remove previous curve from ProxyLoader so it won't be written to
@@ -68,6 +54,8 @@ namespace Automatak.Simulator.DNP3.Commons
 
             // add the newly selected curve to ProxyLoader so it can be written to
             m_proxyLoader.AddLoader(m_selectedCurve);
+
+            return CommandStatus.SUCCESS;
         }
     }
 }
