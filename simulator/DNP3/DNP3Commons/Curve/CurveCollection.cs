@@ -181,6 +181,24 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
                 {
                     SelectCurve((int)update.Value);
                 }
+                else if (index == (ushort)AnalogOutputPoint.FREQUENCY_WATT_CURVE_INDEX
+                    || index == (ushort)AnalogOutputPoint.VOLT_VAR_CURVE_INDEX
+                    || index == (ushort)AnalogOutputPoint.VOLT_WATT_CURVE_INDEX
+                    || index == (ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX)
+                {
+                    int value = (int)update.Value;
+
+                    if (value != 0)
+                    {
+                        if ((value == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_WATT_CURVE_INDEX].Value))
+                            || (value == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.FREQUENCY_WATT_CURVE_INDEX].Value))
+                            || (value == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_VAR_CURVE_INDEX].Value))
+                            || (value == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX].Value)))
+                        {
+                            throw new CurveException(CommandStatus.BLOCKED, "Cannot set AO" + index.ToString() + " to " + value.ToString() + " because it is assigned to another curve index");
+                        }
+                    }
+                }
 
                 m_analogOutputMeasurements[index] = update;
             }
