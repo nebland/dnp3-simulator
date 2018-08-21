@@ -54,8 +54,8 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
         {
             m_proxyLoader = proxyLoader;
 
-            // support storage for 10 curves
-            for (int index = 0; index < 10; index++)
+            // support storage for 20 curves
+            for (int index = 0; index < 20; index++)
             {
                 m_curves.Add(new Curve());
             }
