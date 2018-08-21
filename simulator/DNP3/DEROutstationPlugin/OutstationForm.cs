@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.Commons;
 using Automatak.Simulator.DNP3.Commons.Configuration;
+using Automatak.Simulator.DNP3.Commons.Curve;
 
 namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 {
@@ -47,7 +48,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
             ProxyLoader proxyLoader = new ProxyLoader(outstation, cache);
             this.loader = proxyLoader;
-            m_curves = new CurveCollection(proxyLoader);
+            m_curves = new CurveCollection(m_configuration, proxyLoader);
 
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
@@ -70,10 +71,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         void SetDefaultValues(Configuration configuration)
         {
-            // select the default curve so it can be populated with default values too
-            // TODO: how to handle if configuration setting is out of range
-            m_curves.SelectCurve((int)configuration.analogOutputsMap[244].value);
-
             // set default values for outstation
             var changes = new ChangeSet();
 
@@ -323,13 +320,15 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                if (index == 244)
+                if (index == (ushort)CurveCollection.AnalogOutputPoint.CURVE_EDIT_SELECTOR)
                 {
-                    CommandStatus result = m_curves.SelectCurve((int)value);
-
-                    if (result != CommandStatus.SUCCESS)
+                    try
                     {
-                        return result;
+                        m_curves.SelectCurve((int)value);
+                    }
+                    catch (CurveException exception)
+                    {
+                        return exception.CommandStatus;
                     }
                 }
 

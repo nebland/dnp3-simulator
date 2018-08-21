@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 using Automatak.DNP3.Interface;
 
-namespace Automatak.Simulator.DNP3.Commons
+namespace Automatak.Simulator.DNP3.Commons.Curve
 {
     /*
      * Generic curve points
-     * 
-     * AI330 - Curve Number of Points
      * 
      * AO245 - Curve Mode Type
      * AO246 - Number Of Curve Points
@@ -19,12 +17,9 @@ namespace Automatak.Simulator.DNP3.Commons
      * AO248 - Dependent (Y-Value) Units for Curve
      * AO249 through AO447 - X and Y-Values of each curve
      * 
-     * AO173 - Volt-Watt Curve Index
-     * AO186 - Frequency-Watt Curve Index
-     * AO217 - Volt-VAR Curve Index
-     * AO226 - Watt-VAr Curve Index
+     * AI330 - Curve Number of Points
      * 
-     * Enumerations
+     * Enumeration Values
      * AO245
      *   <0> Curve disabled
      *   <1> Not applicable / Unknown

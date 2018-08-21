@@ -12,6 +12,11 @@ namespace Automatak.Simulator.DNP3.Commons
     {
         IList<IMeasurementLoader> loaders;
 
+        public void InsertLoader(int index, IMeasurementLoader loader)
+        {
+            this.loaders.Insert(index, loader);
+        }
+
         public void AddLoader(IMeasurementLoader loader)
         {
             this.loaders.Add(loader);
