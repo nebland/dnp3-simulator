@@ -46,9 +46,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.cache = cache;
             this.proxy = proxy;
 
-            ProxyLoader proxyLoader = new ProxyLoader(outstation, cache);
-            this.loader = proxyLoader;
-            m_curves = new CurveCollection(m_configuration, proxyLoader);
+            m_curves = new CurveCollection(m_configuration, new ProxyLoader(outstation, cache));
+            this.loader = m_curves.Loader;
 
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
@@ -320,18 +319,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             }
             else
             {
-                if (index == (ushort)CurveCollection.AnalogOutputPoint.CURVE_EDIT_SELECTOR)
-                {
-                    try
-                    {
-                        m_curves.SelectCurve((int)value);
-                    }
-                    catch (CurveException exception)
-                    {
-                        return exception.CommandStatus;
-                    }
-                }
-
                 var changes = new ChangeSet();
 
                 DateTime dateTime = DateTime.Now;
@@ -360,7 +347,14 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 this.listBoxLog.Items.Add(logText);
                 UpdateListBoxLogHScroll();
 
-                loader.Load(changes);
+                try
+                {
+                    loader.Load(changes);
+                }
+                catch (CurveException exception)
+                {
+                    return exception.CommandStatus;
+                }
 
                 return CommandStatus.SUCCESS;
             }
