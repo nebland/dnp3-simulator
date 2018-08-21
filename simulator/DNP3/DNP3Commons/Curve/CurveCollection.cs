@@ -12,14 +12,19 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
     /*
      * Track data associated with a curve and manage multiple curves
      * 
+     * This class is not a IMeausermentLoader, and thus cannot be added to the ProxyLoader, 
+     * because it must be able to manipulate the objects being loaded (the curves) 
+     * when a ChangeSet is applied. The Load function applies changes to this class
+     * first, then updates the ChangeSet with additional changes affected by associated 
+     * curve data, then applies these final changes to the ProxyLoader.
+     * 
      * AO173 - Volt-Watt Curve Index
      * AO186 - Frequency-Watt Curve Index
      * AO217 - Volt-VAR Curve Index
      * AO226 - Watt-VAr Curve Index
      * 
-
      **/
-    public class CurveCollection : IMeasurementLoader, IDatabase
+    public class CurveCollection : IDatabase
     {
         // storage for registers associated with curves
         private IDictionary<ushort, AnalogOutputStatus> m_analogOutputMeasurements = new SortedDictionary<ushort, AnalogOutputStatus>();
@@ -27,7 +32,7 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
 
         private IList<Curve> m_curves = new List<Curve>();
 
-        public CurveLoader Loader { get; private set; }
+        private ProxyLoader m_proxyLoader;
 
         private Curve m_selectedCurve = null;
 
@@ -47,7 +52,7 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
 
         public CurveCollection(Configuration.Configuration configuration, ProxyLoader proxyLoader)
         {
-            Loader = new CurveLoader(this, proxyLoader);
+            m_proxyLoader = proxyLoader;
 
             // support storage for 10 curves
             for (int index = 0; index < 10; index++)
@@ -59,7 +64,7 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
             // (the default selected curve will be set from configuration file at 
             // end of this constructor)
             m_selectedCurve = m_curves[0];
-            Loader.AddCurveLoader(m_selectedCurve);
+            m_proxyLoader.AddLoader(m_selectedCurve);
 
             //
             // initialize tracked data from configuration file
@@ -101,22 +106,47 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
             }
 
             // remove previous curve from ProxyLoader so it won't be written to
-            Loader.RemoveCurveLoader(m_selectedCurve);
+            m_proxyLoader.RemoveLoader(m_selectedCurve);
 
             m_selectedCurve = m_curves[selectedCurveIndex-1];
 
             // load the values of the newly selected curve into the registers
             ChangeSet selectedCurveChanges = m_selectedCurve.CreateChangeSet();
 
-            ((IMeasurementLoader)Loader).Load(selectedCurveChanges);
+            ((IMeasurementLoader)m_proxyLoader).Load(selectedCurveChanges);
 
             // add the selected curve to the ProxyLoader
-            Loader.AddCurveLoader(m_selectedCurve);
+            m_proxyLoader.AddLoader(m_selectedCurve);
         }
 
-        void IMeasurementLoader.Load(IChangeSet updates)
+        void UpdateReferencedCurveRegister(ChangeSet updates)
         {
-            updates.Apply(this);
+            ushort curveEditSelector = (ushort)(m_analogOutputMeasurements[(ushort)AnalogOutputPoint.CURVE_EDIT_SELECTOR].Value);
+
+            bool result =
+               (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_WATT_CURVE_INDEX].Value))
+            || (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.FREQUENCY_WATT_CURVE_INDEX].Value))
+            || (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_VAR_CURVE_INDEX].Value))
+            || (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX].Value));
+
+            byte quality = 0x01;
+            DateTime dateTime = DateTime.Now;
+
+            m_binaryInputMeasurements[(ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE] = new Binary(result, quality, dateTime);
+            updates.Update(new Binary(result, 0, DateTime.Now), (ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE);
+        }
+
+        public void Load(ChangeSet updates)
+        {
+            ((IChangeSet)updates).Apply(this);
+
+            //
+            // update the ChangeSet with associated registers that may need to change
+            //
+            UpdateReferencedCurveRegister(updates);
+
+            // now apply changes to everything else
+            ((IMeasurementLoader)m_proxyLoader).Load(updates);
         }
 
         void IDatabase.Update(Binary update, ushort index, EventMode mode)

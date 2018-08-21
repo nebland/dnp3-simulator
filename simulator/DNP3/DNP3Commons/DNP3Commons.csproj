@@ -82,7 +82,6 @@
     <Compile Include="Curve\Curve.cs" />
     <Compile Include="Curve\CurveCollection.cs" />
     <Compile Include="Curve\CurveException.cs" />
-    <Compile Include="Curve\CurveLoader.cs" />
     <Compile Include="EventedOutstationApplication.cs" />
     <Compile Include="GUI\DBListView.cs">
       <SubType>Component</SubType>

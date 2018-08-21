@@ -22,7 +22,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         readonly EventedOutstationApplication application;
         readonly MeasurementCache cache;
         readonly ProxyCommandHandler proxy;
-        readonly IMeasurementLoader loader;
 
         readonly ChangeSet events = new ChangeSet();
 
@@ -47,7 +46,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.proxy = proxy;
 
             m_curves = new CurveCollection(m_configuration, new ProxyLoader(outstation, cache));
-            this.loader = m_curves.Loader;
 
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
@@ -117,7 +115,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                     Configuration.covertIndex(binaryOutput.pointIndex));
             }
 
-            loader.Load(changes);
+            m_curves.Load(changes);
         }
 
         void application_TimeWrite(ulong millisecSinceEpoch)
@@ -166,7 +164,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             var index = this.comboBoxTypes.SelectedIndex;
             if(Enum.IsDefined(typeof(MeasType), index))
             {
-                MeasType type = (MeasType) Enum.ToObject(typeof(MeasType), index);             
+                MeasType type = (MeasType) Enum.ToObject(typeof(MeasType), index);
                 var collection = cache.GetCollection(type);
                 if (collection != null)
                 {
@@ -303,7 +301,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
                 this.listBoxLog.Items.Add(logText);
                 UpdateListBoxLogHScroll();
-                loader.Load(changes);
+                m_curves.Load(changes);
             }
         }
 
@@ -349,7 +347,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
                 try
                 {
-                    loader.Load(changes);
+                    m_curves.Load(changes);
                 }
                 catch (CurveException exception)
                 {
@@ -407,11 +405,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
-        {           
-           loader.Load(events);
-           events.Clear();           
+        {
+           m_curves.Load(events);
+           events.Clear();
            
-           this.listBoxEvents.Items.Clear();           
+           this.listBoxEvents.Items.Clear();
            this.CheckState();
         }
 
