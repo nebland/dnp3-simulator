@@ -35,6 +35,8 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         {
             InitializeComponent();
 
+            this.measurementView.OnRowSelectionChanged += new MeasurementView.RowSelectionEvent(this.measurementView_OnRowSelectionChanged);
+
             m_configuration = Configuration.LoadConfiguration();
 
             // this needs to happen before the MeasurementView is set as an observer
