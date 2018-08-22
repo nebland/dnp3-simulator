@@ -50,12 +50,14 @@
             this.listView.FullRowSelect = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(0, 0);
+            this.listView.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(924, 437);
+            this.listView.Size = new System.Drawing.Size(2464, 1042);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
             this.listView.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_ItemSelectionChanged);
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -89,11 +91,12 @@
             // 
             // MeasurementView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listView);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "MeasurementView";
-            this.Size = new System.Drawing.Size(924, 437);
+            this.Size = new System.Drawing.Size(2464, 1042);
             this.ResumeLayout(false);
 
         }
