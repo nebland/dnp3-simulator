@@ -138,7 +138,7 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
             {
                 if (!Enable)
                 {
-                    throw new CurveException(CommandStatus.BLOCKED, "Curve editing is disabled, failed to write AO" + index.ToString() + " with value " + update.Value.ToString());
+                    throw new CurveException(CommandStatus.ALREADY_ACTIVE, "Curve editing is disabled, failed to write AO" + index.ToString() + " with value " + update.Value.ToString());
                 }
 
                 m_analogOutputMeasurements[index] = update;
@@ -155,7 +155,7 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
             {
                 if (!Enable)
                 {
-                    throw new CurveException(CommandStatus.BLOCKED, "Curve editing is disabled, failed to write AI" + index.ToString() + " with value " + update.Value.ToString());
+                    throw new CurveException(CommandStatus.ALREADY_ACTIVE, "Curve editing is disabled, failed to write AI" + index.ToString() + " with value " + update.Value.ToString());
                 }
 
                 m_analogInputMeasurements[index] = update;
