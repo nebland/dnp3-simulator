@@ -29,6 +29,7 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
         // storage for registers associated with curves
         private IDictionary<ushort, AnalogOutputStatus> m_analogOutputMeasurements = new SortedDictionary<ushort, AnalogOutputStatus>();
         private IDictionary<ushort, Binary> m_binaryInputMeasurements = new SortedDictionary<ushort, Binary>();
+        private IDictionary<ushort, BinaryOutputStatus> m_binaryOutputMeasurements = new SortedDictionary<ushort, BinaryOutputStatus>();
 
         private IList<Curve> m_curves = new List<Curve>();
 
@@ -48,6 +49,14 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
         public enum BinaryInputPoint : ushort
         {
             SELECTED_CURVE_IS_REFERENCED_BY_A_MODE = 107
+        };
+
+        public enum BinaryOutputPoint : ushort
+        {
+            ENABLE_VOLT_WATT_MODE = 25,
+            ENABLE_FREQUENCY_WATT_MODE = 26,
+            ENABLE_VOLT_VAR_MODE = 29,
+            ENABLE_WATT_VAR_MODE = 30
         };
 
         public CurveCollection(Configuration.Configuration configuration, ProxyLoader proxyLoader)
@@ -84,11 +93,15 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
             m_analogOutputMeasurements[(ushort)AnalogOutputPoint.FREQUENCY_WATT_CURVE_INDEX] = new AnalogOutputStatus(configuration.analogOutputsMap[(ushort)AnalogOutputPoint.FREQUENCY_WATT_CURVE_INDEX].value, quality, dateTime);
             m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_VAR_CURVE_INDEX] = new AnalogOutputStatus(configuration.analogOutputsMap[(ushort)AnalogOutputPoint.VOLT_VAR_CURVE_INDEX].value, quality, dateTime);
             m_analogOutputMeasurements[(ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX] = new AnalogOutputStatus(configuration.analogOutputsMap[(ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX].value, quality, dateTime);
-
             m_analogOutputMeasurements[(ushort)AnalogOutputPoint.CURVE_EDIT_SELECTOR] = new AnalogOutputStatus(defaultSelectedCurveIndex, quality, dateTime);
 
             m_binaryInputMeasurements[(ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE] = new Binary(configuration.binaryInputsMap[(ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE].value, quality, dateTime);
-            
+
+            m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_VOLT_WATT_MODE] = new BinaryOutputStatus(configuration.binaryOutputsMap[(ushort)BinaryOutputPoint.ENABLE_VOLT_WATT_MODE].value, quality, dateTime);
+            m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_FREQUENCY_WATT_MODE] = new BinaryOutputStatus(configuration.binaryOutputsMap[(ushort)BinaryOutputPoint.ENABLE_FREQUENCY_WATT_MODE].value, quality, dateTime);
+            m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_VOLT_VAR_MODE] = new BinaryOutputStatus(configuration.binaryOutputsMap[(ushort)BinaryOutputPoint.ENABLE_VOLT_VAR_MODE].value, quality, dateTime);
+            m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_WATT_VAR_MODE] = new BinaryOutputStatus(configuration.binaryOutputsMap[(ushort)BinaryOutputPoint.ENABLE_WATT_VAR_MODE].value, quality, dateTime);
+
             // now "select" the curve from the configuration file
             SelectCurve(defaultSelectedCurveIndex);
         }
@@ -134,23 +147,62 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
 
             m_binaryInputMeasurements[(ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE] = new Binary(result, quality, dateTime);
             updates.Update(new Binary(result, 0, DateTime.Now), (ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE);
+
+            UpdateEnabledCurve();
+        }
+
+        void UpdateEnabledCurve()
+        {
+            // if the curve is referenced and enabled, then it cannot be written to
+
+            bool selectedCurveReferencedByMode = m_binaryInputMeasurements[(ushort)BinaryInputPoint.SELECTED_CURVE_IS_REFERENCED_BY_A_MODE].Value;
+
+            bool enable = true;
+
+            if (selectedCurveReferencedByMode)
+            {
+                // find the mode referencing the curve so we can check if it is enabled
+                ushort curveEditSelector = (ushort)(m_analogOutputMeasurements[(ushort)AnalogOutputPoint.CURVE_EDIT_SELECTOR].Value);
+
+                if (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_WATT_CURVE_INDEX].Value))
+                {
+                    enable = !m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_VOLT_WATT_MODE].Value;
+                }
+                else if (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.FREQUENCY_WATT_CURVE_INDEX].Value))
+                {
+                    enable = !m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_FREQUENCY_WATT_MODE].Value;
+                }
+                else if (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.VOLT_VAR_CURVE_INDEX].Value))
+                {
+                    enable = !m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_VOLT_VAR_MODE].Value;
+                }
+                else if (curveEditSelector == ((ushort)m_analogOutputMeasurements[(ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX].Value))
+                {
+                    enable = !m_binaryOutputMeasurements[(ushort)BinaryOutputPoint.ENABLE_WATT_VAR_MODE].Value;
+                }
+            }
+
+            m_selectedCurve.Enable = enable;
         }
 
         public void Load(ChangeSet updates)
         {
+            // first apply ChangeSet to this class
             ((IChangeSet)updates).Apply(this);
 
             //
-            // update the ChangeSet with associated registers that may need to change
+            // now update associated registers that may change based on the ChangeSet,
+            // and update the ChangeSet with the changes
             //
             UpdateReferencedCurveRegister(updates);
 
-            // now apply changes to everything else
+            // lastly apply all changes to everything else
             ((IMeasurementLoader)m_proxyLoader).Load(updates);
         }
 
         void IDatabase.Update(Binary update, ushort index, EventMode mode)
         {
+            // the binary input tracked by this class is not set externally
         }
 
         void IDatabase.Update(DoubleBitBinary update, ushort index, EventMode mode)
@@ -171,6 +223,10 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
 
         void IDatabase.Update(BinaryOutputStatus update, ushort index, EventMode mode)
         {
+            if (m_binaryOutputMeasurements.ContainsKey(index))
+            {
+                m_binaryOutputMeasurements[index] = update;
+            }
         }
 
         void IDatabase.Update(AnalogOutputStatus update, ushort index, EventMode mode)
@@ -186,6 +242,8 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
                     || index == (ushort)AnalogOutputPoint.VOLT_WATT_CURVE_INDEX
                     || index == (ushort)AnalogOutputPoint.WATT_VAR_CURVE_INDEX)
                 {
+                    // make sure none of the curve indexes have the requested value
+
                     int value = (int)update.Value;
 
                     if (value != 0)

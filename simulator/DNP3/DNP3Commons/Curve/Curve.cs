@@ -96,6 +96,8 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
             }
         }
 
+        public bool Enable { get; set; }
+
         public ChangeSet CreateChangeSet()
         {
             ChangeSet result = new ChangeSet();
@@ -134,6 +136,11 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
         {
             if (m_analogOutputMeasurements.ContainsKey(index))
             {
+                if (!Enable)
+                {
+                    throw new CurveException(CommandStatus.BLOCKED, "Curve editing is disabled, failed to write AO" + index.ToString() + " with value " + update.Value.ToString());
+                }
+
                 m_analogOutputMeasurements[index] = update;
             }
         }
@@ -146,6 +153,11 @@ namespace Automatak.Simulator.DNP3.Commons.Curve
         {
             if (m_analogInputMeasurements.ContainsKey(index))
             {
+                if (!Enable)
+                {
+                    throw new CurveException(CommandStatus.BLOCKED, "Curve editing is disabled, failed to write AI" + index.ToString() + " with value " + update.Value.ToString());
+                }
+
                 m_analogInputMeasurements[index] = update;
             }
         }
