@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 using Automatak.DNP3.Interface;
 
-namespace Automatak.Simulator.DNP3.Commons
+namespace Automatak.Simulator.DNP3.Commons.Curve
 {
     /*
      * Generic curve points
-     * 
-     * AI330 - Curve Number of Points
      * 
      * AO245 - Curve Mode Type
      * AO246 - Number Of Curve Points
@@ -19,12 +17,9 @@ namespace Automatak.Simulator.DNP3.Commons
      * AO248 - Dependent (Y-Value) Units for Curve
      * AO249 through AO447 - X and Y-Values of each curve
      * 
-     * AO173 - Volt-Watt Curve Index
-     * AO186 - Frequency-Watt Curve Index
-     * AO217 - Volt-VAR Curve Index
-     * AO226 - Watt-VAr Curve Index
+     * AI330 - Curve Number of Points
      * 
-     * Enumerations
+     * Enumeration Values
      * AO245
      *   <0> Curve disabled
      *   <1> Not applicable / Unknown
@@ -101,6 +96,8 @@ namespace Automatak.Simulator.DNP3.Commons
             }
         }
 
+        public bool Enable { get; set; }
+
         public ChangeSet CreateChangeSet()
         {
             ChangeSet result = new ChangeSet();
@@ -139,6 +136,11 @@ namespace Automatak.Simulator.DNP3.Commons
         {
             if (m_analogOutputMeasurements.ContainsKey(index))
             {
+                if (!Enable)
+                {
+                    throw new CurveException(CommandStatus.BLOCKED, "Curve editing is disabled, failed to write AO" + index.ToString() + " with value " + update.Value.ToString());
+                }
+
                 m_analogOutputMeasurements[index] = update;
             }
         }
@@ -151,6 +153,11 @@ namespace Automatak.Simulator.DNP3.Commons
         {
             if (m_analogInputMeasurements.ContainsKey(index))
             {
+                if (!Enable)
+                {
+                    throw new CurveException(CommandStatus.BLOCKED, "Curve editing is disabled, failed to write AI" + index.ToString() + " with value " + update.Value.ToString());
+                }
+
                 m_analogInputMeasurements[index] = update;
             }
         }

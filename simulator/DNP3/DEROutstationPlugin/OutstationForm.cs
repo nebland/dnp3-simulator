@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Automatak.DNP3.Interface;
 using Automatak.Simulator.DNP3.Commons;
 using Automatak.Simulator.DNP3.Commons.Configuration;
+using Automatak.Simulator.DNP3.Commons.Curve;
 
 namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 {
@@ -21,7 +22,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         readonly EventedOutstationApplication application;
         readonly MeasurementCache cache;
         readonly ProxyCommandHandler proxy;
-        readonly IMeasurementLoader loader;
 
         readonly ChangeSet events = new ChangeSet();
 
@@ -45,9 +45,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             this.cache = cache;
             this.proxy = proxy;
 
-            ProxyLoader proxyLoader = new ProxyLoader(outstation, cache);
-            this.loader = proxyLoader;
-            m_curves = new CurveCollection(proxyLoader);
+            m_curves = new CurveCollection(m_configuration, new ProxyLoader(outstation, cache));
 
             this.Text = String.Format("DNP3 Outstation ({0})", alias);
             this.comboBoxTypes.DataSource = System.Enum.GetValues(typeof(MeasType));
@@ -70,9 +68,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         void SetDefaultValues(Configuration configuration)
         {
-            // select the default curve so it can be populated with default values too
-            m_curves.SelectCurve((int)configuration.analogOutputsMap[244].value);
-
             // set default values for outstation
             var changes = new ChangeSet();
 
@@ -120,7 +115,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                     Configuration.covertIndex(binaryOutput.pointIndex));
             }
 
-            loader.Load(changes);
+            m_curves.Load(changes);
         }
 
         void application_TimeWrite(ulong millisecSinceEpoch)
@@ -169,7 +164,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             var index = this.comboBoxTypes.SelectedIndex;
             if(Enum.IsDefined(typeof(MeasType), index))
             {
-                MeasType type = (MeasType) Enum.ToObject(typeof(MeasType), index);             
+                MeasType type = (MeasType) Enum.ToObject(typeof(MeasType), index);
                 var collection = cache.GetCollection(type);
                 if (collection != null)
                 {
@@ -306,23 +301,22 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
                 this.listBoxLog.Items.Add(logText);
                 UpdateListBoxLogHScroll();
-                loader.Load(changes);
+                m_curves.Load(changes);
             }
         }
 
-        void LoadSingleAnalogOutputStatus(ushort index, double value)
+        CommandStatus LoadSingleAnalogOutputStatus(ushort index, double value)
         {
             if (this.InvokeRequired)
             {
-                this.BeginInvoke(new Action(() => LoadSingleAnalogOutputStatus(index, value)));
+                Func<ushort, double, CommandStatus> func = (x, y) => LoadSingleAnalogOutputStatus(x, y);
+
+                object[] values = new object[] { index, value };
+
+                return (CommandStatus) this.Invoke(func, values);
             }
             else
             {
-                if (index == 244)
-                {
-                    m_curves.SelectCurve((int)value);
-                }
-
                 var changes = new ChangeSet();
 
                 DateTime dateTime = DateTime.Now;
@@ -351,7 +345,16 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
                 this.listBoxLog.Items.Add(logText);
                 UpdateListBoxLogHScroll();
 
-                loader.Load(changes);
+                try
+                {
+                    m_curves.Load(changes);
+                }
+                catch (CurveException exception)
+                {
+                    return exception.CommandStatus;
+                }
+
+                return CommandStatus.SUCCESS;
             }
         }
 
@@ -382,19 +385,15 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
+            // check if index is support
             if (!(index < m_configuration.analogOutputs.Count))
-            {
-                return CommandStatus.OUT_OF_RANGE;
-            }
-            // if selecting a curve, make sure it is valid
-            else if ((index == 244) && !m_curves.IsSelectedCurveIndexValid((int)value))
             {
                 return CommandStatus.OUT_OF_RANGE;
             }
 
             if (operate)
             {
-                LoadSingleAnalogOutputStatus(index, value);
+                return LoadSingleAnalogOutputStatus(index, value);
             }
 
             return CommandStatus.SUCCESS;
@@ -406,11 +405,11 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
-        {           
-           loader.Load(events);
-           events.Clear();           
+        {
+           m_curves.Load(events);
+           events.Clear();
            
-           this.listBoxEvents.Items.Clear();           
+           this.listBoxEvents.Items.Clear();
            this.CheckState();
         }
 
