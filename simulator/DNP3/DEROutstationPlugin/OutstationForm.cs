@@ -73,7 +73,6 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             // set default values for outstation
             var changes = new ChangeSet();
 
-            byte quality = 0x01;
             DateTime dateTime = DateTime.Now;
 
             //
@@ -82,7 +81,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             foreach (AnalogInput analogInput in configuration.analogInputs)
             {
                 changes.Update(
-                    new Analog(analogInput.value, quality, dateTime),
+                    new Analog(analogInput.value, (byte) analogInput.quality, dateTime),
                     Configuration.covertIndex(analogInput.pointIndex));
             }
 
@@ -92,7 +91,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             foreach (AnalogOutput analogOutput in configuration.analogOutputs)
             {
                 changes.Update(
-                    new AnalogOutputStatus(analogOutput.value, quality, dateTime),
+                    new AnalogOutputStatus(analogOutput.value, (byte) analogOutput.quality, dateTime),
                     Configuration.covertIndex(analogOutput.pointIndex));
             }
 
@@ -103,7 +102,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             foreach (BinaryInput binaryInput in configuration.binaryInputs)
             {
                 changes.Update(new Binary(
-                    binaryInput.value, quality, dateTime),
+                    binaryInput.value, (byte) binaryInput.quality, dateTime),
                     Configuration.covertIndex(binaryInput.pointIndex));
             }
 
@@ -113,7 +112,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
             {
                 changes.Update(new BinaryOutputStatus(
-                    binaryOutput.value, quality, dateTime),
+                    binaryOutput.value, (byte) binaryOutput.quality, dateTime),
                     Configuration.covertIndex(binaryOutput.pointIndex));
             }
 
