@@ -63,12 +63,16 @@ for row_index in range(3, 379):
             fields["cdc"] = df.iat[row_index, 12]
             fields["reference"] = df.iat[row_index, 13]
             fields["uniqueString"] = df.iat[row_index, 14] + " mapping range " + str(i - 337)
+
+            # add default values for fields not in spreadsheet
             fields["value"] = 0
+            fields["quality"] = 1
 
             analog_input_objects.append(fields)
 
             # map the name to a point index
             analog_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
+
     else:
       fields = {}
       fields["pointIndex"] = df.iat[row_index, 0]
@@ -86,7 +90,10 @@ for row_index in range(3, 379):
       fields["cdc"] = df.iat[row_index, 12]
       fields["reference"] = df.iat[row_index, 13]
       fields["uniqueString"] = df.iat[row_index, 14]
+
+      # add default values for fields not in spreadsheet
       fields["value"] = 0
+      fields["quality"] = 1
 
       # map the name to a point index
       analog_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
@@ -135,7 +142,10 @@ for row_index in range(3, 271):
             fields["reference"] = df.iat[row_index, 17]
             # "Unique String" cell in AI tab has a single "." for some reason
             fields["uniqueString"] = df.iat[row_index, 18] + ". mapping range " + str(i - 253)
+
+            # add default values for fields not in spreadsheet
             fields["value"] = 0
+            fields["quality"] = 1
 
             analog_output_objects.append(fields)
 
@@ -162,7 +172,10 @@ for row_index in range(3, 271):
         fields["cdc"] = df.iat[row_index, 16]
         fields["reference"] = df.iat[row_index, 17]
         fields["uniqueString"] = df.iat[row_index, 18]
+
+        # add default values for fields not in spreadsheet
         fields["value"] = 0
+        fields["quality"] = 1
 
         analog_output_objects.append(fields)
 
@@ -198,7 +211,10 @@ for row_index in range(3, 111):
     fields["cdc"] = df.iat[row_index, 8]
     fields["function"] = df.iat[row_index, 9]
     fields["uniqueString"] = df.iat[row_index, 10]
-    fields["value"] = False
+
+    # add default values for fields not in spreadsheet
+    fields["value"] = 0
+    fields["quality"] = 1
 
     binary_input_objects.append(fields)
 
@@ -245,7 +261,10 @@ for row_index in range(3, 45):
     fields["dataObject"] = df.iat[row_index, 19]
     fields["cdc"] = df.iat[row_index, 20]
     fields["uniqueString"] = df.iat[row_index, 21]
-    fields["value"] = False
+
+    # add default values for fields not in spreadsheet
+    fields["value"] = 0
+    fields["quality"] = 1
 
     binary_output_objects.append(fields)
 
