@@ -407,11 +407,19 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-           m_curves.Load(events);
-           events.Clear();
+            try
+            {
+                m_curves.Load(events);
+            }
+            catch (CurveException exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+            events.Clear();
            
-           this.listBoxEvents.Items.Clear();
-           this.CheckState();
+            this.listBoxEvents.Items.Clear();
+            this.CheckState();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
