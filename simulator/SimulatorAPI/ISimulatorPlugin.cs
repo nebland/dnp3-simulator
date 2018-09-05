@@ -32,5 +32,6 @@ namespace Automatak.Simulator.API
         }
 
         ISimulatorNode Create(ISimulatorNodeCallbacks callbacks);
+        ISimulatorNode CreateNoDialog(ISimulatorNodeCallbacks callbacks);
     }
 }

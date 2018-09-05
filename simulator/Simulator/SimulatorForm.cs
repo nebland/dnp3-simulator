@@ -148,6 +148,11 @@ namespace Automatak.Simulator
                     }
                 );
 
+                // create channel for DerOutstation
+                var treeNodeCallbacks = new TreeNodeCallbacks(this);
+                var secondNode = instance.CreateNoDialog(treeNodeCallbacks);
+                BindNode(secondNode, treeNodeCallbacks.node, treeView.Nodes);
+
                 this.log.LogFull(DisplayHint.INFO, "INFO", "system", "Initialized " + instance.UniqueId + " plugin");
             }
         }
