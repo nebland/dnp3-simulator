@@ -12,7 +12,7 @@ using Automatak.Simulator.DNP3.Commons;
 
 namespace Automatak.Simulator.DNP3
 {
-    class ChannelNode : ISimulatorNode
+    public class ChannelNode : ISimulatorNode
     {
         readonly IDNP3Config config;
         readonly IChannel channel;
@@ -139,6 +139,32 @@ namespace Automatak.Simulator.DNP3
                 {
                     return null;
                 }
+            }
+        }
+
+        public ISimulatorNode CreateOutstationNoDialog(ISimulatorNodeCallbacks callbacks, IOutstationModule module)
+        {
+            var outstationConfig = module.DefaultConfig;
+            var alias = module.DefaultLogName;
+            var factory = module.CreateFactory();
+
+            var outstation = channel.AddOutstation(alias, factory.CommandHandler, factory.Application, outstationConfig);
+
+            if (outstation == null)
+            {
+                return null;
+            }
+            else
+            {
+                var instance = factory.CreateInstance(outstation, alias, outstationConfig);
+                outstation.Enable();
+
+                if (instance.ShowFormOnCreation)
+                {
+                    instance.ShowForm();
+                }
+
+                return new OutstationNode(outstation, instance, callbacks);
             }
         }
 

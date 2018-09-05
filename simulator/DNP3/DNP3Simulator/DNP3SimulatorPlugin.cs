@@ -85,7 +85,17 @@ namespace Automatak.Simulator.DNP3
             }            
        }
 
-       System.Windows.Forms.ImageList ISimulatorPlugin.NodeImageList
+        ISimulatorNode ISimulatorPlugin.CreateNoDialog(ISimulatorNodeCallbacks callbacks)
+        {
+            uint flags = LogLevels.ALL; //logLevelControl1.Filters.Flags;
+            var retry = new ChannelRetry(new TimeSpan(0,0,1), new TimeSpan(0,0,10));
+
+            IChannel channel = manager.AddTCPServer("channel", flags, retry, "127.0.0.1", 20000);
+
+            return new ChannelNode(config, channel, callbacks, "channel");
+        }
+
+        System.Windows.Forms.ImageList ISimulatorPlugin.NodeImageList
        {
            get { return imgList; }
        }

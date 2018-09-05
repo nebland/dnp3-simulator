@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using Automatak.Simulator.UI;
 using Automatak.Simulator.Commons;
 using Automatak.Simulator.API;
+using Automatak.Simulator.DNP3;
+using Automatak.Simulator.DNP3.DerOutstationPlugin;
 
 namespace Automatak.Simulator
 {
@@ -23,8 +25,8 @@ namespace Automatak.Simulator
 
 
         public SimulatorForm(IEnumerable<ISimulatorPluginFactory> plugins, bool splashOnLoad)
-        {                 
-            InitializeComponent();    
+        {
+            InitializeComponent();
             
             this.plugins = plugins;
             this.splashOnLoad = splashOnLoad;
@@ -47,7 +49,7 @@ namespace Automatak.Simulator
 
         void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowAboutBox();  
+            ShowAboutBox();
         }
 
         private void BindNode(ISimulatorNode simNode, TreeNode node, TreeNodeCollection parent)
@@ -121,14 +123,14 @@ namespace Automatak.Simulator
         }
         
         private void SimulatorForm_Load(object sender, EventArgs e)
-        {                        
+        {
             foreach (var factory in plugins)
-            {                
-                var instance = factory.Create(this.log);                
+            {
+                var instance = factory.Create(this.log);
                 var item = new ToolStripMenuItem(instance.RootDisplayName);
                 item.Image = instance.PluginImage;
                 this.addToolStripMenuItem.DropDownItems.Add(item);
-                var page = new TabPage(instance.UniqueId);                
+                var page = new TabPage(instance.UniqueId);
                 var treeView = new TreeView();
                 page.Tag = treeView;
                 treeView.Dock = DockStyle.Fill;
@@ -138,7 +140,7 @@ namespace Automatak.Simulator
                 
                 item.Click += new EventHandler(
                     delegate(Object o, EventArgs a)
-                    {                        
+                    {
                         var callbacks = new TreeNodeCallbacks(this);
                         var node = instance.Create(callbacks);
                         if (node != null)
@@ -147,6 +149,20 @@ namespace Automatak.Simulator
                         }
                     }
                 );
+
+                //
+                // create DerOutstation at startup and update the ui
+                //
+
+                // create channel for DerOutstation
+                var channelNodeCallbacks = new TreeNodeCallbacks(this);
+                ChannelNode channelNode = (ChannelNode) instance.CreateNoDialog(channelNodeCallbacks);
+                BindNode(channelNode, channelNodeCallbacks.node, treeView.Nodes);
+
+                // create der outstation
+                var outstationNodeCallbacks = new TreeNodeCallbacks(this);
+                var outstationNode = channelNode.CreateOutstationNoDialog(outstationNodeCallbacks, Automatak.Simulator.DNP3.DerOutstationPlugin.OutstationModule.Instance);
+                BindNode(outstationNode, outstationNodeCallbacks.node, channelNodeCallbacks.node.Nodes);
 
                 this.log.LogFull(DisplayHint.INFO, "INFO", "system", "Initialized " + instance.UniqueId + " plugin");
             }
@@ -169,7 +185,7 @@ namespace Automatak.Simulator
                 }
                 else
                 {
-                    return (node.Tag as ISimulatorNode).Metrics;                   
+                    return (node.Tag as ISimulatorNode).Metrics;
                 }
             }
         }
