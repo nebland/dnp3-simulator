@@ -34,5 +34,6 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
 
         public bool value { get; set; }
         public int quality { get; set; }
+        public bool enable { get; set; }
     }
 }

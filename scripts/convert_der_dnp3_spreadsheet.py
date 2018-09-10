@@ -41,7 +41,6 @@ analog_input_objects = []
 analog_input_point_index_map = {}
 
 for row_index in range(3, 379):
-
     if row_index == 340:
         # this cell has point index as AI337 - AI530
         # create separate pointIndex entries for each, create a unique string
@@ -67,12 +66,12 @@ for row_index in range(3, 379):
             # add default values for fields not in spreadsheet
             fields["value"] = 0
             fields["quality"] = 1
+            fields["enable"] = True
 
             analog_input_objects.append(fields)
 
             # map the name to a point index
             analog_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
-
     else:
       fields = {}
       fields["pointIndex"] = df.iat[row_index, 0]
@@ -94,6 +93,7 @@ for row_index in range(3, 379):
       # add default values for fields not in spreadsheet
       fields["value"] = 0
       fields["quality"] = 1
+      fields["enable"] = True
 
       # map the name to a point index
       analog_input_point_index_map[fields["uniqueString"]] = fields["pointIndex"]
@@ -146,6 +146,7 @@ for row_index in range(3, 271):
             # add default values for fields not in spreadsheet
             fields["value"] = 0
             fields["quality"] = 1
+            fields["enable"] = True
 
             analog_output_objects.append(fields)
 
@@ -176,6 +177,7 @@ for row_index in range(3, 271):
         # add default values for fields not in spreadsheet
         fields["value"] = 0
         fields["quality"] = 1
+        fields["enable"] = True
 
         analog_output_objects.append(fields)
 
@@ -215,6 +217,7 @@ for row_index in range(3, 111):
     # add default values for fields not in spreadsheet
     fields["value"] = 0
     fields["quality"] = 1
+    fields["enable"] = True
 
     binary_input_objects.append(fields)
 
@@ -265,6 +268,7 @@ for row_index in range(3, 45):
     # add default values for fields not in spreadsheet
     fields["value"] = 0
     fields["quality"] = 1
+    fields["enable"] = True
 
     binary_output_objects.append(fields)
 
