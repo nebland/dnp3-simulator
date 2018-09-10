@@ -145,6 +145,9 @@ namespace Automatak.Simulator.DNP3
         public ISimulatorNode CreateOutstationNoDialog(ISimulatorNodeCallbacks callbacks, IOutstationModule module)
         {
             var outstationConfig = module.DefaultConfig;
+            outstationConfig.link.localAddr = 100;
+            outstationConfig.link.remoteAddr = 101;
+
             var alias = module.DefaultLogName;
             var factory = module.CreateFactory();
 
