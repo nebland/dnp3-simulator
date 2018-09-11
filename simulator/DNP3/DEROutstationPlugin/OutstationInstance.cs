@@ -118,8 +118,9 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     {
                         ushort pointIndex = Configuration.covertIndex(analogInput.pointIndex);
 
-                        // config.databaseTemplate.analogs[arrayIndex].clazz = PointClass.Class0;
-                        // config.databaseTemplate.analogs[arrayIndex].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
+                        stackConfig.databaseTemplate.analogs[arrayIndex].clazz = PointClass.Class1;
+                        stackConfig.databaseTemplate.analogs[arrayIndex].staticVariation = StaticAnalogVariation.Group30Var1;
+                        stackConfig.databaseTemplate.analogs[arrayIndex].eventVariation = EventAnalogVariation.Group32Var1;
                         stackConfig.databaseTemplate.analogs[arrayIndex].index = pointIndex;
 
                         arrayIndex += 1;
@@ -134,8 +135,7 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     {
                         ushort pointIndex = Configuration.covertIndex(analogOutput.pointIndex);
 
-                        stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].clazz = PointClass.Class0;
-                        stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
+                        stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].staticVariation = StaticAnalogOutputStatusVariation.Group40Var2;
                         stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].index = pointIndex;
 
                         arrayIndex += 1;
@@ -167,9 +167,8 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     {
                         ushort pointIndex = Configuration.covertIndex(binaryOutput.pointIndex);
 
-                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].clazz = PointClass.Class1;
-                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].staticVariation = StaticBinaryVariation.Group1Var2;
-                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].eventVariation = EventBinaryVariation.Group2Var2;
+                        stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].clazz = PointClass.Class0;
+                        stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].staticVariation = StaticBinaryOutputStatusVariation.Group10Var2;
                         stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].index = pointIndex;
 
                         arrayIndex += 1;
@@ -184,9 +183,9 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
                     {
                         ushort pointIndex = Configuration.covertIndex(counter.pointIndex);
 
-                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].clazz = PointClass.Class1;
-                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].staticVariation = StaticBinaryVariation.Group1Var2;
-                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].eventVariation = EventBinaryVariation.Group2Var2;
+                        stackConfig.databaseTemplate.counters[arrayIndex].clazz = PointClass.Class1;
+                        stackConfig.databaseTemplate.counters[arrayIndex].staticVariation = StaticCounterVariation.Group20Var1;
+                        stackConfig.databaseTemplate.counters[arrayIndex].eventVariation = EventCounterVariation.Group22Var5;
                         stackConfig.databaseTemplate.counters[arrayIndex].index = pointIndex;
 
                         arrayIndex += 1;
