@@ -25,16 +25,16 @@ namespace Automatak.Simulator.DNP3.Commons
         readonly MeasurementCollection timeAndIntervals = new MeasurementCollection();
         
         public MeasurementCache(DatabaseTemplate template)
-        {                        
+        {
             var values = new ChangeSet();
-            template.binaries.EachIndex((m, i) => values.Update(new Binary(Flags.RESTART), Convert.ToUInt16(i)));
-            template.doubleBinaries.EachIndex((m, i) => values.Update(new DoubleBitBinary(Flags.RESTART), Convert.ToUInt16(i)));                       
-            template.counters.EachIndex((m, i) => values.Update(new Counter(Flags.RESTART), Convert.ToUInt16(i)));
-            template.frozenCounters.EachIndex((m, i) => values.Update(new FrozenCounter(Flags.RESTART), Convert.ToUInt16(i)));
-            template.analogs.EachIndex((m, i) => values.Update(new Analog(Flags.RESTART), Convert.ToUInt16(i)));
-            template.binaryOutputStatii.EachIndex((m, i) => values.Update(new BinaryOutputStatus(Flags.RESTART), Convert.ToUInt16(i)));
-            template.analogOutputStatii.EachIndex((m, i) => values.Update(new AnalogOutputStatus(Flags.RESTART), Convert.ToUInt16(i)));                            
-            template.timeAndIntervals.EachIndex((m, i) => values.Update(new TimeAndInterval(0, 0, IntervalUnits.Undefined), Convert.ToUInt16(i)));
+            template.binaries.EachIndex((m, i) => values.Update(new Binary(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.doubleBinaries.EachIndex((m, i) => values.Update(new DoubleBitBinary(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.counters.EachIndex((m, i) => values.Update(new Counter(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.frozenCounters.EachIndex((m, i) => values.Update(new FrozenCounter(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.analogs.EachIndex((m, i) => values.Update(new Analog(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.binaryOutputStatii.EachIndex((m, i) => values.Update(new BinaryOutputStatus(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.analogOutputStatii.EachIndex((m, i) => values.Update(new AnalogOutputStatus(Flags.RESTART), Convert.ToUInt16(m.index)));
+            template.timeAndIntervals.EachIndex((m, i) => values.Update(new TimeAndInterval(0, 0, IntervalUnits.Undefined), Convert.ToUInt16(m.index)));
 
             this.Load(values);
         }

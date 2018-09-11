@@ -80,9 +80,12 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             //
             foreach (AnalogInput analogInput in configuration.analogInputs)
             {
-                changes.Update(
-                    new Analog(analogInput.value, (byte) analogInput.quality, dateTime),
-                    Configuration.covertIndex(analogInput.pointIndex));
+                if (analogInput.enable)
+                {
+                    changes.Update(
+                        new Analog(analogInput.value, (byte)analogInput.quality, dateTime),
+                        Configuration.covertIndex(analogInput.pointIndex));
+                }
             }
 
             //
@@ -90,9 +93,12 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             //
             foreach (AnalogOutput analogOutput in configuration.analogOutputs)
             {
-                changes.Update(
-                    new AnalogOutputStatus(analogOutput.value, (byte) analogOutput.quality, dateTime),
-                    Configuration.covertIndex(analogOutput.pointIndex));
+                if (analogOutput.enable)
+                {
+                    changes.Update(
+                        new AnalogOutputStatus(analogOutput.value, (byte)analogOutput.quality, dateTime),
+                        Configuration.covertIndex(analogOutput.pointIndex));
+                }
             }
 
             //
@@ -101,9 +107,12 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
 
             foreach (BinaryInput binaryInput in configuration.binaryInputs)
             {
-                changes.Update(new Binary(
-                    binaryInput.value, (byte) binaryInput.quality, dateTime),
-                    Configuration.covertIndex(binaryInput.pointIndex));
+                if (binaryInput.enable)
+                {
+                    changes.Update(new Binary(
+                        binaryInput.value, (byte)binaryInput.quality, dateTime),
+                        Configuration.covertIndex(binaryInput.pointIndex));
+                }
             }
 
             //
@@ -111,9 +120,25 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             //
             foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
             {
-                changes.Update(new BinaryOutputStatus(
-                    binaryOutput.value, (byte) binaryOutput.quality, dateTime),
-                    Configuration.covertIndex(binaryOutput.pointIndex));
+                if (binaryOutput.enable)
+                {
+                    changes.Update(new BinaryOutputStatus(
+                        binaryOutput.value, (byte)binaryOutput.quality, dateTime),
+                        Configuration.covertIndex(binaryOutput.pointIndex));
+                }
+            }
+
+            //
+            // counters
+            //
+            foreach (Commons.Configuration.Counter counter in configuration.counters)
+            {
+                if (counter.enable)
+                {
+                    changes.Update(new Automatak.DNP3.Interface.Counter(
+                        counter.value, (byte)counter.quality, dateTime),
+                        Configuration.covertIndex(counter.pointIndex));
+                }
             }
 
             m_curves.Load(changes);
@@ -227,7 +252,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         void LoadDoubleBinaries(IEnumerable<ushort> indices)
         {
             using (var dialog = new DoubleBinaryValueDialog(indices))
-            {                
+            {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     this.AddChanges(dialog.SelectedChanges);
@@ -238,7 +263,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         void LoadAnalogs(IEnumerable<ushort> indices, bool isAnalog)
         {
             using (var dialog = new AnalogValueDialog(isAnalog, indices))
-            {                
+            {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     this.AddChanges(dialog.SelectedChanges);
@@ -249,7 +274,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         void LoadCounters(IEnumerable<ushort> indices, bool isCounter)
         {
             using (var dialog = new CounterValueDialog(isCounter, indices))
-            {                
+            {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     this.AddChanges(dialog.SelectedChanges);
@@ -364,7 +389,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
          */
         CommandStatus OnControl(ControlRelayOutputBlock command, ushort index, bool operate)
         {
-            if (!(index < m_configuration.binaryOutputs.Count))
+            if (!(m_configuration.binaryOutputsMap.ContainsKey(index)))
             {
                 return CommandStatus.OUT_OF_RANGE;
             }
@@ -387,7 +412,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
         CommandStatus OnAnalogControl(double value, ushort index, bool operate)
         {
             // check if index is support
-            if (!(index < m_configuration.analogOutputs.Count))
+            if (!m_configuration.analogInputsMap.ContainsKey(index))
             {
                 return CommandStatus.OUT_OF_RANGE;
             }

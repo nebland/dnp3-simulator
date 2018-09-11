@@ -192,7 +192,7 @@ namespace Automatak.Simulator.DNP3.DEROutstationPlugin
             {
                 foreach (int i in listView.SelectedIndices)
                 {
-                    yield return (ushort) i;
+                    yield return ushort.Parse(listView.Items[i].SubItems[0].Text);
                 }
             }
         }
