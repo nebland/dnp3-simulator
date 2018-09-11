@@ -13,7 +13,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "LCCH.ChLiv",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -30,7 +30,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "CALH.GrAlm",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -47,7 +47,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "CALH.GrWrn",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -64,7 +64,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "CALH.GrInd",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -81,7 +81,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "DSTO.SocHiWrn",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -98,7 +98,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "DSTO.SocHiAlm",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -115,7 +115,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "DSTO.SocLoAlm",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -132,7 +132,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "DSTO.SohLoAlm",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -149,7 +149,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "DBAT.IntnTmpHiAlm",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -166,7 +166,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "DBAT.ExtTmpHiAlm",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -183,7 +183,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.disconnected and in maintenance",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -200,7 +200,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.disconnected and blocked",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -217,7 +217,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.starting and synchronizing",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -234,7 +234,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.stopping",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -251,7 +251,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.connected and idle",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -268,7 +268,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.ceased to energize",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -285,7 +285,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DSTO.PrmConn",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -302,7 +302,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DSTO.PrmDscon",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -319,7 +319,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.connected and idle",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -336,7 +336,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.connected and generating",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -353,7 +353,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.connected and consuming",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -370,7 +370,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.disconnected and available",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -387,7 +387,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.disconnected and stand-by",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -404,7 +404,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DSTO.DEROpSt.off",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -421,7 +421,7 @@
       "cdc": "DPC",
       "function": "",
       "uniqueString": "CSWI.Pos",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -438,7 +438,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DSTO.IsldCtlFol",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -455,7 +455,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DECP.ECPIsldAuto",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -472,7 +472,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DSTO.AGra",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -489,7 +489,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DSTO.OpnLoopTau",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -506,7 +506,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DFPF.PFGnExtSet",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -523,7 +523,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DFPF.PFLodExtSet",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -540,7 +540,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DHVT.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -557,7 +557,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DHFT.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -574,7 +574,7 @@
       "cdc": "ENS",
       "function": "TV31",
       "uniqueString": "DRGS.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -591,7 +591,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DVWD.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -608,7 +608,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DHFW.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -625,7 +625,7 @@
       "cdc": "ENS",
       "function": "INV2",
       "uniqueString": "DWLM.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -642,7 +642,7 @@
       "cdc": "ENS",
       "function": "INV4",
       "uniqueString": "DWGC.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -659,7 +659,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DTCD.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -676,7 +676,7 @@
       "cdc": "ENS",
       "function": "PPL",
       "uniqueString": "DLFL.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -693,7 +693,7 @@
       "cdc": "ENS",
       "function": "LGF",
       "uniqueString": "DGFL.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -710,7 +710,7 @@
       "cdc": "ENS",
       "function": "LGF",
       "uniqueString": "DGFL.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -727,7 +727,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DAGC.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -744,7 +744,7 @@
       "cdc": "ENS",
       "function": "RPS",
       "uniqueString": "DWSM.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -761,7 +761,7 @@
       "cdc": "ENS",
       "function": "DVW",
       "uniqueString": "DVWC.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -778,7 +778,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DFWC.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -795,7 +795,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DVAR.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -812,7 +812,7 @@
       "cdc": "ENS",
       "function": "INV3",
       "uniqueString": "DFPF.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -829,7 +829,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DVVC.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -846,7 +846,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DWVR.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -863,7 +863,7 @@
       "cdc": "ENS",
       "function": "",
       "uniqueString": "DPFC.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -880,7 +880,7 @@
       "cdc": "ENS",
       "function": "INV5",
       "uniqueString": "DPRG.",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -897,7 +897,7 @@
       "cdc": "SPS",
       "function": "MD",
       "uniqueString": "PTOV.Blk",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -914,7 +914,7 @@
       "cdc": "ACD",
       "function": "MD",
       "uniqueString": "PTOV.Str.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -931,7 +931,7 @@
       "cdc": "ACT",
       "function": "MD",
       "uniqueString": "PTOV.Op.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -948,7 +948,7 @@
       "cdc": "SPS",
       "function": "MD",
       "uniqueString": "PTUV.Blk",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -965,7 +965,7 @@
       "cdc": "ACD",
       "function": "MD",
       "uniqueString": "PTUV.Str.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -982,7 +982,7 @@
       "cdc": "ACT",
       "function": "MD",
       "uniqueString": "PTUV.Op.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -999,7 +999,7 @@
       "cdc": "SPS",
       "function": "MD",
       "uniqueString": "PTOV.Blk",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1016,7 +1016,7 @@
       "cdc": "ACD",
       "function": "MD",
       "uniqueString": "PTOV.Str.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1033,7 +1033,7 @@
       "cdc": "ACT",
       "function": "MD",
       "uniqueString": "PTOV.Op.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1050,7 +1050,7 @@
       "cdc": "SPS",
       "function": "MD",
       "uniqueString": "PTUV.Blk",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1067,7 +1067,7 @@
       "cdc": "ACD",
       "function": "MD",
       "uniqueString": "PTUV.Str.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1084,7 +1084,7 @@
       "cdc": "ACT",
       "function": "MD",
       "uniqueString": "PTUV.Op.general",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1101,7 +1101,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DHVT.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1118,7 +1118,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DHFT.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1135,7 +1135,7 @@
       "cdc": "ENC",
       "function": "",
       "uniqueString": "DRGS.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1152,7 +1152,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DVWD.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1169,7 +1169,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DHFW.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1186,7 +1186,7 @@
       "cdc": "SPC",
       "function": "INV2",
       "uniqueString": "DWLM.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1203,7 +1203,7 @@
       "cdc": "SPC",
       "function": "INV4",
       "uniqueString": "DWGC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1220,7 +1220,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DTCD.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1237,7 +1237,7 @@
       "cdc": "SPC",
       "function": "PPL",
       "uniqueString": "DPKP.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1254,7 +1254,7 @@
       "cdc": "SPC",
       "function": "LGF",
       "uniqueString": "DGFL.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1271,7 +1271,7 @@
       "cdc": "SPC",
       "function": "LGF",
       "uniqueString": "DLFL.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1288,7 +1288,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DAGC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1305,7 +1305,7 @@
       "cdc": "SPC",
       "function": "RPS",
       "uniqueString": "DWSM.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1322,7 +1322,7 @@
       "cdc": "SPC",
       "function": "DVW",
       "uniqueString": "DVWC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1339,7 +1339,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DHFW.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1356,7 +1356,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DVAR.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1373,7 +1373,7 @@
       "cdc": "SPC",
       "function": "INV3",
       "uniqueString": "DFPF.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1390,7 +1390,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DVVR.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1407,7 +1407,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DWVR.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1424,7 +1424,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DPFC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1441,7 +1441,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DPRG.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1458,7 +1458,7 @@
       "cdc": "SPC",
       "function": "",
       "uniqueString": "DRGS.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1475,7 +1475,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DHFW.HysEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1492,7 +1492,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DHFW.SnptEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1509,7 +1509,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DLFW.HysEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1526,7 +1526,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DLFW.SnptEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1543,7 +1543,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DWGC.UseRmpRte",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1560,7 +1560,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DAGC.UseRmpRte",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1577,7 +1577,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DVWC.UseRmpRte",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1594,7 +1594,7 @@
       "cdc": "SPG",
       "function": "",
       "uniqueString": "DVVR.VRefAdjEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1611,7 +1611,7 @@
       "cdc": "MV",
       "function": "",
       "uniqueString": "MMXU.TotW.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1628,7 +1628,7 @@
       "cdc": "MV",
       "function": "",
       "uniqueString": "MMXU.TotW.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1645,7 +1645,7 @@
       "cdc": "MV",
       "function": "",
       "uniqueString": "MMXU.TotVAr.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1662,7 +1662,7 @@
       "cdc": "MV",
       "function": "",
       "uniqueString": "MMXU.TotVAr.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1679,7 +1679,7 @@
       "cdc": "MV",
       "function": "",
       "uniqueString": "MMXU.TotPF.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1696,7 +1696,7 @@
       "cdc": "MV",
       "function": "",
       "uniqueString": "MMXU.TotPF.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1713,7 +1713,7 @@
       "cdc": "WYE",
       "function": "",
       "uniqueString": "MMXU.PhV.phsA.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1730,7 +1730,7 @@
       "cdc": "WYE",
       "function": "",
       "uniqueString": "MMXU.PhV.phsA.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1747,7 +1747,7 @@
       "cdc": "WYE",
       "function": "",
       "uniqueString": "MMXU.PhV.phsB.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1764,7 +1764,7 @@
       "cdc": "WYE",
       "function": "",
       "uniqueString": "MMXU.PhV.phsB.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1781,7 +1781,7 @@
       "cdc": "WYE",
       "function": "",
       "uniqueString": "MMXU.PhV.phsC.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1798,7 +1798,7 @@
       "cdc": "WYE",
       "function": "",
       "uniqueString": "MMXU.PhV.phsC.range",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1815,7 +1815,7 @@
       "cdc": "SPS",
       "function": "",
       "uniqueString": "LCCH.ChLiv",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1832,7 +1832,7 @@
       "cdc": "",
       "function": "",
       "uniqueString": ".",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     }
@@ -1862,7 +1862,7 @@
       "dataObject": "DEROpSt.disconnected and blocked",
       "cdc": "ENS",
       "uniqueString": "DSTO.DEROpSt.disconnected and blocked",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1890,7 +1890,7 @@
       "dataObject": "RtnSrvReq",
       "cdc": "SPC",
       "uniqueString": "DCTE.RtnSrvReq",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1918,7 +1918,7 @@
       "dataObject": "CeaEngzReq",
       "cdc": "SPC",
       "uniqueString": "DCTE.CeaEngzReq",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1946,7 +1946,7 @@
       "dataObject": "PrmConn",
       "cdc": "SPC",
       "uniqueString": "DSTO.PrmConn",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -1974,7 +1974,7 @@
       "dataObject": "PrmDscon",
       "cdc": "SPC",
       "uniqueString": "DSTO.PrmDscon",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2002,7 +2002,7 @@
       "dataObject": " Pos  ",
       "cdc": "DPC",
       "uniqueString": "CSWI. Pos  ",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2030,7 +2030,7 @@
       "dataObject": "IsldCtlFol",
       "cdc": "SPG",
       "uniqueString": "DGEN.IsldCtlFol",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2058,7 +2058,7 @@
       "dataObject": "ECPIsldAuto",
       "cdc": "SPG",
       "uniqueString": "DECP.ECPIsldAuto",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2086,7 +2086,7 @@
       "dataObject": "AGra",
       "cdc": "ASG",
       "uniqueString": "DSTO.AGra",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2114,7 +2114,7 @@
       "dataObject": "OpnLoopTau",
       "cdc": "SPG",
       "uniqueString": "DSTO.OpnLoopTau",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2142,7 +2142,7 @@
       "dataObject": "PFGnExtSet",
       "cdc": "SPG",
       "uniqueString": "DFPF.PFGnExtSet",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2170,7 +2170,7 @@
       "dataObject": "PFLodExtSet",
       "cdc": "SPG",
       "uniqueString": "DFPF.PFLodExtSet",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2198,7 +2198,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DHVT.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2226,7 +2226,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DHFT.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2254,7 +2254,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DRGS.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2282,7 +2282,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DVWD.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2310,7 +2310,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DHFW.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2338,7 +2338,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DWLM.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2366,7 +2366,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DWGC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2394,7 +2394,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DTCD.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2422,7 +2422,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DPKP.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2450,7 +2450,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DGFL.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2478,7 +2478,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DLFL.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2506,7 +2506,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DAGC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2534,7 +2534,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DWSM.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2562,7 +2562,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DVWC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2590,7 +2590,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DHFW.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2618,7 +2618,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DVAR.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2646,7 +2646,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DFPF.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2674,7 +2674,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DVVC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2702,7 +2702,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DWVR.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2730,7 +2730,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DPFC.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2758,7 +2758,7 @@
       "dataObject": "ModEna",
       "cdc": "SPC",
       "uniqueString": "DPRG.ModEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2786,7 +2786,7 @@
       "dataObject": "ArGraMod",
       "cdc": "SPC",
       "uniqueString": "DRGS.ArGraMod",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2814,7 +2814,7 @@
       "dataObject": "HysEna",
       "cdc": "SPG",
       "uniqueString": "DHFW.HysEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2842,7 +2842,7 @@
       "dataObject": "SnptEna",
       "cdc": "SPG",
       "uniqueString": "DHFW.SnptEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2870,7 +2870,7 @@
       "dataObject": "HysEna",
       "cdc": "SPG",
       "uniqueString": "DLFW.HysEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2898,7 +2898,7 @@
       "dataObject": "SnptEna",
       "cdc": "SPG",
       "uniqueString": "DLFW.SnptEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2926,7 +2926,7 @@
       "dataObject": "UseRmpRte",
       "cdc": "SPG",
       "uniqueString": "DWGC.UseRmpRte",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2954,7 +2954,7 @@
       "dataObject": "UseRmpRte",
       "cdc": "SPG",
       "uniqueString": "DAGC.UseRmpRte",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -2982,7 +2982,7 @@
       "dataObject": "UseRmpRte",
       "cdc": "SPG",
       "uniqueString": "DVWC.UseRmpRte",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     },
@@ -3010,7 +3010,7 @@
       "dataObject": "VRefAdjEna",
       "cdc": "SPG",
       "uniqueString": "DVVR.VRefAdjEna",
-      "value": 0,
+      "value": false,
       "quality": 1,
       "enable": true
     }
@@ -26499,28 +26499,40 @@
       "name": "System Active Energy Delivered",
       "description": "  Measured in watt-hours.",
       "frozenCounterExists": "Yes",
-      "frozenCounterEventDefaultClass": 3
+      "frozenCounterEventDefaultClass": 3,
+      "value": 0,
+      "quality": 1,
+      "enable": true
     },
     {
       "pointIndex": "C1",
       "name": "System Active Energy Received",
       "description": "  Measured in watt-hours.",
       "frozenCounterExists": "Yes",
-      "frozenCounterEventDefaultClass": 3
+      "frozenCounterEventDefaultClass": 3,
+      "value": 0,
+      "quality": 1,
+      "enable": true
     },
     {
       "pointIndex": "C2",
       "name": "System Reactive Energy Delivered",
       "description": "  Measured in VAr-hours.",
       "frozenCounterExists": "Yes",
-      "frozenCounterEventDefaultClass": 3
+      "frozenCounterEventDefaultClass": 3,
+      "value": 0,
+      "quality": 1,
+      "enable": true
     },
     {
       "pointIndex": "C3",
       "name": "System Reactive Energy Received",
       "description": "  Measured in VAr-hours.",
       "frozenCounterExists": "Yes",
-      "frozenCounterEventDefaultClass": 3
+      "frozenCounterEventDefaultClass": 3,
+      "value": 0,
+      "quality": 1,
+      "enable": true
     }
   ],
   "analogIndexMap": [

@@ -13,5 +13,9 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public string pointIndex { get; set; }
         public string name { get; set; }
         public string description { get; set; }
+
+        public uint value { get; set; }
+        public int quality { get; set; }
+        public bool enable { get; set; }
     }
 }

@@ -26,6 +26,7 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         public Dictionary<ushort, AnalogOutput> analogOutputsMap { get; private set; }
         public Dictionary<ushort, BinaryInput> binaryInputsMap { get; private set; }
         public Dictionary<ushort, BinaryOutput> binaryOutputsMap { get; private set; }
+        public Dictionary<ushort, Counter> countersMap { get; private set; }
 
         public Dictionary<ushort, ushort> analogIndexInputToOutput { get; private set; }
         public Dictionary<ushort, ushort> analogIndexOutputToInput { get; private set; }
@@ -37,9 +38,22 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
         /*
          * Convert index from format like "AI0" to a number
          */
-        public static ushort covertIndex(string index)
+        public static ushort covertIndex(string pointIndex)
         {
-            string indexNumber = index.Substring(2, index.Count() - 2);
+            int numericIndex = 0;
+            while (numericIndex < pointIndex.Count())
+            {
+                if (!char.IsDigit(pointIndex[numericIndex]))
+                {
+                    numericIndex += 1;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            string indexNumber = pointIndex.Substring(numericIndex, pointIndex.Count() - numericIndex);
 
             return ushort.Parse(indexNumber);
         }
@@ -91,6 +105,15 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
             //
 
             //
+            // sort lists according to point indexes
+            //
+            configuration.analogInputs = configuration.analogInputs.OrderBy(o => Configuration.covertIndex(o.pointIndex)).ToList<AnalogInput>();
+            configuration.analogOutputs = configuration.analogOutputs.OrderBy(o => Configuration.covertIndex(o.pointIndex)).ToList<AnalogOutput>();
+            configuration.binaryInputs = configuration.binaryInputs.OrderBy(o => Configuration.covertIndex(o.pointIndex)).ToList<BinaryInput>();
+            configuration.binaryOutputs = configuration.binaryOutputs.OrderBy(o => Configuration.covertIndex(o.pointIndex)).ToList<BinaryOutput>();
+            configuration.counters = configuration.counters.OrderBy(o => Configuration.covertIndex(o.pointIndex)).ToList<Counter>();
+
+            //
             // create map of analog inputs
             //
             configuration.analogInputsMap = new Dictionary<ushort, AnalogInput>();
@@ -128,6 +151,16 @@ namespace Automatak.Simulator.DNP3.Commons.Configuration
             foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
             {
                 configuration.binaryOutputsMap[Configuration.covertIndex(binaryOutput.pointIndex)] = binaryOutput;
+            }
+
+            //
+            // create map of counters
+            //
+            configuration.countersMap = new Dictionary<ushort, Counter>();
+
+            foreach (Counter counter in configuration.counters)
+            {
+                configuration.countersMap[Configuration.covertIndex(counter.pointIndex)] = counter;
             }
 
             //

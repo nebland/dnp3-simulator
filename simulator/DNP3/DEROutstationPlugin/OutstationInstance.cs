@@ -42,39 +42,159 @@ namespace Automatak.Simulator.DNP3.DerOutstationPlugin
             {
                 Configuration configuration = Configuration.LoadConfiguration();
 
-                OutstationStackConfig config = new OutstationStackConfig();
+                OutstationStackConfig stackConfig = new OutstationStackConfig();
 
-                config.databaseTemplate = new DatabaseTemplate(
-                    (ushort) configuration.binaryInputs.Count, 
-                    1, 
-                    (ushort) configuration.analogInputs.Count, 
-                    (ushort) configuration.counters.Count, 
-                    0, 
-                    (ushort) configuration.binaryOutputs.Count, 
-                    (ushort) configuration.analogOutputs.Count, 
-                    11);
+                //
+                // count the number of "enabled" points for the DatabaseTemplate constructor
+                //
+
+                int enabledAnalogInputCount = 0;
+                int enabledAnalogOutputCount = 0;
+                int enabledBinaryInputCount = 0;
+                int enabledBinaryOutputCount = 0;
+                int enabledCountersCount = 0;
+
+                foreach (AnalogInput analogInput in configuration.analogInputs)
+                {
+                    if (analogInput.enable)
+                    {
+                        enabledAnalogInputCount += 1;
+                    }
+                }
 
                 foreach (AnalogOutput analogOutput in configuration.analogOutputs)
                 {
-                    ushort index = Configuration.covertIndex(analogOutput.pointIndex);
-
-                    config.databaseTemplate.analogOutputStatii[index].clazz = PointClass.Class0;
-
-                    config.databaseTemplate.analogOutputStatii[index].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
+                    if (analogOutput.enable)
+                    {
+                        enabledAnalogOutputCount += 1;
+                    }
                 }
 
                 foreach (BinaryInput binaryInput in configuration.binaryInputs)
                 {
-                    ushort index = Configuration.covertIndex(binaryInput.pointIndex);
-
-                    config.databaseTemplate.binaries[index].clazz = PointClass.Class1;
-
-                    config.databaseTemplate.binaries[index].staticVariation = StaticBinaryVariation.Group1Var2;
-
-                    config.databaseTemplate.binaries[index].eventVariation = EventBinaryVariation.Group2Var2;
+                    if (binaryInput.enable)
+                    {
+                        enabledBinaryInputCount += 1;
+                    }
                 }
 
-                return config;
+                foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
+                {
+                    if (binaryOutput.enable)
+                    {
+                        enabledBinaryOutputCount += 1;
+                    }
+                }
+
+                foreach (Commons.Configuration.Counter counter in configuration.counters)
+                {
+                    if (counter.enable)
+                    {
+                        enabledCountersCount += 1;
+                    }
+                }
+
+                stackConfig.databaseTemplate = new DatabaseTemplate(
+                    (ushort) enabledBinaryInputCount, 
+                    1, 
+                    (ushort) enabledAnalogInputCount, 
+                    (ushort) enabledCountersCount, 
+                    0, 
+                    (ushort) enabledBinaryOutputCount, 
+                    (ushort) enabledAnalogOutputCount, 
+                    11);
+
+                //
+                // initialize DatabaseTemplate from Configuration, manually assigning 
+                // the points to their corresponding arrays (this will automatically 
+                // make the DatabaseTemplate IndexMode Discontiguous
+                //
+
+                int arrayIndex = 0;
+
+                foreach (AnalogInput analogInput in configuration.analogInputs)
+                {
+                    if (analogInput.enable)
+                    {
+                        ushort pointIndex = Configuration.covertIndex(analogInput.pointIndex);
+
+                        // config.databaseTemplate.analogs[arrayIndex].clazz = PointClass.Class0;
+                        // config.databaseTemplate.analogs[arrayIndex].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
+                        stackConfig.databaseTemplate.analogs[arrayIndex].index = pointIndex;
+
+                        arrayIndex += 1;
+                    }
+                }
+
+                arrayIndex = 0;
+
+                foreach (AnalogOutput analogOutput in configuration.analogOutputs)
+                {
+                    if (analogOutput.enable)
+                    {
+                        ushort pointIndex = Configuration.covertIndex(analogOutput.pointIndex);
+
+                        stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].clazz = PointClass.Class0;
+                        stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].staticVariation = StaticAnalogOutputStatusVariation.Group40Var3;
+                        stackConfig.databaseTemplate.analogOutputStatii[arrayIndex].index = pointIndex;
+
+                        arrayIndex += 1;
+                    }
+                }
+
+                arrayIndex = 0;
+
+                foreach (BinaryInput binaryInput in configuration.binaryInputs)
+                {
+                    if (binaryInput.enable)
+                    {
+                        ushort pointIndex = Configuration.covertIndex(binaryInput.pointIndex);
+
+                        stackConfig.databaseTemplate.binaries[arrayIndex].clazz = PointClass.Class1;
+                        stackConfig.databaseTemplate.binaries[arrayIndex].staticVariation = StaticBinaryVariation.Group1Var2;
+                        stackConfig.databaseTemplate.binaries[arrayIndex].eventVariation = EventBinaryVariation.Group2Var2;
+                        stackConfig.databaseTemplate.binaries[arrayIndex].index = pointIndex;
+
+                        arrayIndex += 1;
+                    }
+                }
+
+                arrayIndex = 0;
+
+                foreach (BinaryOutput binaryOutput in configuration.binaryOutputs)
+                {
+                    if (binaryOutput.enable)
+                    {
+                        ushort pointIndex = Configuration.covertIndex(binaryOutput.pointIndex);
+
+                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].clazz = PointClass.Class1;
+                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].staticVariation = StaticBinaryVariation.Group1Var2;
+                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].eventVariation = EventBinaryVariation.Group2Var2;
+                        stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].index = pointIndex;
+
+                        arrayIndex += 1;
+                    }
+                }
+
+                arrayIndex = 0;
+
+                foreach (Commons.Configuration.Counter counter in configuration.counters)
+                {
+                    if (counter.enable)
+                    {
+                        ushort pointIndex = Configuration.covertIndex(counter.pointIndex);
+
+                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].clazz = PointClass.Class1;
+                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].staticVariation = StaticBinaryVariation.Group1Var2;
+                        // stackConfig.databaseTemplate.binaryOutputStatii[arrayIndex].eventVariation = EventBinaryVariation.Group2Var2;
+                        stackConfig.databaseTemplate.counters[arrayIndex].index = pointIndex;
+
+                        arrayIndex += 1;
+                    }
+                }
+
+
+                return stackConfig;
             }
         }
 

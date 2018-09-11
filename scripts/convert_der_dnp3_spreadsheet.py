@@ -215,7 +215,7 @@ for row_index in range(3, 111):
     fields["uniqueString"] = df.iat[row_index, 10]
 
     # add default values for fields not in spreadsheet
-    fields["value"] = 0
+    fields["value"] = False
     fields["quality"] = 1
     fields["enable"] = True
 
@@ -266,7 +266,7 @@ for row_index in range(3, 45):
     fields["uniqueString"] = df.iat[row_index, 21]
 
     # add default values for fields not in spreadsheet
-    fields["value"] = 0
+    fields["value"] = False
     fields["quality"] = 1
     fields["enable"] = True
 
@@ -296,6 +296,11 @@ for row_index in range(3, 7):
     process_name_description(fields, df, row_index)
     fields["frozenCounterExists"] = df.iat[row_index, 3]
     fields["frozenCounterEventDefaultClass"] = df.iat[row_index, 4]
+
+    # add default values for fields not in spreadsheet
+    fields["value"] = 0
+    fields["quality"] = 1
+    fields["enable"] = True
 
     counter_objects.append(fields)
 
